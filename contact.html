@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Rooster Roofing</title>
+    <title>Residential Roofing Services - Rooster Roofing, LLC</title>
+    <meta name="description" content="Expert residential roofing for shingles, metal, and tile roofs in the Sarasota, FL area. Trust Rooster Roofing to protect your home with quality materials and workmanship." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -36,17 +37,19 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
           <a href="index.html" class="flex items-center gap-2">
-            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="h-14 w-auto">
+            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" alt="Rooster Roofing Logo" class="h-14 w-auto">
           </a>
           <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-foreground">
-            <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
-            <a href="about.html" class="hover:text-secondary transition-colors">About Us</a>
-            <a href="services.html" class="hover:text-secondary transition-colors">Services</a>
-            <a href="contact.html" class="text-secondary font-bold">Contact</a>
+            <a href="index.html" class="text-secondary font-bold">Home</a>
+            <a href="residential.html" class="hover:text-secondary transition-colors">Residential</a>
+            <a href="commercial.html" class="hover:text-secondary transition-colors">Commercial</a>
+            <a href="repairs.html" class="hover:text-secondary transition-colors">Roof Repairs</a>
+            <a href="gallery.html" class="hover:text-secondary transition-colors">Gallery</a>
+            <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
           </nav>
           <div class="hidden md:flex items-center space-x-4">
-            <a href="tel:9417243470" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold ring-offset-background transition-all duration-200 h-11 px-6 bg-emergency text-primary-foreground hover:bg-red-700 shadow-button animate-pulse">
-                Call Us
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold ring-offset-background transition-all duration-200 h-11 px-6 bg-emergency text-primary-foreground hover:bg-red-700 shadow-button animate-pulse">
+                Call us now!
             </a>
           </div>
           <div class="lg:hidden">
@@ -59,95 +62,61 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
         <a href="index.html" class="block py-2 px-4 text-sm hover:bg-muted">Home</a>
-        <a href="about.html" class="block py-2 px-4 text-sm hover:bg-muted">About Us</a>
-        <a href="services.html" class="block py-2 px-4 text-sm hover:bg-muted">Services</a>
-        <a href="contact.html" class="block py-2 px-4 text-sm text-secondary font-bold">Contact</a>
+        <a href="residential.html" class="block py-2 px-4 text-sm text-secondary font-bold">Residential</a>
+        <a href="commercial.html" class="block py-2 px-4 text-sm hover:bg-muted">Commercial</a>
+        <a href="repairs.html" class="block py-2 px-4 text-sm hover:bg-muted">Roof Repairs</a>
+        <a href="gallery.html" class="block py-2 px-4 text-sm hover:bg-muted">Gallery</a>
+        <a href="blog.html" class="block py-2 px-4 text-sm hover:bg-muted">Blog</a>
       </div>
     </header>
 
     <main>
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-muted/30">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-              <h2 class="text-4xl font-bold text-foreground mb-4">Get Your Free Roofing Estimate</h2>
-              <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Ready to protect your property? Contact Rooster Roofing today for a free, no-obligation estimate on any of our roofing services.</p>
+        <!-- Hero Section -->
+        <section class="relative py-24 sm:py-32 bg-primary text-primary-foreground text-center">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://images.unsplash.com/photo-1564153278945-8c2394a5a9a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="relative max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl sm:text-6xl font-bold">Residential Roofing</h1>
+                <p class="mt-6 text-lg sm:text-xl text-primary-foreground/80">Protecting your home and family with durable, high-quality roofing solutions tailored to your needs.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <div class="lg:col-span-2">
-                <div class="shadow-card bg-card rounded-lg p-6 sm:p-8">
-                  <div class="mb-4">
-                    <h3 class="text-2xl text-foreground font-bold">Request a Quote</h3>
-                    <p class="text-muted-foreground">Fill out the form below and we'll get back to you within 2 hours during business hours.</p>
-                  </div>
-                  <form id="contact-form" action="https://formsubmit.co/sales@roosterroofingnow.com" method="POST" class="space-y-6">
-                    <input type="hidden" name="_subject" value="New Roofing Quote Request from Website!">
-                    <input type="hidden" name="_captcha" value="false">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label for="first-name" class="text-sm font-medium text-foreground mb-2 block">First Name *</label>
-                        <input type="text" id="first-name" name="first-name" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="John" />
-                      </div>
-                      <div>
-                        <label for="last-name" class="text-sm font-medium text-foreground mb-2 block">Last Name *</label>
-                        <input type="text" id="last-name" name="last-name" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="Smith" />
-                      </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label for="phone" class="text-sm font-medium text-foreground mb-2 block">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="(941) 123-4567" />
-                      </div>
-                      <div>
-                        <label for="email" class="text-sm font-medium text-foreground mb-2 block">Email Address *</label>
-                        <input type="email" id="email" name="email" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="john@email.com" />
-                      </div>
-                    </div>
-                    <div>
-                      <label for="address" class="text-sm font-medium text-foreground mb-2 block">Property Address *</label>
-                      <input type="text" id="address" name="address" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="123 Main Street, Sarasota, FL 34231" />
-                    </div>
-                    <div>
-                      <label for="service" class="text-sm font-medium text-foreground mb-2 block">Service Needed</label>
-                      <select id="service" name="service" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                        <option>Select a service...</option><option>Full Roof Replacement</option><option>Roof Repair</option><option>Emergency Tarping</option><option>Roof Inspection</option><option>Not Sure - Need Assessment</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label for="details" class="text-sm font-medium text-foreground mb-2 block">Project Details</label>
-                      <textarea id="details" name="details" class="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="Please describe your roofing needs, any issues you're experiencing, or questions you have..."></textarea>
-                    </div>
-                    <button type="submit" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 w-full bg-gradient-cta text-secondary-foreground hover:scale-105 shadow-hero transform hover:-translate-y-1">Get My Free Estimate</button>
-                  </form>
-                </div>
-              </div>
-              <div class="space-y-6">
-                <div class="shadow-card bg-card rounded-lg p-6">
-                  <div class="flex items-start space-x-4">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-                    <div><h3 class="font-semibold text-foreground mb-1">Phone</h3><p class="text-lg font-medium text-foreground mb-1 hover:text-secondary break-all"><a href="tel:9417243470">(941) 724-3470</a></p><p class="text-sm text-muted-foreground">Emergency Service</p></div>
-                  </div>
-                </div>
-                <div class="shadow-card bg-card rounded-lg p-6">
-                  <div class="flex items-start space-x-4">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
-                    <div><h3 class="font-semibold text-foreground mb-1">Email</h3><p class="text-lg font-medium text-foreground mb-1 hover:text-secondary break-all"><a href="mailto:sales@roosterroofingnow.com">sales@roosterroofingnow.com</a></p><p class="text-sm text-muted-foreground">Responds within 2 hours</p></div>
-                  </div>
-                </div>
-                 <div class="shadow-card bg-card rounded-lg p-6">
-                  <div class="flex items-start space-x-4">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-                    <div><h3 class="font-semibold text-foreground mb-1">Service Area</h3><p class="text-lg font-medium text-foreground mb-1 break-all">West-Coast Florida</p><p class="text-sm text-muted-foreground">And surrounding areas</p></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
-        <!-- Elfsight Google Reviews Widget -->
-        <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
+        <!-- Roof Types Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                <!-- Shingle Roofs -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-3xl font-bold text-foreground mb-4">Shingle Roofing</h3>
+                        <p class="text-muted-foreground leading-relaxed">Asphalt shingles are the most popular roofing choice in America, offering a versatile, durable, and cost-effective solution for any home style. Available in a wide variety of colors and designs, they provide reliable protection and can enhance your home's curb appeal.</p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1605310149382-8b066e2c331a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Asphalt shingle roof" class="rounded-lg shadow-card w-full h-auto">
+                    </div>
+                </div>
+
+                <!-- Metal Roofs -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1564153278945-8c2394a5a9a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern metal roof" class="rounded-lg shadow-card w-full h-auto">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-foreground mb-4">Metal Roofing</h3>
+                        <p class="text-muted-foreground leading-relaxed">For unparalleled longevity and energy efficiency, consider a metal roof. Known for their exceptional durability against Florida's harsh weather, metal roofs are a long-term investment that can lower your energy bills and provide superior protection for decades.</p>
+                    </div>
+                </div>
+
+                <!-- Tile Roofs -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-3xl font-bold text-foreground mb-4">Tile Roofing</h3>
+                        <p class="text-muted-foreground leading-relaxed">Embrace the classic Florida aesthetic with a beautiful tile roof. Available in clay or concrete, tile roofs offer a distinctive look, excellent durability, and natural resistance to fire and insects, making them a premium choice for any home.</p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1599801986027-f71f1853a822?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Clay tile roof" class="rounded-lg shadow-card w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -155,7 +124,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="md:col-span-2">
-            <h3 class="text-2xl font-bold mb-4">🐓 Rooster Roofing, LLC</h3>
+            <a href="index.html"><img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" alt="Rooster Roofing Logo" class="h-16 w-auto mb-4"></a>
             <p class="text-primary-foreground/80 mb-4 max-w-md">Sarasota's most trusted roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
           </div>
           <div>
@@ -164,6 +133,7 @@
               <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
               <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
               <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="areas.html" class="hover:text-secondary transition-colors">Areas We Serve</a></li>
               <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
             </ul>
           </div>
