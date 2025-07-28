@@ -1,0 +1,65 @@
+/* Embedding the custom design system and styles */
+:root {
+    --background: 220 20% 97%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --primary: 215 50% 25%; /* Deep Slate Blue */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 25 65% 50%; /* Terracotta/Roof-tone */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 15% 92%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 25 60% 60%;
+    --accent-foreground: 215 25% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 215 50% 25%;
+    --radius: 0.5rem;
+    --roofing-slate: 215 40% 30%;
+    --roofing-terra: 25 65% 50%;
+    --emergency: 0 85% 55%;
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--roofing-slate)));
+    --gradient-service: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--roofing-terra)));
+    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.1);
+    --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-button: 0 4px 8px -2px hsl(var(--secondary) / 0.4);
+}
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Typographic Animation Styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-headline-word > span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.sc-iGgWBj {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}

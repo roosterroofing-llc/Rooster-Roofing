@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Rooster Roofing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
+                        'emergency': 'hsl(var(--emergency))',
+                    },
+                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+                    boxShadow: { 'card': 'var(--shadow-card)', 'hero': 'var(--shadow-hero)', 'button': 'var(--shadow-button)' },
+                    backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-service': 'var(--gradient-service)', 'gradient-cta': 'var(--gradient-cta)' },
+                    animation: { pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background">
+
+    <!-- Header -->
+    <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <a href="index.html" class="flex items-center gap-2">
+            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="h-14 w-auto">
+          </a>
+          <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-foreground">
+            <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+            <a href="about.html" class="text-secondary font-bold">About Us</a>
+            <a href="services.html" class="hover:text-secondary transition-colors">Services</a>
+            <a href="contact.html" class="hover:text-secondary transition-colors">Contact</a>
+          </nav>
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="tel:9417243470" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold ring-offset-background transition-all duration-200 h-11 px-6 bg-emergency text-primary-foreground hover:bg-red-700 shadow-button animate-pulse">
+                Call Us
+            </a>
+          </div>
+          <div class="lg:hidden">
+            <button id="mobile-menu-button" class="text-foreground">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
+        <a href="index.html" class="block py-2 px-4 text-sm hover:bg-muted">Home</a>
+        <a href="about.html" class="block py-2 px-4 text-sm text-secondary font-bold">About Us</a>
+        <a href="services.html" class="block py-2 px-4 text-sm hover:bg-muted">Services</a>
+        <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-muted">Contact</a>
+      </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 class="text-4xl font-bold text-foreground mb-6 leading-tight">
+                  Certified Roofing Contractor
+                  <span class="block text-secondary">Fully Licensed & Insured</span>
+                </h2>
+                <p class="text-lg text-muted-foreground mb-6">Rooster Roofing is dedicated to providing exceptional service to homeowners and businesses throughout Sarasota & Manatee County. We're fully licensed, insured, and committed to quality workmanship.</p>
+                <p class="text-lg text-muted-foreground mb-8">Our team of experts uses only the highest quality materials and follows industry best practices to ensure your roof protects your property for years to come. We stand behind our work with comprehensive warranties.</p>
+                <div class="space-y-4 mb-8">
+                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">Florida State Certified Roofing Contractor</span></div>
+                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">Fully Licensed & Insured</span></div>
+                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">LIC. No. CCC1335999</span></div>
+                </div>
+                <a href="contact.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-gradient-cta text-secondary-foreground hover:scale-105 shadow-hero transform hover:-translate-y-1">Contact Us</a>
+              </div>
+              <div class="grid grid-cols-2 gap-6">
+                <!-- Stat Card 1 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Quality workmanship</div>
+                </div>
+                <!-- Stat Card 2 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Experinced & Reliable</div>
+                </div>
+                <!-- Stat Card 3 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Fast Project Turnaround</div>
+                </div>
+                <!-- Stat Card 4 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Locally Serving Communities</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Elfsight Google Reviews Widget -->
+        <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-primary-foreground">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4">🐓 Rooster Roofing, LLC</h3>
+            <p class="text-primary-foreground/80 mb-4 max-w-md">Sarasota's most trusted roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-primary-foreground/80">
+              <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+              <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+              <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <div class="space-y-3 text-primary-foreground/80">
+              <div class="flex items-center"><a href="tel:9417243470" class="hover:text-secondary transition-colors">(941) 724-3470</a></div>
+              <div class="flex items-center"><a href="mailto:sales@roosterroofingnow.com" class="hover:text-secondary transition-colors">sales@roosterroofingnow.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
+          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
