@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commercial Roofing Solutions - Rooster Roofing, LLC</title>
+    <meta name="description" content="Specialized commercial roofing services including TPO and flat roofs. We provide durable, energy-efficient solutions for businesses in the Sarasota, FL area." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
+                        'emergency': 'hsl(var(--emergency))',
+                    },
+                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+                    boxShadow: { 'card': 'var(--shadow-card)', 'hero': 'var(--shadow-hero)', 'button': 'var(--shadow-button)' },
+                    backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-service': 'var(--gradient-service)', 'gradient-cta': 'var(--gradient-cta)' },
+                    animation: { pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background">
+
+    <!-- Header -->
+    <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <a href="index.html" class="flex items-center gap-2">
+            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" alt="Rooster Roofing Logo" class="h-14 w-auto">
+          </a>
+          <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-foreground">
+            <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+            <a href="residential.html" class="hover:text-secondary transition-colors">Residential</a>
+            <a href="commercial.html" class="text-secondary font-bold">Commercial</a>
+            <a href="repairs.html" class="hover:text-secondary transition-colors">Roof Repairs</a>
+            <a href="gallery.html" class="hover:text-secondary transition-colors">Gallery</a>
+            <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
+          </nav>
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold ring-offset-background transition-all duration-200 h-11 px-6 bg-emergency text-primary-foreground hover:bg-red-700 shadow-button animate-pulse">
+                Call us now!
+            </a>
+          </div>
+          <div class="lg:hidden">
+            <button id="mobile-menu-button" class="text-foreground">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
+        <a href="index.html" class="block py-2 px-4 text-sm hover:bg-muted">Home</a>
+        <a href="residential.html" class="block py-2 px-4 text-sm text-secondary font-bold">Residential</a>
+        <a href="commercial.html" class="block py-2 px-4 text-sm hover:bg-muted">Commercial</a>
+        <a href="repairs.html" class="block py-2 px-4 text-sm hover:bg-muted">Roof Repairs</a>
+        <a href="gallery.html" class="block py-2 px-4 text-sm hover:bg-muted">Gallery</a>
+        <a href="blog.html" class="block py-2 px-4 text-sm hover:bg-muted">Blog</a>
+      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-24 sm:py-32 bg-primary text-primary-foreground text-center">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="relative max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl sm:text-6xl font-bold">Commercial Roofing</h1>
+                <p class="mt-6 text-lg sm:text-xl text-primary-foreground/80">Protecting your business with reliable, long-lasting, and energy-efficient roofing systems.</p>
+            </div>
+        </section>
+
+        <!-- Roof Types Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                <!-- TPO Roofs -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-foreground mb-4">TPO Roofing Systems</h3>
+                        <p class="text-muted-foreground leading-relaxed">TPO (Thermoplastic Olefin) is a leading choice for commercial flat roofs. This single-ply roofing membrane is highly resistant to punctures, tears, and water damage. Its reflective surface helps reduce cooling costs, making it an energy-efficient and cost-effective solution for your business.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1631048995254-04a43b91c37b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="TPO commercial roof" class="rounded-lg shadow-card w-full h-auto">
+                    </div>
+                </div>
+
+                <!-- Flat Roofs -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-3xl font-bold text-foreground mb-4">Flat & Low-Slope Roofs</h3>
+                        <p class="text-muted-foreground leading-relaxed">We specialize in the installation and maintenance of flat and low-slope roofing systems. From built-up roofing (BUR) to modified bitumen, we provide durable, watertight solutions that protect your commercial property from the elements and ensure proper drainage.</p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Commercial flat roof" class="rounded-lg shadow-card w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-primary-foreground">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <a href="index.html"><img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" alt="Rooster Roofing Logo" class="h-16 w-auto mb-4"></a>
+            <p class="text-primary-foreground/80 mb-4 max-w-md">Sarasota's most trusted roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-primary-foreground/80">
+              <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+              <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+              <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="areas.html" class="hover:text-secondary transition-colors">Areas We Serve</a></li>
+              <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <div class="space-y-3 text-primary-foreground/80">
+              <div class="flex items-center"><a href="tel:9417243470" class="hover:text-secondary transition-colors">(941) 724-3470</a></div>
+              <div class="flex items-center"><a href="mailto:sales@roosterroofingnow.com" class="hover:text-secondary transition-colors">sales@roosterroofingnow.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
+          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
