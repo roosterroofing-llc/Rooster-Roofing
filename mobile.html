@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- SEO and Social Media Meta Tags -->
+    <title>Rooster Roofing, LLC - Certified Roofing Contractor | Sarasota, FL</title>
+    <meta name="description" content="Sarasota's trusted roofing contractor. Full roof replacement, repair, emergency tarping & inspection. Licensed, insured, 24/7 emergency service. Free estimates!" />
+    <meta name="author" content="Rooster Roofing, LLC" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rooster Roofing, LLC - Top-Rated Florida Roofer" />
+    <meta property="og:description" content="Your trusted partner for roofing in Sarasota, FL. We offer roof replacement, repairs, and 24/7 emergency service." />
+    <meta property="og:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Rooster Roofing, LLC - Top-Rated Florida Roofer" />
+    <meta property="twitter:description" content="Your trusted partner for roofing in Sarasota, FL. We offer roof replacement, repairs, and 24/7 emergency service." />
+    <meta property="twitter:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+<style>
+/* Embedding the custom design system and styles */
+:root {
+    /* Blue-Green Theme */
+    --primary: 190 70% 25%;           /* Dark Blue-Green for header */
+    --primary-foreground: 0 0% 98%;   /* White text on dark background */
+    --background: 150 40% 94%;         /* Light Blue-Green for body */
+    --foreground: 215 25% 15%;         /* Black text on light background */
+
+    /* Button Colors */
+    --destructive: 350 90% 30%;       /* Dark Red for buttons */
+    --destructive-foreground: 0 0% 98%;/* White text on red buttons */
+
+    /* Additional variables may be retained from original for accents, cards, etc. */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --secondary: 25 65% 50%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 190 40% 90%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 190 60% 60%;
+    --accent-foreground: 215 25% 15%;
+    --border: 190 20% 80%;
+    --input: 190 20% 80%;
+    --ring: 190 70% 25%;
+    --radius: 0.5rem;
+
+    /* Gradients and Shadows (optional, update if used) */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(190, 50%, 30%));
+    --gradient-service: linear-gradient(135deg, hsl(var(--card-destructive)), hsl(var(--muted)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%));
+    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.1);
+    --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-button: 0 4px 8px -2px hsl(var(--destructive) / 0.4);
+}
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Typographic Animation Styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-headline-word > span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.sc-iGgWBj {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+</style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
+                        'emergency': 'hsl(var(--emergency))',
+                    },
+                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+                    boxShadow: { 'card': 'var(--shadow-card)', 'hero': 'var(--shadow-hero)', 'button': 'var(--shadow-button)' },
+                    backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-service': 'var(--gradient-service)', 'gradient-cta': 'var(--gradient-cta)' },
+                    animation: { pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background">
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[650px] flex items-center text-white overflow-hidden">
+            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+              <source src="https://ik.imagekit.io/roosterroofing/West_Coast_Florida_Roofs_Cinematic_Video.mp4?updatedAt=1753970277182" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+                <div class="absolute inset-0 bg-card-foreground opacity-75"></div>
+          
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+              <div class="max-w-3xl">
+                <div class="animate-fade-in-up flex items-center space-x-2 mb-4" style="animation-delay: 0.2s;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-primary-foreground"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span class="text-primary-foreground font-semibold">Certified & Licensed Roofing Contractor</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+                  <span class="hero-headline-word">
+                    <span style="animation-delay: 0.4s;">F</span><span style="animation-delay: 0.45s;">l</span><span style="animation-delay: 0.5s;">o</span><span style="animation-delay: 0.55s;">r</span><span style="animation-delay: 0.6s;">i</span><span style="animation-delay: 0.65s;">d</span><span style="animation-delay: 0.7s;">a</span><span style="animation-delay: 0.75s;">’</span><span style="animation-delay: 0.8s;">s</span><span style="animation-delay: 0.85s; margin-left: 0.25em;">M</span><span style="animation-delay: 0.9s;">o</span><span style="animation-delay: 0.95s;">s</span><span style="animation-delay: 1.0s;">t</span><span style="animation-delay: 1.05s; margin-left: 0.25em;">I</span><span style="animation-delay: 1.1s;">n</span><span style="animation-delay: 1.15s;">-</span><span style="animation-delay: 1.2s;">D</span><span style="animation-delay: 1.25s;">e</span><span style="animation-delay: 1.3s;">m</span><span style="animation-delay: 1.35s;">a</span><span style="animation-delay: 1.4s;">n</span><span style="animation-delay: 1.45s;">d</span>
+                    </span>
+                    <span class="block text-primary-foreground hero-headline-word">
+                      <span style="animation-delay: 1.5s;">R</span><span style="animation-delay: 1.55s;">o</span><span style="animation-delay: 1.6s;">o</span><span style="animation-delay: 1.65s;">f</span><span style="animation-delay: 1.7s;">i</span><span style="animation-delay: 1.75s;">n</span><span style="animation-delay: 1.8s;">g</span><span style="animation-delay: 1.85s; margin-left: 0.25em;">S</span><span style="animation-delay: 1.9s;">e</span><span style="animation-delay: 1.95s;">r</span><span style="animation-delay: 2.0s;">v</span><span style="animation-delay: 2.05s;">i</span><span style="animation-delay: 2.1s;">c</span><span style="animation-delay: 2.15s;">e</span><span style="animation-delay: 2.2s;">s</span>
+                      </span>
+                      </h1>
+
+                
+                <p class="animate-fade-in-up text-xl text-primary-foreground/90 mb-8 max-w-2xl" style="animation-delay: 1.8s;">
+                  From emergency repairs to complete roof replacements, Rooster Roofing delivers 
+                  exceptional quality and service you can count on. Licensed and insured.
+                </p>
+                
+                <div class="animate-fade-in-up flex flex-col sm:flex-row gap-4 mb-8" style="animation-delay: 2s;">
+                  <a href="estimator.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-primary text-secondary-foreground hover:scale-105 shadow-hero transform hover:-translate-y-1">
+                    Get an Instant Roof Quote
+                  </a>
+                </div>
+                  <div class="es-roof-calc-widget" data-widgetdata='{"dealer_unique_id":"1714726c817af50457d810aae9d27a2e","buttonText":"Get Instant Roof Quote","borderColor":"#002555","primaryColor":"#ff5600","fontsize":"16px","fontFamily":"sans-serif","textColor":"#ffffff","width":"260px","animation":"bounce","padding":"15px 30px"}'>
+                  </div>
+                <div class="animate-fade-in-up flex items-center space-x-4 mt-8" style="animation-delay: 2.2s;">
+                  <div class="flex text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </div>
+                  <span class="text-primary-foreground/90 font-medium">5-Star Local Reviews • Fully Licensed & Insured</span>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-card">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl font-bold text-foreground mb-4">
+                Expert Roofing Services
+              </h2>
+              <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive roofing solutions for residential and commercial properties 
+                throughout West-Coast Florida and surrounding areas.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Service Card 1 -->
+              <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                <div class="text-center p-6">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                  <h3 class="text-xl font-bold text-foreground">Full Roof Replacement</h3>
+                </div>
+                <div class="p-6 pt-0 flex-grow flex flex-col">
+                  <p class="text-muted-foreground mb-6 text-center text-sm flex-grow">Complete roof installation with premium materials. We work with all roofing types including tile, shingle, metal or flat roofs.</p>
+                  <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-primary text-primary-foreground hover:bg-gradient-cta shadow-button">Learn More</a>
+                </div>
+              </div>
+              <!-- Service Card 2 -->
+              <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                <div class="text-center p-6">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+                  <h3 class="text-xl font-bold text-foreground">Roof Repair</h3>
+                </div>
+                <div class="p-6 pt-0 flex-grow flex flex-col">
+                  <p class="text-muted-foreground mb-6 text-center text-sm flex-grow">Professional repair services for leaks, damaged shingles, and storm damage. Quick response and lasting solutions.</p>
+                  <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-primary text-primary-foreground hover:bg-gradient-cta shadow-button">Learn More</a>
+                </div>
+              </div>
+              <!-- Service Card 3 -->
+              <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                <div class="text-center p-6">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                  <h3 class="text-xl font-bold text-foreground">Emergency Tarping</h3>
+                </div>
+                <div class="p-6 pt-0 flex-grow flex flex-col">
+                  <p class="text-muted-foreground mb-6 text-center text-sm flex-grow">Provides emergency tarping to protect your property from water damage until permanent repairs can be made.</p>
+                  <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-primary text-primary-foreground hover:bg-gradient-cta shadow-button">Learn More</a>
+                </div>
+              </div>
+              <!-- Service Card 4 -->
+              <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                <div class="text-center p-6">
+                  <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div>
+                  <h3 class="text-xl font-bold text-foreground">Roof Inspection</h3>
+                </div>
+                <div class="p-6 pt-0 flex-grow flex flex-col">
+                  <p class="text-muted-foreground mb-6 text-center text-sm flex-grow">Comprehensive roof assessments with detailed reports. Perfect for home purchases or insurance claims.</p>
+                  <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-primary text-primary-foreground hover:bg-gradient-cta shadow-button">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 class="text-4xl font-bold text-foreground mb-6 leading-tight">
+                  Certified Roofing Contractor
+                  <span class="block text-secondary">Fully Licensed & Insured</span>
+                </h2>
+                <p class="text-lg text-muted-foreground mb-6">Rooster Roofing is dedicated to providing exceptional service to homeowners and businesses throughout Sarasota & Manatee County. We're fully licensed, insured, and committed to quality workmanship.</p>
+                <p class="text-lg text-muted-foreground mb-8">Our team of experts uses only the highest quality materials and follows industry best practices to ensure your roof protects your property for years to come. We stand behind our work with comprehensive warranties.</p>
+                <div class="space-y-4 mb-8">
+                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">Florida State Certified Roofing Contractor</span></div>
+                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">Fully Licensed & Insured</span></div>
+                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">LIC. No. CCC1335999</span></div>
+                </div>
+                <a href="contact.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-primary text-secondary-foreground hover:scale-105 shadow-hero transform hover:-translate-y-1">Contact Us</a>
+              </div>
+              <div class="grid grid-cols-2 gap-6">
+                <!-- Stat Card 1 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Quality workmanship</div>
+                </div>
+                <!-- Stat Card 2 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Experinced & Reliable</div>
+                </div>
+                <!-- Stat Card 3 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Fast Project Turnaround</div>
+                </div>
+                <!-- Stat Card 4 -->
+                <div class="text-center shadow-card p-6 bg-card rounded-lg">
+                  <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                  <div class="text-1xl font-bold text-foreground mb-2">Locally Serving Communities</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-card">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl font-bold text-foreground mb-4">Get Your Free Roofing Estimate</h2>
+              <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Ready to protect your property? Contact Rooster Roofing today for a free, no-obligation estimate on any of our roofing services.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div class="lg:col-span-2">
+                <div class="shadow-card bg-card rounded-lg p-6 sm:p-8">
+                  <div class="mb-4">
+                    <h3 class="text-2xl text-foreground font-bold">Request a Quote</h3>
+                    <p class="text-muted-foreground">Fill out the form below and we'll get back to you within 2 hours during business hours.</p>
+                  </div>
+                  <form id="contact-form" action="https://formsubmit.co/sales@roosterroofingnow.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_subject" value="New Roofing Quote Request from Website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label for="first-name" class="text-sm font-medium text-foreground mb-2 block">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="John" />
+                      </div>
+                      <div>
+                        <label for="last-name" class="text-sm font-medium text-foreground mb-2 block">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="Smith" />
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label for="phone" class="text-sm font-medium text-foreground mb-2 block">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="(941) 123-4567" />
+                      </div>
+                      <div>
+                        <label for="email" class="text-sm font-medium text-foreground mb-2 block">Email Address *</label>
+                        <input type="email" id="email" name="email" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="john@email.com" />
+                      </div>
+                    </div>
+                    <div>
+                      <label for="address" class="text-sm font-medium text-foreground mb-2 block">Property Address *</label>
+                      <input type="text" id="address" name="address" required class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="123 Main Street, Sarasota, FL 34231" />
+                    </div>
+                    <div>
+                      <label for="service" class="text-sm font-medium text-foreground mb-2 block">Service Needed</label>
+                      <select id="service" name="service" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                        <option>Select a service...</option><option>Full Roof Replacement</option><option>Roof Repair</option><option>Emergency Tarping</option><option>Roof Inspection</option><option>Not Sure - Need Assessment</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="details" class="text-sm font-medium text-foreground mb-2 block">Project Details</label>
+                      <textarea id="details" name="details" class="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="Please describe your roofing needs, any issues you're experiencing, or questions you have..."></textarea>
+                    </div>
+                    <button type="submit" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 w-full bg-primary text-secondary-foreground hover:scale-105 shadow-hero transform hover:-translate-y-1">Get My Free Estimate</button>
+                  </form>
+                </div>
+              </div>
+              <div class="space-y-6">
+                <div class="shadow-card bg-card rounded-lg p-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                    <div><h3 class="font-semibold text-foreground mb-1">Phone</h3><p class="text-lg font-medium text-foreground mb-1 hover:text-secondary break-all"><a href="tel:9417243470">(941) 724-3470</a></p><p class="text-sm text-muted-foreground">Emergency Service</p></div>
+                  </div>
+                </div>
+                <div class="shadow-card bg-card rounded-lg p-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
+                    <div><h3 class="font-semibold text-foreground mb-1">Email</h3><p class="text-lg font-medium text-foreground mb-1 hover:text-secondary break-all"><a href="mailto:sales@roosterroofingnow.com">sales@roosterroofingnow.com</a></p><p class="text-sm text-muted-foreground">Responds within 2 hours</p></div>
+                  </div>
+                </div>
+                  <div class="shadow-card bg-card rounded-lg p-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                    <div><h3 class="font-semibold text-foreground mb-1">Service Area</h3><p class="text-lg font-medium text-foreground mb-1 break-all">West-Coast Florida</p><p class="text-sm text-muted-foreground">And surrounding areas</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Elfsight Google Reviews Widget -->
+        <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
+    </main>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // --- Gorilla Roof Leads Widget ---
+    function triggerWidget() {
+        const button = document.querySelector(".es-roof-calc-widget button");
+        if (button) {
+            button.click();
+        } else {
+            console.warn("Roof quote button not found, retrying...");
+            setTimeout(triggerWidget, 500);
+        }
+    }
+    // Check if the widget div exists on the page before trying to trigger it
+    if (document.querySelector(".es-roof-calc-widget")) {
+        setTimeout(triggerWidget, 1000);
+    }
+});
+
+// --- Function to load external scripts ---
+function loadScript(src, isAsync = true) {
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = isAsync;
+    document.body.appendChild(script);
+}
+
+
+// Load external widget scripts
+loadScript("https://widget.gorillaroofleads.com/index.js");
+loadScript("https://static.elfsight.com/platform/platform.js");
+</script>
+
+</body>
+</html>
