@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO and Social Media Meta Tags -->
+    <title>Instant Roof Estimator - Rooster Roofing, LLC</title>
+    <meta name="description" content="Get an instant, free roof estimate with our easy-to-use online tool. Simply enter your address to begin." />
+    <meta name="author" content="Rooster Roofing, LLC" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Instant Roof Estimator - Rooster Roofing, LLC" />
+    <meta property="og:description" content="Get an instant, free roof estimate with our easy-to-use online tool." />
+    <meta property="og:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Instant Roof Estimator - Rooster Roofing, LLC" />
+    <meta property="twitter:description" content="Get an instant, free roof estimate with our easy-to-use online tool." />
+    <meta property="twitter:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
+                        'emergency': 'hsl(var(--emergency))',
+                    },
+                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the fullscreen version */
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+    </style>
+</head>
+<body class="bg-background">
+
+    <!-- The iframe takes up the entire screen -->
+    <iframe 
+        title="Roof Lead Estimator" 
+        src="https://app.gorillaroofleads.com/home?dealer_unique_id=1714726c817af50457d810aae9d27a2e"
+        class="w-full h-full border-0">
+        Your browser does not support iframes.
+    </iframe>
+
+</body>
+</html>
