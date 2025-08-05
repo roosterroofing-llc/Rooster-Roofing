@@ -5,7 +5,7 @@
     <strong>Certified Roofing Contractor | Sarasota, FL</strong>
   </p>
   <p>
-    Your trusted partner for residential and commercial roofing. We offer full roof replacements, repairs, and 24/7 emergency services. Licensed and insured for your peace of mind. This repository contains the source code for our official website.
+    Your trusted partner for residential and commercial roofing. We offer full roof replacements, repairs, and emergency roofing services. Licensed and insured for your peace of mind. This repository contains the source code for our official website.
   </p>
 </div>
 
