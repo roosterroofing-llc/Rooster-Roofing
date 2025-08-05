@@ -33,6 +33,7 @@ function loadScript(src, isAsync = true) {
     document.body.appendChild(script);
 }
 
+
 // Load external widget scripts
 loadScript("https://widget.gorillaroofleads.com/index.js");
 loadScript("https://static.elfsight.com/platform/platform.js");
