@@ -4,7 +4,7 @@
     --primary: 200 70% 25%;            /* Dark Blue-Green for header */
     --primary-foreground: 0 0% 98%;    /* White text on dark background */
     --background: 200 30% 94%;         /* Light Blue-Green for body */
-    --foreground: 215 25% 15%;         /* Black text on light background */
+    --foreground: 300 65% 15%;         /* Black text on light background */
 
     /* Button Colors */
     --destructive: 350 90% 30%;        /* Dark Red for buttons */
