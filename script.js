@@ -1,39 +1,69 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // --- Mobile Menu Toggle ---
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+/* Embedding the custom design system and styles */
+:root {
+    /* Blue-Green Theme */
+    --primary: 200 70% 25%;            /* Dark Blue-Green for header */
+    --primary-foreground: 0 0% 98%;    /* White text on dark background */
+    --background: 200 30% 94%;         /* Light Blue-Green for body */
+    --foreground: 300 65% 15%;         /* Black text on light background */
 
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
+    /* Button Colors */
+    --destructive: 350 90% 30%;        /* Dark Red for buttons */
+    --destructive-foreground: 0 0% 98%;/* White text on red buttons */
 
-    // --- Gorilla Roof Leads Widget ---
-    function triggerWidget() {
-        const button = document.querySelector(".es-roof-calc-widget button");
-        if (button) {
-            button.click();
-        } else {
-            console.warn("Roof quote button not found, retrying...");
-            setTimeout(triggerWidget, 500);
-        }
-    }
-    // Check if the widget div exists on the page before trying to trigger it
-    if (document.querySelector(".es-roof-calc-widget")) {
-        setTimeout(triggerWidget, 1000);
-    }
-});
+    /* Additional variables may be retained from original for accents, cards, etc. */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --secondary: 50 75% 60%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 190 40% 90%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 190 60% 60%;
+    --accent-foreground: 215 25% 15%;
+    --border: 190 20% 80%;
+    --input: 190 20% 80%;
+    --ring: 190 70% 25%;
+    --radius: 0.5rem;
 
-// --- Function to load external scripts ---
-function loadScript(src, isAsync = true) {
-    let script = document.createElement('script');
-    script.src = src;
-    script.async = isAsync;
-    document.body.appendChild(script);
+    /* Gradients and Shadows (optional, update if used) */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(190, 50%, 30%));
+    --gradient-service: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%));
+    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.1);
+    --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-button: 0 4px 8px -2px hsl(var(--destructive) / 0.4);
+}
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* Typographic Animation Styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-// Load external widget scripts
-loadScript("https://widget.gorillaroofleads.com/index.js");
-loadScript("https://static.elfsight.com/platform/platform.js");
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-headline-word > span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.sc-iGgWBj {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
