@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const visibleLinksContainer = document.getElementById('visible-nav-links');
     const overflowContainer = document.getElementById('overflow-nav-container');
     const overflowMenu = document.getElementById('overflow-nav-menu');
+    const overflowButton = document.getElementById('overflow-nav-button');
     const masterLinks = document.querySelectorAll('#master-nav-links a');
     const nav = document.querySelector('nav.hidden.lg\\:flex');
 
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 // Prepare the link for the red dropdown menu
                 const overflowLink = lastLink.cloneNode(true);
-                overflowLink.className = 'block px-4 py-2 text-sm text-red-600 hover:bg-muted hover:text-red-700';
+                overflowLink.className = 'block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors';
 
                 overflowMenu.insertBefore(overflowLink, overflowMenu.firstChild);
                 visibleLinksContainer.removeChild(lastLink);
@@ -64,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // --- Hover logic for the "More" dropdown ---
-    if (overflowContainer) {
-        overflowContainer.addEventListener('mouseenter', () => overflowMenu.classList.remove('hidden'));
-        overflowContainer.addEventListener('mouseleave', () => overflowMenu.classList.add('hidden'));
+    if (overflowButton) {
+        overflowButton.addEventListener('click', () => overflowMenu.classList.toggle('hidden'));
+        overflowMenu.addEventListener('mouseleave', () => overflowMenu.classList.add('hidden'));
     }
 
     // Initial setup and resize handling
