@@ -32,44 +32,41 @@
 </head>
 <body class="bg-background">
 
-    <!-- Header -->
     <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-4">
 
-      <!-- Logo and Title -->
-      <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto">
-        <span class="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight ml-2 whitespace-nowrap">Rooster Roofing</span>
+      <a href="index.html" class="flex items-center flex-shrink-0">
+        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
+        <span class="text-1xl sm:text-2xl md:text-4xl font-bold text-red-700 leading-tight mr-6 [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)]">Rooster Roofing</span>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-foreground">
-        <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
-        <a href="residential.html" class="text-secondary font-bold">Residential</a>
-        <a href="commercial.html" class="hover:text-secondary transition-colors">Commercial</a>
-        <a href="repairs.html" class="hover:text-secondary transition-colors">Roof Repairs</a>
-        <a href="gallery.html" class="hover:text-secondary transition-colors">Gallery</a>
-        <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
+      <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
+        <div id="visible-nav-links" class="flex-row items-center space-x-7"></div>
+
+        <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
+          <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
+            More
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden">
+            </div>
+        </div>
       </nav>
 
-      <!-- CTA (Call Button) - Hidden on smaller screens -->
-      <div class="hidden md:flex items-center space-x-4">
-          <a href="tel:+19417243470" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold ring-offset-background transition-all duration-200 h-11 px-6 bg-gradient-cta text-primary-foreground hover:bg-red-700 shadow-button animate-pulse">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            Call us now!
-          </a>
-        </div>
+      <div id="master-nav-links" class="hidden">
+          <a href="index.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Home</a>
+          <a href="residential.html" class="text-xl text-red-600 font-bold">Residential</a>
+          <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Commercial</a>
+          <a href="repairs.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Roof Repairs</a>
+          <a href="gallery.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Gallery</a>
+          <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Blog</a>
+      </div>
 
-      <!-- Mobile Menu Button -->
       <div class="lg:hidden">
         <button id="mobile-menu-button" class="text-foreground">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
       </div>
@@ -77,17 +74,13 @@
     </div>
   </div>
 
-  <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
-    <a href="index.html" class="block py-2 px-4 text-sm hover:bg-muted">Home</a>
-    <a href="residential.html" class="block py-2 px-4 text-sm hover:bg-muted">Residential</a>
-    <a href="commercial.html" class="block py-2 px-4 text-sm hover:bg-muted">Commercial</a>
-    <a href="repairs.html" class="block py-2 px-4 text-sm hover:bg-muted">Roof Repairs</a>
-    <a href="gallery.html" class="block py-2 px-4 text-sm hover:bg-muted">Gallery</a>
-    <a href="blog.html" class="block py-2 px-4 text-sm hover:bg-muted">Blog</a>
-    <a href="estimator.html" class="block py-2 px-4 text-sm hover:bg-muted">Get an Instant Roof Quote</a>
-    <a href="privacypolicy.html" class="block py-2 px-4 text-sm hover:bg-muted">Privacy Policy</a>
-    <a href="termsofservice.html" class="block py-2 px-4 text-sm hover:bg-muted">Terms of Service</a>
+    <a href="index.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
+    <a href="residential.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg">Residential</a>
+    <a href="commercial.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
+    <a href="repairs.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Roof Repairs</a>
+    <a href="gallery.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Gallery</a>
+    <a href="blog.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
   </div>
 </header>
 
@@ -100,7 +93,7 @@
             <h1 class="text-4xl sm:text-6xl font-bold">Residential Roofing</h1>
             <p class="text-lg sm:text-xl text-primary-foreground/80">Protecting your home and family with durable, high-quality roofing solutions tailored to your needs.</p>
             
-            <a href="estimator.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-primary text-secondary-foreground hover:scale-105 shadow-hero transform hover:-translate-y-1">
+            <a href="estimator.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-primary text-secondary-foreground hover:bg-red-700 hover:scale-105 shadow-hero transform hover:-translate-y-1">
               Get an Instant Roof Quote
               </a>
               </div>
@@ -117,14 +110,14 @@
                         <p class="text-muted-foreground leading-relaxed">Asphalt shingle roofs are an excellent choice for Florida homeowners, offering a winning combination of affordability, style, and resilience against the Sunshine State's demanding climate. Available in a wide variety of colors and designs, they provide reliable protection and can enhance your home's curb appeal.</p>
                     </div>
                     <div class="order-1 md:order-2">
-                        <img src="https://ik.imagekit.io/roosterroofing/unnamed.jpg?updatedAt=1753824441584" alt="Asphalt shingle roof" class="rounded-lg shadow-card w-full h-auto">
+                        <img src="https://ik.imagekit.io/roosterroofing/unnamed.jpg?updatedAt=1753824441584" alt="Asphalt shingle roof" class="rounded-lg shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full h-auto">
                     </div>
                 </div>
 
                 <!-- Metal Roofs -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://ik.imagekit.io/roosterroofing/unnamed%20(1).jpg?updatedAt=1753824553768" alt="Modern metal roof" class="rounded-lg shadow-card w-full h-auto">
+                        <img src="https://ik.imagekit.io/roosterroofing/unnamed%20(1).jpg?updatedAt=1753824553768" alt="Modern metal roof" class="rounded-lg shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full h-auto">
                     </div>
                     <div>
                         <h3 class="text-3xl font-bold text-foreground mb-4">Metal Roofing</h3>
@@ -139,7 +132,7 @@
                         <p class="text-muted-foreground leading-relaxed">Embrace the classic Florida aesthetic with a beautiful tile roof. Available in clay or concrete, tile roofs offer a distinctive look, excellent durability, and natural resistance to fire and insects, making them a premium choice for any home.</p>
                     </div>
                     <div class="order-1 md:order-2">
-                        <img src="https://ik.imagekit.io/roosterroofing/unnamed%20(2).jpg?updatedAt=1753824737091" alt="Clay tile roof" class="rounded-lg shadow-card w-full h-auto">
+                        <img src="https://ik.imagekit.io/roosterroofing/unnamed%20(2).jpg?updatedAt=1753824737091" alt="Clay tile roof" class="rounded-lg shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full h-auto">
                     </div>
                 </div>
             </div>
@@ -157,30 +150,33 @@
           <div class="md:col-span-2">
             <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
         <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto">
-        <span class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground leading-tight ml-2 whitespace-rap">Rooster Roofing</span>
+        <span class="text-2xl sm:text-4xl md:text-3xl font-bold text-primary-foreground leading-tight ml-2 whitespace-wrap flex-grow">Rooster Roofing</span>
       </a>
-            <p class="text-primary-foreground/80 mb-4 max-w-md">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
+            <p class="text-md sm:text-lg md:text-sm text-primary-foreground/80 mb-4 max-w-md">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
           </div>
           <div>
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2 text-primary-foreground/80">
-              <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
-              <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
-              <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
-              <li><a href="areas.html" class="hover:text-secondary transition-colors">Areas We Serve</a></li>
-              <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
+              <li><a href="index.html" class="hover:text-red-700 transition-colors">Home</a></li>
+              <li><a href="about.html" class="hover:text-red-700 transition-colors">About Us</a></li>
+              <li><a href="services.html" class="hover:text-red-700 transition-colors">Services</a></li>
+              <li><a href="areas.html" class="hover:text-red-700 transition-colors">Areas We Serve</a></li>
+              <li><a href="contact.html" class="hover:text-red-700 transition-colors">Contact</a></li>
             </ul>
           </div>
           <div>
             <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
             <div class="space-y-3 text-primary-foreground/80">
-              <div class="flex items-center"><a href="tel:9417243470" class="hover:text-secondary transition-colors">(941) 724-3470</a></div>
-              <div class="flex items-center"><a href="mailto:sales@roosterroofingnow.com" class="hover:text-secondary transition-colors">sales@roosterroofingnow.com</a></div>
+              <div class="flex items-center"><a href="tel:9417243470" class="hover:text-red-700 transition-colors">(941) 724-3470</a></div>
+              <div class="flex items-center"><a href="mailto:sales@roosterroofingnow.com" class="hover:text-red-700 transition-colors">sales@roosterroofingnow.com</a></div>
             </div>
           </div>
         </div>
         <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br/>Privacy Policy | Terms of Service</p>
+          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br/>
+          <a href="privacypolicy.html" class="hover:text-red-700 transition-colors">Privacy Policy</a> | 
+          <a href="termsofservice.html" class="hover:text-red-700 transition-colors">Terms of Service</a>
+          </p>
         </div>
       </div>
     </footer>
