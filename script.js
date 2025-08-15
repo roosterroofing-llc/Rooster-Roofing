@@ -89,6 +89,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector(".es-roof-calc-widget")) {
         setTimeout(triggerWidget, 1000);
     }
+    
+    // --- Interactive Service Area Map ---
+    const serviceAreaLinks = document.querySelectorAll('#service-areas a');
+    const serviceAreaMap = document.getElementById('service-area-map');
+
+    if (serviceAreaLinks && serviceAreaMap) {
+        serviceAreaLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const newSrc = this.dataset.src;
+                if (newSrc) {
+                    serviceAreaMap.src = newSrc;
+                }
+            });
+        });
+    }
 });
 
 // --- Function to load external scripts ---
