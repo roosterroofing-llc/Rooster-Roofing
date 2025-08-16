@@ -67,3 +67,20 @@ body {
     width: 0 !important;
     height: 0 !important;
 }
+
+/* Location Modal Styles */
+.location-modal {
+    transition: opacity 0.3s ease;
+}
+
+.location-modal-content {
+    transition: transform 0.3s ease;
+}
+
+/* Location Widget Styles */
+#location-widget .arrow {
+    transition: transform 0.2s;
+}
+#location-widget:hover .arrow {
+    transform: rotate(180deg);
+}
