@@ -20,39 +20,30 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateResponsiveNav() {
         if (!nav || !visibleLinksContainer || !overflowContainer) return;
 
-        // Get the total available width for the nav links
         const availableWidth = nav.offsetWidth;
-
-        // Reset the state
         visibleLinksContainer.innerHTML = '';
         overflowMenu.innerHTML = '';
         overflowContainer.style.display = 'none';
 
-        // Add all links to the visible container to measure them
         masterLinks.forEach(link => {
             visibleLinksContainer.appendChild(link.cloneNode(true));
         });
 
-        // Measure total width of all links
         let totalWidth = 0;
         const visibleLinks = Array.from(visibleLinksContainer.children);
         visibleLinks.forEach(link => {
             totalWidth += link.offsetWidth;
         });
         
-        // Add spacing between links to the total width
         if (visibleLinks.length > 1) {
-            totalWidth += (visibleLinks.length - 1) * 24; // 24px is from space-x-6
+            totalWidth += (visibleLinks.length - 1) * 24;
         }
 
-        // Check if overflow is needed
         if (totalWidth > availableWidth) {
-            // Move links to the overflow menu one by one until they fit
             while (totalWidth > availableWidth && visibleLinksContainer.children.length > 0) {
                 const lastLink = visibleLinksContainer.lastElementChild;
-                const linkWidth = lastLink.offsetWidth + 24; // Add spacing
+                const linkWidth = lastLink.offsetWidth + 24;
                 
-                // Prepare the link for the red dropdown menu
                 const overflowLink = lastLink.cloneNode(true);
                 overflowLink.className = 'block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors';
 
@@ -64,45 +55,120 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // --- Hover logic for the "More" dropdown ---
     if (overflowButton) {
         overflowButton.addEventListener('click', () => overflowMenu.classList.toggle('hidden'));
         overflowMenu.addEventListener('mouseleave', () => overflowMenu.classList.add('hidden'));
     }
 
-    // Initial setup and resize handling
     updateResponsiveNav();
     window.addEventListener('resize', updateResponsiveNav);
+    
+    // --- Location Detection and Redirection ---
+    const locationWidget = document.getElementById('location-widget');
+    const locationDisplay = document.getElementById('location-display');
+    const locationSelect = document.getElementById('location-select');
+    const locationModal = document.getElementById('location-modal');
+    const closeModalButton = document.getElementById('close-modal-button');
 
+    const serviceAreaPages = {
+        "Tampa": "tampa.html",
+        "St. Petersburg": "st-petersburg.html",
+        "Bradenton": "bradenton.html",
+        "Sarasota": "sarasota.html",
+        "Venice": "venice.html",
+        "Port Charlotte": "port-charlotte.html"
+    };
+    
+    // Get the filename of the current page (e.g., "index.html")
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    // --- Gorilla Roof Leads Widget ---
-    function triggerWidget() {
-        const button = document.querySelector(".es-roof-calc-widget button");
-        if (button) {
-            button.click();
-        } else {
-            console.warn("Roof quote button not found, retrying...");
-            setTimeout(triggerWidget, 500);
+    function populateLocationSelector() {
+        if (!locationSelect) return;
+        locationSelect.innerHTML = `<option value="">Change Location</option>`;
+        for (const area in serviceAreaPages) {
+            const option = document.createElement('option');
+            option.value = serviceAreaPages[area]; // The value is now the HTML file
+            option.textContent = area;
+            locationSelect.appendChild(option);
         }
     }
-    // Check if the widget div exists on the page before trying to trigger it
-    if (document.querySelector(".es-roof-calc-widget")) {
-        setTimeout(triggerWidget, 1000);
-    }
-    
-    // --- Interactive Service Area Map ---
-    const serviceAreaLinks = document.querySelectorAll('#service-areas a');
-    const serviceAreaMap = document.getElementById('service-area-map');
 
-    if (serviceAreaLinks && serviceAreaMap) {
-        serviceAreaLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const newSrc = this.dataset.src;
-                if (newSrc) {
-                    serviceAreaMap.src = newSrc;
+    function showOutOfAreaModal() {
+        if (locationModal) {
+            locationModal.classList.remove('hidden');
+        }
+    }
+
+    function hideOutOfAreaModal() {
+        if (locationModal) {
+            locationModal.classList.add('hidden');
+        }
+    }
+
+    async function getLocationAndRedirect() {
+        // Only run the auto-redirect logic on the main index page
+        if (currentPage !== 'index.html') {
+            // For other pages, just display the city name from the page title
+            const pageTitle = document.title.split(' ')[0];
+            locationDisplay.textContent = pageTitle;
+            locationWidget.classList.remove('hidden');
+            return;
+        }
+
+        try {
+            const response = await fetch('https://ipapi.co/json/');
+            const data = await response.json();
+            const detectedCity = data.city;
+            
+            let matchedPage = null;
+            for (const area in serviceAreaPages) {
+                if (detectedCity.includes(area)) {
+                    matchedPage = serviceAreaPages[area];
+                    break;
                 }
-            });
+            }
+
+            if (matchedPage) {
+                // Redirect to the specific area page
+                window.location.href = matchedPage;
+            } else {
+                // If no match, show the modal and the default selector
+                showOutOfAreaModal();
+                locationDisplay.textContent = detectedCity || "Your Location";
+                locationWidget.classList.remove('hidden');
+            }
+
+        } catch (error) {
+            console.error("Error fetching location:", error);
+            locationDisplay.textContent = "Select Location";
+            locationWidget.classList.remove('hidden');
+        }
+    }
+
+    if (locationWidget) {
+        populateLocationSelector();
+        getLocationAndRedirect();
+
+        locationWidget.addEventListener('click', (event) => {
+            if (event.target.id === 'location-select') return;
+            locationSelect.classList.toggle('hidden');
+        });
+
+        locationSelect.addEventListener('change', (e) => {
+            if (e.target.value) {
+                // Navigate to the selected page
+                window.location.href = e.target.value;
+            }
+        });
+
+        if (closeModalButton) {
+            closeModalButton.addEventListener('click', hideOutOfAreaModal);
+        }
+
+        document.addEventListener('click', function(event) {
+            if (!locationWidget.contains(event.target)) {
+                locationSelect.classList.add('hidden');
+            }
         });
     }
 });
