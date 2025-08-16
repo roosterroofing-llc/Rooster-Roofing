@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO and Social Media Meta Tags -->
     <title>Rooster Roofing, LLC - Certified Roofing Contractor | Sarasota, FL</title>
     <meta name="description" content="Sarasota's trusted roofing contractor. Full roof replacement, repair, emergency tarping & inspection. Licensed, insured, 24/7 emergency service. Free estimates!" />
     <meta name="author" content="Rooster Roofing, LLC" />
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Rooster Roofing, LLC - Top-Rated Florida Roofer" />
     <meta property="og:description" content="Your trusted partner for roofing in Sarasota, FL. We offer roof replacement, repairs, and 24/7 emergency service." />
     <meta property="og:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="Rooster Roofing, LLC - Top-Rated Florida Roofer" />
     <meta property="twitter:description" content="Your trusted partner for roofing in Sarasota, FL. We offer roof replacement, repairs, and 24/7 emergency service." />
@@ -46,25 +43,38 @@
 </head>
 <body class="bg-background">
 
-    <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+<header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center space-y-4">
+    <div class="flex justify-between items-center py-4">
 
-      <a href="index.html" class="flex items-center flex-shrink-0">
-        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
-        <span class="text-1xl sm:text-2xl md:text-4xl font-bold text-red-700 leading-tight mr-6 [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)]">Rooster Roofing</span>
-      </a>
+      <div class="flex items-center flex-shrink-0">
+        <a href="index.html" class="flex-shrink-0">
+          <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
+        </a>
+        <div class="ml-3">
+          <a href="index.html">
+            <span class="block text-1xl sm:text-2xl md:text-4xl font-bold text-red-700 leading-tight [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)] whitespace-nowrap">Rooster Roofing</span>
+          </a>
+          <div id="location-widget" class="relative hidden lg:flex flex-col items-start mt-1">
+              <div class="flex items-center space-x-1 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span id="location-display" class="text-xs sm:text-sm font-medium text-foreground whitespace-nowrap">Detecting...</span>
+              <span id="out-of-area-message" class="text-xs sm:text-sm text-red-600 font-semibold whitespace-nowrap sm:ml-6"></span>
+              <svg class="arrow w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <select id="location-select" class="absolute top-full left-20 mt-2 text-sm border-gray-300 rounded-md hidden z-10"></select>
+              </div>
+          </div>
+        </div>
+      </div>
 
       <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
         <div id="visible-nav-links" class="flex-row items-center space-x-7"></div>
-
         <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
           <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
             More
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
-          <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden">
-            </div>
+          <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden"></div>
         </div>
       </nav>
 
@@ -99,7 +109,6 @@
 </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="relative flex items-center text-white overflow-hidden">
             <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
               <source src="https://ik.imagekit.io/roosterroofing/West_Coast_Florida_Roofs_Cinematic_Video.mp4?updatedAt=1753970277182" type="video/mp4">
@@ -151,7 +160,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="py-20 bg-card">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -165,7 +173,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <!-- Service Card 1 -->
               <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
                 <div class="text-center p-6">
                   <div class="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
@@ -176,7 +183,6 @@
                   <a href="residential.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
                 </div>
               </div>
-              <!-- Service Card 2 -->
               <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
                 <div class="text-center p-6">
                   <div class="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
@@ -187,7 +193,6 @@
                   <a href="repairs.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
                 </div>
               </div>
-              <!-- Service Card 3 -->
               <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
                 <div class="text-center p-6">
                   <div class="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
@@ -198,7 +203,6 @@
                   <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
                 </div>
               </div>
-              <!-- Service Card 4 -->
               <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
                 <div class="text-center p-6">
                   <div class="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-foreground"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></div>
@@ -213,7 +217,6 @@
           </div>
         </section>
         
-        <!-- About Section -->
         <section id="about" class="py-20">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -232,22 +235,18 @@
                 <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">Contact Us</a>
               </div>
               <div class="grid grid-cols-2 gap-6">
-                <!-- Stat Card 1 -->
                 <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
                   <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg></div>
                   <div class="text-1xl font-bold text-foreground mb-2">Quality workmanship</div>
                 </div>
-                <!-- Stat Card 2 -->
                 <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
                   <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
                   <div class="text-1xl font-bold text-foreground mb-2">Experinced & Reliable</div>
                 </div>
-                <!-- Stat Card 3 -->
                 <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
                   <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
                   <div class="text-1xl font-bold text-foreground mb-2">Fast Project Turnaround</div>
                 </div>
-                <!-- Stat Card 4 -->
                 <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
                   <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                   <div class="text-1xl font-bold text-foreground mb-2">Locally Serving Communities</div>
@@ -257,7 +256,6 @@
           </div>
         </section>
         
-        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-card">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -316,7 +314,7 @@
               <div class="space-y-6">
                 <div class="shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg p-6">
                   <div class="flex items-start space-x-4">
-                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg></div>
                     <div><h3 class="font-semibold text-foreground mb-1">Phone</h3><p class="text-lg font-medium text-foreground mb-1 hover:text-red-700 break-all"><a href="tel:9417243470">(941) 724-3470</a></p><p class="text-sm text-muted-foreground">Emergency Service</p></div>
                   </div>
                 </div>
@@ -337,11 +335,9 @@
           </div>
         </section>
 
-        <!-- Elfsight Google Reviews Widget -->
         <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-primary text-primary-foreground">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -357,7 +353,7 @@
             <ul class="space-y-2 text-primary-foreground/80">
               <li><a href="index.html" class="hover:text-red-700 transition-colors">Home</a></li>
               <li><a href="about.html" class="hover:text-red-700 transition-colors">About Us</a></li>
-              <li><a href="services.html" class="hover:text-red-700 transition-colors">Services</a></li>
+              <li><a href="services.html" class="hover:text-red-700 transition-colors">Our Services</a></li>
               <li><a href="areas.html" class="hover:text-red-700 transition-colors">Areas We Serve</a></li>
               <li><a href="contact.html" class="hover:text-red-700 transition-colors">Contact Us</a></li>
             </ul>
@@ -380,6 +376,6 @@
     </footer>
 
     <script src="script.js"></script>
-
+    
 </body>
 </html>
