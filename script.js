@@ -63,12 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     updateResponsiveNav();
     window.addEventListener('resize', updateResponsiveNav);
     
-    // --- Location Detection and Redirection ---
+    // --- Location Detection and Selection ---
     const locationWidget = document.getElementById('location-widget');
     const locationDisplay = document.getElementById('location-display');
     const locationSelect = document.getElementById('location-select');
-    const locationModal = document.getElementById('location-modal');
-    const closeModalButton = document.getElementById('close-modal-button');
+    const outOfAreaMessage = document.getElementById('out-of-area-message');
 
     const serviceAreaPages = {
         "Tampa": "tampa.html",
@@ -79,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Port Charlotte": "port-charlotte.html"
     };
     
-    // Get the filename of the current page (e.g., "index.html")
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     function populateLocationSelector() {
@@ -87,89 +85,119 @@ document.addEventListener("DOMContentLoaded", function () {
         locationSelect.innerHTML = `<option value="">Change Location</option>`;
         for (const area in serviceAreaPages) {
             const option = document.createElement('option');
-            option.value = serviceAreaPages[area]; // The value is now the HTML file
+            option.value = serviceAreaPages[area];
             option.textContent = area;
             locationSelect.appendChild(option);
         }
     }
-
-    function showOutOfAreaModal() {
-        if (locationModal) {
-            locationModal.classList.remove('hidden');
+    
+    function showOutOfAreaMessage() {
+        if(outOfAreaMessage) {
+            outOfAreaMessage.textContent = "(Out of Service Area)";
         }
     }
 
-    function hideOutOfAreaModal() {
-        if (locationModal) {
-            locationModal.classList.add('hidden');
-        }
-    }
-
-    async function getLocationAndRedirect() {
-        // Only run the auto-redirect logic on the main index page
-        if (currentPage !== 'index.html') {
-            // For other pages, just display the city name from the page title
-            const pageTitle = document.title.split(' ')[0];
-            locationDisplay.textContent = pageTitle;
-            locationWidget.classList.remove('hidden');
-            return;
-        }
-
+    async function getLocation() {
         try {
             const response = await fetch('https://ipapi.co/json/');
             const data = await response.json();
             const detectedCity = data.city;
             
-            let matchedPage = null;
-            for (const area in serviceAreaPages) {
-                if (detectedCity.includes(area)) {
-                    matchedPage = serviceAreaPages[area];
-                    break;
-                }
-            }
+            locationDisplay.textContent = detectedCity || "Your Location";
+            
+            const inServiceArea = Object.keys(serviceAreaPages).some(area => detectedCity && detectedCity.includes(area));
 
-            if (matchedPage) {
-                // Redirect to the specific area page
-                window.location.href = matchedPage;
-            } else {
-                // If no match, show the modal and the default selector
-                showOutOfAreaModal();
-                locationDisplay.textContent = detectedCity || "Your Location";
-                locationWidget.classList.remove('hidden');
+            if (!inServiceArea) {
+                showOutOfAreaMessage();
             }
 
         } catch (error) {
             console.error("Error fetching location:", error);
             locationDisplay.textContent = "Select Location";
-            locationWidget.classList.remove('hidden');
+        } finally {
+            if (locationWidget) {
+                locationWidget.classList.remove('hidden');
+            }
         }
     }
 
+    async function handleLocationLogic() {
+        const isLocationPage = Object.values(serviceAreaPages).includes(currentPage);
+        
+        if (currentPage === 'index.html' || currentPage === '') {
+            // On the homepage, detect and redirect if possible
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                const detectedCity = data.city;
+                
+                let matchedPage = null;
+                for (const area in serviceAreaPages) {
+                    if (detectedCity && detectedCity.includes(area)) {
+                        matchedPage = serviceAreaPages[area];
+                        break;
+                    }
+                }
+
+                if (matchedPage) {
+                    window.location.href = matchedPage;
+                } else {
+                    locationDisplay.textContent = detectedCity || "Your Location";
+                    showOutOfAreaMessage();
+                    locationWidget.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error("Error fetching location:", error);
+                locationDisplay.textContent = "Select Location";
+                locationWidget.classList.remove('hidden');
+            }
+        } else if (isLocationPage) {
+            // On a location page, display the city from the title
+            const pageTitle = document.title.split(' ')[0].replace('-', ' ');
+            locationDisplay.textContent = pageTitle;
+            locationWidget.classList.remove('hidden');
+        } else {
+            // On any other page (like About, Contact), just detect and display location
+            getLocation();
+        }
+    }
+
+
     if (locationWidget) {
         populateLocationSelector();
-        getLocationAndRedirect();
+        handleLocationLogic();
 
         locationWidget.addEventListener('click', (event) => {
-            if (event.target.id === 'location-select') return;
-            locationSelect.classList.toggle('hidden');
+            if (event.target.tagName !== 'SELECT') {
+                locationSelect.classList.toggle('hidden');
+            }
         });
 
         locationSelect.addEventListener('change', (e) => {
             if (e.target.value) {
-                // Navigate to the selected page
                 window.location.href = e.target.value;
             }
         });
-
-        if (closeModalButton) {
-            closeModalButton.addEventListener('click', hideOutOfAreaModal);
-        }
 
         document.addEventListener('click', function(event) {
             if (!locationWidget.contains(event.target)) {
                 locationSelect.classList.add('hidden');
             }
         });
+    }
+    
+    // --- Gorilla Roof Leads Widget ---
+    function triggerWidget() {
+        const button = document.querySelector(".es-roof-calc-widget button");
+        if (button) {
+            button.click();
+        } else {
+            console.warn("Roof quote button not found, retrying...");
+            setTimeout(triggerWidget, 500);
+        }
+    }
+    if (document.querySelector(".es-roof-calc-widget")) {
+        setTimeout(triggerWidget, 1000);
     }
 });
 
