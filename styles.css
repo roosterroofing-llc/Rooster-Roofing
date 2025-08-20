@@ -1,5 +1,8 @@
 /* Embedding the custom design system and styles */
 :root {
+    /* Font Family */
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
     /* Blue-Green Theme */
     --primary: 200 70% 25%;            /* Dark Blue-Green for header */
     --primary-foreground: 0 0% 98%;    /* White text on dark background */
@@ -10,7 +13,7 @@
     --destructive: 350 90% 30%;        /* Dark Red for buttons */
     --destructive-foreground: 0 0% 98%;/* White text on red buttons */
 
-    /* Additional variables may be retained from original for accents, cards, etc. */
+    /* Additional variables */
     --card: 0 0% 100%;
     --card-foreground: 215 25% 15%;
     --secondary: 50 75% 60%;
@@ -24,7 +27,7 @@
     --ring: 190 70% 25%;
     --radius: 0.5rem;
 
-    /* Gradients and Shadows (optional, update if used) */
+    /* Gradients and Shadows */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(190, 50%, 30%));
     --gradient-service: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
     --gradient-cta: linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%));
@@ -32,10 +35,10 @@
     --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
     --shadow-button: 0 4px 8px -2px hsl(var(--destructive) / 0.4);
 }
+
 body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Typographic Animation Styles */
@@ -61,6 +64,7 @@ body {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
+/* Hide external widgets until loaded */
 .sc-iGgWBj {
     opacity: 0 !important;
     visibility: hidden !important;
@@ -81,32 +85,16 @@ body {
 #location-widget .arrow {
     transition: transform 0.2s;
 }
+
 #location-widget:hover .arrow {
     transform: rotate(180deg);
 }
 
-/* Add this to the end of your styles.css file */
 #in-area-message {
-    color: #16a34a; /* This is a green color */
+    color: #16a34a; /* Green color for in-area message */
 }
 
-/* Custom styles for the location dropdown */
-#location-select {
-    background-image: var(--gradient-service);
-    color: hsl(var(--foreground));
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem; /* Equivalent to rounded-md */
-    border: 1px solid hsl(var(--border));
-    transition: background-color 0.2s, color 0.2s;
-}
-
-#location-select:hover {
-    background-image: none; /* Remove gradient on hover */
-    background-color: hsl(0, 72%, 51%); /* This is a standard red-700 color */
-    color: hsl(var(--primary-foreground));
-}
-
-/* Custom styles for the new location dropdown menu */
+/* Custom styles for the location dropdown menu */
 #location-menu {
     min-width: 150px; /* Ensures the dropdown has a nice width */
 }
