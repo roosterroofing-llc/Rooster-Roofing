@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <title>About Us - Rooster Roofing, LLC | Our Story</title>
     <meta name="description" content="Learn about Rooster Roofing, a licensed and insured family-owned business serving Sarasota & Manatee County. Committed to quality and customer satisfaction." />
     <meta name="author" content="Rooster Roofing, LLC" />
     <meta name="keywords" content="Rooster Roofing, Sarasota roofing contractor, roof repair Sarasota, roof installation Manatee County, licensed roofer Florida, family-owned roofing company" />
-    
+
+    <!-- Geo-Targeting Meta Tags -->
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Sarasota" />
     <meta name="geo.position" content="27.3364;-82.5307" />
     <meta name="ICBM" content="27.3364, -82.5307" />
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="About Rooster Roofing - Sarasota's Trusted Contractor" />
     <meta property="og:description" content="Discover our commitment to quality workmanship and customer service. Licensed, insured, and locally focused." />
     <meta property="og:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
+
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="About Rooster Roofing - Sarasota's Trusted Contractor" />
     <meta property="twitter:description" content="Discover our commitment to quality workmanship and customer service. Licensed, insured, and locally focused." />
     <meta property="twitter:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
 
+    <!-- Scripts and Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -30,173 +35,335 @@
             theme: {
                 extend: {
                     colors: {
-                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
-                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
-                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
-                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
-                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
-                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
-                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                        'roofing-slate': 'hsl(var(--roofing-slate))',
+                        'roofing-terra': 'hsl(var(--roofing-terra))',
                         'emergency': 'hsl(var(--emergency))',
                     },
-                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
-                    boxShadow: { 'card': 'var(--shadow-card)', 'hero': 'var(--shadow-hero)', 'button': 'var(--shadow-button)' },
-                    backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-service': 'var(--gradient-service)', 'gradient-cta': 'var(--gradient-cta)' },
-                    animation: { pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                    borderRadius: {
+                        lg: 'var(--radius)',
+                        md: 'calc(var(--radius) - 2px)',
+                        sm: 'calc(var(--radius) - 4px)'
+                    },
+                    boxShadow: {
+                        'card': 'var(--shadow-card)',
+                        'hero': 'var(--shadow-hero)',
+                        'button': 'var(--shadow-button)'
+                    },
+                    backgroundImage: {
+                        'gradient-hero': 'var(--gradient-hero)',
+                        'gradient-service': 'var(--gradient-service)',
+                        'gradient-cta': 'var(--gradient-cta)'
+                    },
+                    animation: {
+                        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    }
                 }
             }
         }
     </script>
 </head>
+
 <body class="bg-background">
 
-<header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center py-4">
+    <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
 
-      <div class="flex items-center flex-shrink-0">
-        <a href="index.html" class="flex-shrink-0">
-          <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
-        </a>
-        <div class="ml-3">
-          <a href="index.html">
-            <span class="block text-1xl sm:text-2xl md:text-4xl font-bold text-red-700 leading-tight [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)] whitespace-nowrap">Rooster Roofing</span>
-          </a>
-          <div id="location-widget" class="relative hidden lg:flex flex-col items-start mt-1">
-              <div class="flex items-center space-x-1 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span id="location-display" class="text-xs sm:text-sm font-medium text-foreground whitespace-nowrap">Detecting...</span>
-              <span id="out-of-area-message" class="text-xs sm:text-sm text-red-600 font-semibold whitespace-nowrap sm:ml-6"></span>
-              <svg class="arrow w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              <select id="location-select" class="absolute top-full left-20 mt-2 text-sm border-gray-300 rounded-md hidden z-10"></select>
-              </div>
-          </div>
+                <div class="flex justify-start items-center flex-shrink-0">
+                    <a href="index.html" class="flex-shrink-0">
+                        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
+                    </a>
+                    <div class="ml-1 justify-start">
+                        <a href="index.html">
+                            <span class="block text-3xl md:text-4xl font-bold text-red-600 leading-tight [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.8)] whitespace-nowrap">ROOSTER ROOFING</span>
+                        </a>
+                        <div id="location-widget" class="relative hidden lg:flex items-center space-x-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex items-center space-x-1 cursor-pointer">
+                                    <span id="location-display" class="text-xs sm:text-md md:text-lg font-medium text-foreground whitespace-nowrap">Detecting...</span>
+                                    <svg id="location-arrow" class="arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                                <span id="in-area-message" class="text-xs sm:text-md font-semibold whitespace-nowrap"></span>
+                                <span id="out-of-area-message" class="text-xs sm:text-md text-red-600 font-semibold whitespace-nowrap"></span>
+                            </div>
+                            <div id="location-menu" class="absolute top-full left-0 mt-2 bg-gradient-service border border-border rounded-md shadow-lg hidden z-10">
+                                <ul id="location-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
+                    <div id="visible-nav-links" class="flex-row items-center space-x-7"></div>
+                    <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
+                        <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
+                            More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden"></div>
+                    </div>
+                </nav>
+
+                <div id="master-nav-links" class="hidden">
+                    <a href="index.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Home</a>
+                    <a href="about.html" class="text-xl text-red-600 font-bold">About Us</a>
+                    <a href="contact.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Contact Us</a>
+                    <a href="services.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Our Services</a>
+                    <a href="areas.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Areas We Serve</a>
+                    <a href="privacypolicy.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Privacy Policy</a>
+                    <a href="termsofservice.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Terms of Service</a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-foreground">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
         </div>
-      </div>
 
-      <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
-        <div id="visible-nav-links" class="flex-row items-center space-x-7"></div>
-        <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
-          <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
-            More
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden"></div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
+            <a href="about.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg">About Us</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Contact Us</a>
+            <a href="services.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Our Services</a>
+            <a href="areas.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Areas We Serve</a>
+            <a href="privacypolicy.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Privacy Policy</a>
+            <a href="termsofservice.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Terms of Service</a>
         </div>
-      </nav>
-
-      <div id="master-nav-links" class="hidden">
-          <a href="index.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Home</a>
-          <a href="about.html" class="text-xl text-red-600 font-bold">About Us</a>
-          <a href="residential.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Residential</a>
-          <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Commercial</a>
-          <a href="repairs.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Roof Repairs</a>
-          <a href="gallery.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Gallery</a>
-          <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Blog</a>
-      </div>
-
-      <div class="lg:hidden">
-        <button id="mobile-menu-button" class="text-foreground">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
-    <a href="index.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
-    <a href="about.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg">About Us</a>
-    <a href="residential.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Residential</a>
-    <a href="commercial.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
-    <a href="repairs.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Roof Repairs</a>
-    <a href="gallery.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Gallery</a>
-    <a href="blog.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
-  </div>
-</header>
+    </header>
 
     <main>
-        <section id="about" class="py-20">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 class="text-4xl font-bold text-primary mb-6 leading-tight">
-                  Certified Roofing Contractor
-                  <span class="block text-foreground">Fully Licensed & Insured</span>
-                </h1>
-                <p class="text-lg text-muted-foreground mb-6">Rooster Roofing is dedicated to providing exceptional roofing services to homeowners and businesses throughout Sarasota & Manatee County. We're fully licensed, insured, and committed to quality workmanship.</p>
-                <p class="text-lg text-muted-foreground mb-8">Our team of experts uses only the highest quality materials and follows industry best practices to ensure your roof protects your property for years to come. We stand behind our work with comprehensive warranties.</p>
-                <div class="space-y-4 mb-8">
-                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">Florida State Certified Roofing Contractor</span></div>
-                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">Fully Licensed & Insured</span></div>
-                  <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg><span class="text-foreground font-medium">LIC. No. CCC1335999</span></div>
-                </div>
-                <a href="contact.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">Contact Us</a>
-              </div>
-              <div class="grid grid-cols-2 gap-6">
-                <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                  <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path></svg></div>
-                  <div class="text-1xl font-bold text-foreground mb-2">Quality workmanship</div>
-                </div>
-                <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                  <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                  <div class="text-1xl font-bold text-foreground mb-2">Experinced & Reliable</div>
-                </div>
-                <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                  <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
-                  <div class="text-1xl font-bold text-foreground mb-2">Fast Project Turnaround</div>
-                </div>
-                <div class="text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                  <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-                  <div class="text-1xl font-bold text-foreground mb-2">Locally Serving Communities</div>
-                </div>
-              </div>
+        <section class="relative flex items-center text-white overflow-hidden min-h-[60vh] sm:min-h-[80vh]">
+            <!-- Video Background Container -->
+            <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                <iframe 
+                    src="https://player.vimeo.com/video/1111944528?background=1&autoplay=1&loop=1&muted=1&quality=auto" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%);" 
+                    title="Rooster Roofing Drone Footage BG">
+                </iframe>
             </div>
-          </div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-card-foreground opacity-55"></div>
+            <!-- Content -->
+            <div class="relative max-w-4xl mx-auto px-4 py-24 sm:py-32 flex flex-col items-center animate-fade-in-up gap-6 z-10" style="animation-delay: 0.4s;">
+                <h1 class="text-4xl sm:text-6xl font-bold text-primary-foreground">Certified Roofing Contractor</h1>
+                <div class="animate-fade-in-up flex items-center space-x-2" style="animation-delay: 0.65s;">
+                    <p class="text-3xl sm:text-5xl text-primary-foreground/80">Fully Licensed & Insured</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-center text-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 items-center">
+                        <div>
+                            <a href="index.html" class="flex flex-col items-center">
+                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="max-w-sm sm:max-w-lg h-auto w-full mx-auto">
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 gap-2">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-foreground whitespace-nowrap">
+                                Certified Roofing Contractor
+                            </h2>
+                            <h3 class="text-3xl lg:text-4xl text-primary-foreground font-bold whitespace-nowrap">
+                                <span class="block text-foreground hero-headline-word">
+                                    Fully Licensed & Insured
+                                </span>
+                            </h3>
+                            <div class="flex items-center justify-center mt-2 mb-2">
+                                <a href="contact.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md sm:text-lg md:text-xl font-semibold ring-offset-background transition-all duration-300 h-10 px-6 sm:h-14 sm:px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4">
+                    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
+                            <p class="text-lg text-foreground mb-2">
+                                Rooster Roofing is dedicated to providing exceptional service to homeowners and businesses throughout the West Coast Florida. We're fully licensed, insured, and committed to quality workmanship.
+                            </p>
+                            <div class="grid grid-cols-1 gap-2">
+                                <p class="text-lg text-foreground mb-2">
+                                    Our team of experts uses only the highest quality materials and follows industry best practices to ensure your roof protects your property for years to come. We stand behind our work with comprehensive warranties.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-2">
+                                <div class="flex items-center">
+                                    <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-12 md:w-12 lg:w-8 h-auto flex-shrink-0">
+                                    <span class="text-primary text-md md:text-md lg:text-sm">Florida State-Certified Roofing Contractor</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-12 md:w-12 lg:w-8 h-auto flex-shrink-0">
+                                    <span class="text-primary text-md md:text-md lg:text-sm">Mule-Hide Warranty Eligible Contractor</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-12 md:w-12 lg:w-8 h-auto flex-shrink-0">
+                                    <span class="text-primary text-md md:text-md lg:text-sm">Certified Quality, Insured Protection</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-12 md:w-12 lg:w-8 h-auto flex-shrink-0">
+                                    <span class="text-primary text-md md:text-md lg:text-sm">Offers Free, No-obligation Roofing Estimates</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-12 md:w-12 lg:w-8 h-auto flex-shrink-0">
+                                    <span class="text-primary text-md md:text-md lg:text-sm">Superior Material, Competetive Pricing</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-12 md:w-12 lg:w-8 h-auto flex-shrink-0">
+                                    <span class="text-primary text-md md:text-md lg:text-sm">Quality Worksmanship, Guaranteed Compliance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-6">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
+                        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+                            <div class="flex items-center justify-center h-48 p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(5).png?updatedAt=1755435559612" alt="Florida State Certified Roofing Contractor Badge" class="max-w-full max-h-full object-contain">
+                            </div>
+                            <div class="flex items-center justify-center h-48 p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                <img src="https://ik.imagekit.io/roosterroofing/owens_corning_preferred_contractor.png?updatedAt=1755432005389" alt="Owens Corning Preferred Contractor Badge" class="max-w-full max-h-full object-contain">
+                            </div>
+                            <div class="flex items-center justify-center h-48 p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(4).png?updatedAt=1755434115203" alt="Mule-Hide Certified Badge" class="max-w-full max-h-full object-contain">
+                            </div>
+                            <div class="flex items-center justify-center h-48 p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                <a href="https://www.bbb.org/us/fl/sarasota/profile/roofing-contractors/rooster-roofing-llc-0653-90455938/#sealclick" target="_blank" rel="nofollow" class="flex items-center justify-center h-full w-full">
+                                    <img src="https://seal-westflorida.bbb.org/seals/blue-seal-150-110-bbb-90455938.png" alt="Rooster Roofing, LLC BBB Business Review" class="max-w-full max-h-full object-contain border-0">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
+                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                            <path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-lg lg:text-xl font-bold text-foreground">5 Star Local Reviews</div>
+                                </div>
+                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-lg lg:text-xl font-bold text-foreground">Reliable Roofing Expert</div>
+                                </div>
+                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="text-lg lg:text-xl font-bold text-foreground">Efficient Service-Minimal Disruption</div>
+                                </div>
+                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="text-lg lg:text-xl font-bold text-foreground">Your Local Roofing Professional</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </main>
 
     <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
-    
+
     <footer class="bg-primary text-primary-foreground">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-                <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto">
-                <span class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground leading-tight ml-2 whitespace-rap">Rooster Roofing</span>
-            </a>
-            <p class="text-primary-foreground/80 mb-4 max-w-md">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
-          </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-primary-foreground/80">
-              <li><a href="index.html" class="hover:underline hover:text-red-600 transition-colors">Home</a></li>
-              <li><a href="about.html" class="hover:underline hover:text-red-600 transition-colors">About Us</a></li>
-              <li><a href="services.html" class="hover:underline hover:text-red-600 transition-colors">Our Services</a></li>
-              <li><a href="areas.html" class="hover:underline hover:text-red-600 transition-colors">Areas We Serve</a></li>
-              <li><a href="contact.html" class="hover:underline hover:text-red-600 transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-            <div class="space-y-3 text-primary-foreground/80">
-              <div class="flex items-center"><a href="tel:9417249355" class="hover:underline hover:text-red-600 transition-colors">(941) 724-9355</a></div>
-              <div class="flex items-center"><a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-600 transition-colors">info@roosterroofingnow.com</a></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="flex items-center justify-start gap-1 whitespace-nowrap">
+                        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto">
+                        <span class="text-3xl md:text-2xl lg:text-3xl font-bold text-primary-foreground leading-tight [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)] whitespace-nowrap">ROOSTER ROOFING</span>
+                    </a>
+                    <p class="text-primary-foreground/80 mb-4 max-w-lg">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-primary-foreground/80">
+                        <li><a href="index.html" class="hover:underline hover:text-red-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:underline hover:text-red-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:underline hover:text-red-600 transition-colors">Contact Us</a></li>
+                        <li><a href="services.html" class="hover:underline hover:text-red-600 transition-colors">Our Services</a></li>
+                        <li><a href="areas.html" class="hover:underline hover:text-red-600 transition-colors">Areas We Serve</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-3 text-primary-foreground/80">
+                        <div class="flex-shrink-0 items-center">Office:<a href="tel:9417249355" class="hover:underline hover:text-red-600 ml-1 transition-colors">(941) 724-9355</a></div>
+                        <div class="flex-shrink-0 items-center">Sales:<a href="tel:9417243470" class="hover:underline hover:text-red-600 ml-1 transition-colors">(941) 724-3470</a></div>
+                        <div class="flex-shrink-0 items-center">General Inquiry:<a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-600 ml-1 transition-colors">info@roosterroofingnow.com</a></div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
+                <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br />
+                    <a href="privacypolicy.html" class="hover:underline hover:text-red-600 transition-colors">Privacy Policy</a> |
+                    <a href="termsofservice.html" class="hover:underline hover:text-red-600 transition-colors">Terms of Service</a>
+                </p>
+            </div>
         </div>
-        <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br/>
-          <a href="privacypolicy.html" class="hover:underline hover:text-red-600 transition-colors">Privacy Policy</a> | 
-          <a href="termsofservice.html" class="hover:underline hover:text-red-600 transition-colors">Terms of Service</a>
-          </p>
-        </div>
-      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
+
 </html>
