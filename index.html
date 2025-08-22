@@ -77,23 +77,23 @@
 <body class="bg-background">
 
     <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
 
-                <div class="flex justify-start items-center flex-shrink-0">
-                    <a href="index.html" class="flex-shrink-0">
-                        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
+                <div class="flex items-center flex-shrink-0">
+                    <a href="index.html" class="justify-start flex-shrink-0">
+                        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto [filter:drop-shadow(4px_3px_2px_rgba(0,0,0,1.5))]">
                     </a>
-                    <div class="ml-1 justify-start">
+                    <div class="ml-1 items-center justify-start">
                         <a href="index.html">
-                            <span class="block text-3xl md:text-4xl font-bold text-red-600 leading-tight [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.8)] whitespace-nowrap">ROOSTER ROOFING</span>
+                            <span class="block text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 leading-tight [text-shadow:2px_2px_2px_hsl(var(--foreground)/2.5)] whitespace-nowrap">ROOSTER ROOFING</span>
                         </a>
-                        <div id="location-widget" class="relative hidden flex items-center justify-start space-x-1 mt-1 whitespace-nowrap">
+                        <div id="location-widget" class="relative hidden flex items-center space-x-1 mt-1 whitespace-nowrap">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary h-4 w-4 sm:h-5 sm:w-5">
                                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                            <div class="flex items-center justify-start space-x-1">
+                            <div class="flex items-center space-x-1">
                                 <div class="flex items-center justify-start space-x-1 cursor-pointer">
                                     <span id="location-display" class="text-xs sm:text-md md:text-lg font-medium text-foreground whitespace-nowrap">Detecting...</span>
                                     <svg id="location-arrow" class="arrow w-4 h-4 flex items-center justify-start" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@
                 </div>
 
                 <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
-                    <div id="visible-nav-links" class="flex-row items-center space-x-7"></div>
+                    <div id="visible-nav-links" class="flex-row items-center justify-between space-x-8"></div>
                     <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
                         <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
                             More
@@ -119,17 +119,17 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden"></div>
+                        <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]"></div>
                     </div>
                 </nav>
 
                 <div id="master-nav-links" class="hidden">
-                    <a href="index.html" class="text-xl text-red-600 font-bold">Home</a>
-                    <a href="residential.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Residential</a>
-                    <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Commercial</a>
-                    <a href="repairs.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Roof Repairs</a>
-                    <a href="gallery.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Gallery</a>
-                    <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Blog</a>
+                    <a href="index.html" class="text-xl text-red-600 font-bold [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Home</a>
+                    <a href="residential.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Residential</a>
+                    <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Commercial</a>
+                    <a href="repairs.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Repairs</a>
+                    <a href="gallery.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Gallery</a>
+                    <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Blog</a>
                 </div>
 
                 <div class="lg:hidden">
@@ -144,7 +144,7 @@
         </div>
 
         <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
-            <a href="index.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg">Home</a>
+            <a href="index.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Home</a>
             <a href="residential.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Residential</a>
             <a href="commercial.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
             <a href="repairs.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Roof Repairs</a>
@@ -154,21 +154,21 @@
     </header>
 
     <main>
-        <section class="relative flex items-center text-white overflow-hidden min-h-[60vh] sm:min-h-[80vh]">
-            <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
-                <source src="https://ik.imagekit.io/roosterroofing/West_Coast_Florida_Roofs_Cinematic_Video.mp4?updatedAt=1753970277182" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute inset-0 bg-card-foreground opacity-55"></div>
+        <section class="relative bg-card-foreground flex items-center text-white overflow-hidden min-h-[60vh] sm:min-h-[80vh]">
+            <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                <iframe src="https://player.vimeo.com/video/1111944528?background=1&autoplay=1&loop=1&muted=1&quality=auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%);" title="Rooster Roofing Drone Footage BG">
+                </iframe>
+            </div>
+            <div class="absolute inset-0 bg-card-foreground opacity-45"></div>
             <div class="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-20 lg:py-24 flex-shrink-0">
                 <div class="max-w-3xl">
                     <div class="animate-fade-in-up flex items-center justify-center sm:justify-start max-w-[40ch] space-x-2" style="animation-delay: 0.2s;">
                         <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 sm:h-6 sm:w-6 items-center justify-center sm:justify-start text-primary-foreground">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
-                        <span class="flex text-md md:text-lg lg:text-xl text-primary-foreground font-semibold">Certified & Licensed Roofing Contractor</span>
+                        <span class="flex text-md md:text-lg lg:text-xl text-primary-foreground font-semibold [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Certified & Licensed Roofing Contractor</span>
                     </div>
-                    <h1 class="block items-center justify-center sm:justify-start text-center sm:text-start text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-2 leading-tight max-w-[40ch]">
+                    <h1 class="block items-center justify-center sm:justify-start text-center sm:text-start text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-2 leading-tight max-w-[40ch] [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">
                         <span class="hero-headline-word" style="display: block;">
                             <span style="animation-delay: 0.4s;">F</span><span style="animation-delay: 0.45s;">l</span><span style="animation-delay: 0.5s;">o</span><span style="animation-delay: 0.55s;">r</span><span style="animation-delay: 0.6s;">i</span><span style="animation-delay: 0.65s;">d</span><span style="animation-delay: 0.7s;">a</span><span style="animation-delay: 0.75s;">’</span><span style="animation-delay: 0.8s;">s</span><span style="animation-delay: 0.85s; margin-left: 0.25em;">M</span><span style="animation-delay: 0.9s;">o</span><span style="animation-delay: 0.95s;">s</span><span style="animation-delay: 1.0s;">t</span><span style="animation-delay: 1.05s; margin-left: 0.25em;">I</span><span style="animation-delay: 1.1s;">n</span><span style="animation-delay: 1.15s;">-</span><span style="animation-delay: 1.2s;">D</span><span style="animation-delay: 1.25s;">e</span><span style="animation-delay: 1.3s;">m</span><span style="animation-delay: 1.35s;">a</span><span style="animation-delay: 1.4s;">n</span><span style="animation-delay: 1.45s;">d</span>
                         </span>
@@ -176,17 +176,17 @@
                             <span style="animation-delay: 1.5s;">R</span><span style="animation-delay: 1.55s;">o</span><span style="animation-delay: 1.6s;">o</span><span style="animation-delay: 1.65s;">f</span><span style="animation-delay: 1.7s;">i</span><span style="animation-delay: 1.75s;">n</span><span style="animation-delay: 1.8s;">g</span><span style="animation-delay: 1.85s; margin-left: 0.25em;">S</span><span style="animation-delay: 1.9s;">e</span><span style="animation-delay: 1.95s;">r</span><span style="animation-delay: 2.0s;">v</span><span style="animation-delay: 2.05s;">i</span><span style="animation-delay: 2.1s;">c</span><span style="animation-delay: 2.15s;">e</span><span style="animation-delay: 2.2s;">s</span>
                         </span>
                     </h1>
-                    <p class="animate-fade-in-up block md:inline-block items-center justify-center sm:justify-start text-center sm:text-start text-md md:text-lg lg:text-xl text-primary-foreground/90 mb-4 leading-relaxed [text-wrap:balance] max-w-[40ch] sm:max-w-full" style="animation-delay: 1.8s;">
+                    <p class="animate-fade-in-up block md:inline-block items-center justify-center sm:justify-start text-center sm:text-start text-md md:text-lg lg:text-xl text-primary-foreground/90 mb-4 leading-relaxed [text-wrap:balance] max-w-[40ch] sm:max-w-full [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]" style="animation-delay: 1.8s;">
                         From emergency repairs to complete roof replacements, Rooster Roofing delivers exceptional quality and service you can count on. Licensed and insured.
                     </p>
-                    <div class="animate-fade-in-up flex justify-center sm:justify-start max-w-[40ch] md:max-w-full" style="animation-delay: 2s;">
-                        <a href="estimator.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold ring-offset-background transition-all duration-300 px-4 py-2 sm:px-10 sm:py-4 text-sm md:text-md lg:text-lg bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">
+                    <div class="animate-fade-in-up flex justify-center sm:justify-start max-w-[40ch] md:max-w-full mb-2" style="animation-delay: 2s;">
+                        <a href="estimator.html" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold ring-offset-background transition-all duration-300 px-4 py-2 sm:px-10 sm:py-4 text-sm md:text-md lg:text-lg bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">
                             Get an Instant Roof Quote
                         </a>
                     </div>
                     <div class="es-roof-calc-widget" data-widgetdata='{"dealer_unique_id":"1714726c817af50457d810aae9d27a2e","buttonText":"Get Instant Roof Quote","borderColor":"#002555","primaryColor":"#ff5600","fontsize":"16px","fontFamily":"sans-serif","textColor":"#ffffff","width":"260px","animation":"bounce","padding":"15px 30px"}'>
                     </div>
-                    <div class="animate-fade-in-up space-x-2 items-center justify-center sm:justify-start" style="animation-delay: 2.2s;">
+                    <div class="animate-fade-in-up space-x-2 items-center justify-center sm:justify-start [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]" style="animation-delay: 2.2s;">
                         <div class="flex sm:inline-flex items-center justify-center sm:justify-start text-center sm:text-start text-secondary max-w-[40ch] sm:max-w-full leading-relaxed">
                             <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -215,7 +215,7 @@
         <section id="services" class="py-20 bg-card">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">
                         Expert Roofing Services
                     </h2>
                     <p class="text-sm md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -223,7 +223,7 @@
                         throughout West Coast Florida and surrounding areas.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -232,11 +232,11 @@
                                     <polyline points="9 22 9 12 15 12 15 22"></polyline>
                                 </svg>
                             </div>
-                            <h3 class="text-lg md:text-xl lg:text-2xl font-bold text-foreground">Full Roof Replacement</h3>
+                            <h3 class="text-md md:text-lg lg:text-xl font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Full Roof Replacement</h3>
                         </div>
                         <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-muted-foreground mb-6 text-center text-md md:text-md lg:text-lg flex-grow">Complete roof installation with premium materials. We work with all roofing types including tile, shingle, metal or flat roofs.</p>
-                            <a href="residential.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
+                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-md lg:text-lg flex-grow">Complete roof installation with premium materials. We work with all roofing types including tile, shingle, metal or flat roofs.</p>
+                            <a href="residential.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Learn More</a>
                         </div>
                     </div>
                     <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
@@ -246,11 +246,11 @@
                                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Roof Repair</h3>
+                            <h3 class="text-md md:text-lg lg:text-xl font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Repair</h3>
                         </div>
                         <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-lg lg:text-xl flex-grow">Professional repair services for leaks, damaged shingles, and storm damage. Quick response and lasting solutions.</p>
-                            <a href="repairs.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
+                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-md lg:text-lg flex-grow">Professional repair services for leaks, damaged shingles, and storm damage. Quick response and lasting solutions.</p>
+                            <a href="repairs.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Learn More</a>
                         </div>
                     </div>
                     <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
@@ -260,11 +260,11 @@
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Emergency Tarping</h3>
+                            <h3 class="text-md md:text-lg lg:text-xl font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Emergency Tarping</h3>
                         </div>
                         <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-lg lg:text-xl flex-grow">Provides emergency tarping to protect your property from water damage until permanent repairs can be made.</p>
-                            <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
+                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-md lg:text-lg flex-grow">Provides emergency tarping to protect your property from water damage until permanent repairs can be made.</p>
+                            <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Learn More</a>
                         </div>
                     </div>
                     <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
@@ -275,17 +275,17 @@
                                     <path d="m21 21-4.3-4.3"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Roof Inspection</h3>
+                            <h3 class="text-md md:text-lg lg:text-xl font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Inspection</h3>
                         </div>
                         <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-lg lg:text-xl flex-grow">Comprehensive roof assessments with detailed reports. Perfect for home purchases or insurance claims.</p>
-                            <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button">Learn More</a>
+                            <p class="text-muted-foreground mb-6 text-center text-sm md:text-md lg:text-lg flex-grow">Comprehensive roof assessments with detailed reports. Perfect for home purchases or insurance claims.</p>
+                            <a href="services.html" class="mt-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 h-10 px-4 py-2 w-full bg-red-700 text-primary-foreground hover:bg-red-600 shadow-button hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <div class="border-t border-foreground/20"></div>
         <section id="about" class="py-12">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <div class="flex flex-col items-center justify-center text-center">
@@ -296,16 +296,16 @@
                             </a>
                         </div>
                         <div class="grid grid-cols-1 gap-2">
-                            <h2 class="text-3xl lg:text-4xl font-bold text-foreground whitespace-nowrap">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-foreground whitespace-nowrap [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">
                                 Certified Roofing Contractor
                             </h2>
-                            <h3 class="text-3xl lg:text-4xl text-primary-foreground font-bold whitespace-nowrap">
+                            <h3 class="text-3xl lg:text-4xl text-primary-foreground font-bold whitespace-nowrap [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">
                                 <span class="block text-foreground hero-headline-word">
                                     Fully Licensed & Insured
                                 </span>
                             </h3>
                             <div class="flex items-center justify-center mt-2 mb-2">
-                                <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md sm:text-lg md:text-xl font-semibold ring-offset-background transition-all duration-300 h-10 px-6 sm:h-14 sm:px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">
+                                <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md sm:text-lg md:text-xl font-semibold ring-offset-background transition-all duration-300 h-10 px-6 sm:h-14 sm:px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">
                                     Contact Us
                                 </a>
                             </div>
@@ -313,125 +313,125 @@
                     </div>
                 </div>
                 <div class="py-4">
-                    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-center">
-                            <p class="text-center md:text-start text-sm md:text-md lg:text-lg text-foreground mb-2">
-                                Rooster Roofing is dedicated to providing exceptional service to homeowners and businesses throughout the West Coast Florida. We're fully licensed, insured, and committed to quality workmanship.
-                            </p>
-                            <div class="grid grid-cols-1 gap-2">
-                                <p class="text-center md:text-start text-sm md:text-md lg:text-lg text-foreground mb-2">
-                                    Our team of experts uses only the highest quality materials and follows industry best practices to ensure your roof protects your property for years to come. We stand behind our work with comprehensive warranties.
-                                </p>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="py-4">
+                            <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
+                                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                                    <p class="text-lg text-foreground mb-2 lg:col-span-1">
+                                        Rooster Roofing is dedicated to providing exceptional service to homeowners and businesses throughout the West Coast Florida. We're fully licensed, insured, and committed to quality workmanship.
+                                    </p>
+                                    <p class="text-lg text-foreground mb-2 lg:col-span-1">
+                                        Our team of experts uses only the highest quality materials and follows industry best practices to ensure your roof protects your property for years to come. We stand behind our work with comprehensive warranties.
+                                    </p>
+                                    <div class="grid grid-cols-1 gap-2 lg:col-span-1">
+                                        <div class="flex items-center">
+                                            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 h-auto flex-shrink-0 mr-3">
+                                            <span class="text-primary text-sm font-bold">Florida State-Certified Roofing Contractor</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 h-auto flex-shrink-0 mr-3">
+                                            <span class="text-primary text-sm font-bold">Mule-Hide Warranty Eligible Contractor</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 h-auto flex-shrink-0 mr-3">
+                                            <span class="text-primary text-sm font-bold">Certified Quality, Insured Protection</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 h-auto flex-shrink-0 mr-3">
+                                            <span class="text-primary text-sm font-bold">Offers Free, No-obligation Roofing Estimates</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 h-auto flex-shrink-0 mr-3">
+                                            <span class="text-primary text-sm font-bold">Superior Material, Competetive Pricing</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 h-auto flex-shrink-0 mr-3">
+                                            <span class="text-primary text-sm font-bold">Quality Worksmanship, Guaranteed Compliance</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-6">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
+                                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+                                    <div class="flex items-center justify-center h-48 p-4 shadow-card bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                        <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(5).png?updatedAt=1755435559612" alt="Florida State Certified Roofing Contractor Badge" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div class="flex items-center justify-center h-48 p-4 shadow-card bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                        <img src="https://ik.imagekit.io/roosterroofing/owens_corning_preferred_contractor.png?updatedAt=1755432005389" alt="Owens Corning Preferred Contractor Badge" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div class="flex items-center justify-center h-48 p-4 shadow-card bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                        <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(4).png?updatedAt=1755434115203" alt="Mule-Hide Certified Badge" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div class="flex items-center justify-center h-48 p-4 shadow-card bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
+                                        <a href="https://www.bbb.org/us/fl/sarasota/profile/roofing-contractors/rooster-roofing-llc-0653-90455938/#sealclick" target="_blank" rel="nofollow" class="flex items-center justify-center h-full w-full">
+                                            <img src="https://seal-westflorida.bbb.org/seals/blue-seal-150-110-bbb-90455938.png" alt="Rooster Roofing, LLC BBB Business Review" class="max-w-full max-h-full object-contain border-0">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-4">
+                                <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
+                                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
+                                        <div class="flex flex-col items-center text-center shadow-card p-6 bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                            <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                                    <path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="text-sm md:text-md lg:text-lg font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">5 Star Local Reviews</div>
+                                        </div>
+                                        <div class="flex flex-col items-center text-center shadow-card p-6 bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                            <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="9" cy="7" r="4"></circle>
+                                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="text-sm md:text-md lg:text-lg font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Reliable Roofing Expert</div>
+                                        </div>
+                                        <div class="flex flex-col items-center text-center shadow-card p-6 bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                            <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                                    <line x1="16" x2="16" y1="2" y2="6"></line>
+                                                    <line x1="8" x2="8" y1="2" y2="6"></line>
+                                                    <line x1="3" x2="21" y1="10" y2="10"></line>
+                                                </svg>
+                                            </div>
+                                            <div class="text-sm md:text-md lg:text-lg font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Efficient Service-Minimal Disruption</div>
+                                        </div>
+                                        <div class="flex flex-col items-center text-center shadow-card p-6 bg-gradient-service hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-48 justify-center">
+                                            <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
+                                                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
+                                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="text-sm md:text-md lg:text-lg font-bold text-foreground [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Your Local Roofing Professional</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="py-4">
-                    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 items-center">
-                            <div class="flex items-center">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 md:w-12 lg:w-16 h-auto flex-shrink-0">
-                                <span class="text-primary text-sm md:text-md lg:text-lg">Florida State-Certified Roofing Contractor</span>
-                            </div>
-                            <div class="flex items-center">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 md:w-12 lg:w-16 h-auto flex-shrink-0">
-                                <span class="text-primary text-sm md:text-md lg:text-lg">Mule-Hide Warranty Eligible Contractor</span>
-                            </div>
-                            <div class="flex items-center">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 md:w-12 lg:w-16 h-auto flex-shrink-0">
-                                <span class="text-primary text-sm md:text-md lg:text-lg">Certified Quality, Insured Protection</span>
-                            </div>
-                            <div class="flex items-center">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 md:w-12 lg:w-16 h-auto flex-shrink-0">
-                                <span class="text-primary text-sm md:text-md lg:text-lg">Offers Free, No-obligation Roofing Estimates</span>
-                            </div>
-                            <div class="flex items-center">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 md:w-12 lg:w-16 h-auto flex-shrink-0">
-                                <span class="text-primary text-sm md:text-md lg:text-lg">Superior Material, Competetive Pricing</span>
-                            </div>
-                            <div class="flex items-center">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(17).png?updatedAt=1755438778364" alt="Rooster Roofing favicon" class="w-8 md:w-12 lg:w-16 h-auto flex-shrink-0">
-                                <span class="text-primary text-sm md:text-md lg:text-lg">Quality Worksmanship, Guaranteed Compliance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="py-4">
-                    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
-                        <div class="grid grid-cols-4 gap-4 items-center">
-                            <div class="flex items-center justify-center h-12 p-0 md:h-24 md:p-2 lg:h-48 lg:p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(5).png?updatedAt=1755435559612" alt="Florida State Certified Roofing Contractor Badge" class="max-w-full max-h-full object-contain">
-                            </div>
-                            <div class="flex items-center justify-center h-12 p-0 md:h-24 md:p-2 lg:h-48 lg:p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                                <img src="https://ik.imagekit.io/roosterroofing/owens_corning_preferred_contractor.png?updatedAt=1755432005389" alt="Owens Corning Preferred Contractor Badge" class="max-w-full max-h-full object-contain">
-                            </div>
-                            <div class="flex items-center justify-center h-12 p-0 md:h-24 md:p-2 lg:h-48 lg:p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                                <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(4).png?updatedAt=1755434115203" alt="Mule-Hide Certified Badge" class="max-w-full max-h-full object-contain">
-                            </div>
-                            <div class="flex items-center justify-center h-12 p-0 md:h-24 md:p-2 lg:h-48 lg:p-4 shadow-card bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg">
-                                <a href="https://www.bbb.org/us/fl/sarasota/profile/roofing-contractors/rooster-roofing-llc-0653-90455938/#sealclick" target="_blank" rel="nofollow" class="flex items-center justify-center h-full w-full">
-                                    <img src="https://seal-westflorida.bbb.org/seals/blue-seal-150-110-bbb-90455938.png" alt="Rooster Roofing, LLC BBB Business Review" class="max-w-full max-h-full object-contain border-0">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="py-4">
-                        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
-                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
-                                <div class="flex flex-col items-center text-center shadow-card p-4 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-35 justify-center">
-                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
-                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
-                                            <path d="m15.477 12.89 1.515 8.526L12 17.11l-5.023 4.354 1.515-8.526L3.73 8.47l8.63-1.24L12 3l1.64 4.23 8.63 1.24-4.76 4.42Z"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="text-md lg:text-lg font-bold text-foreground">5 Star Local Reviews</div>
-                                </div>
-                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-35 justify-center">
-                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
-                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="9" cy="7" r="4"></circle>
-                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="text-md lg:text-lg font-bold text-foreground">Reliable Roofing Expert</div>
-                                </div>
-                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-35 justify-center">
-                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
-                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
-                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
-                                            <line x1="16" x2="16" y1="2" y2="6"></line>
-                                            <line x1="8" x2="8" y1="2" y2="6"></line>
-                                            <line x1="3" x2="21" y1="10" y2="10"></line>
-                                        </svg>
-                                    </div>
-                                    <div class="text-md lg:text-lg font-bold text-foreground">Efficient Service-Minimal Disruption</div>
-                                </div>
-                                <div class="flex flex-col items-center text-center shadow-card p-6 bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg min-h-35 justify-center">
-                                    <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4 shrink-0">
-                                        <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-secondary-foreground">
-                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                                            <circle cx="12" cy="10" r="3"></circle>
-                                        </svg>
-                                    </div>
-                                    <div class="text-md lg:text-lg font-bold text-foreground">Your Local Roofing Professional</div>
-                                </div>
-                            </div>
-                        </div>
         </section>
-
+        <div class="border-t border-foreground/20"></div>
         <section id="contact" class="py-20 bg-card">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">Get Your Free Roofing Estimate</h2>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Get Your Free Roofing Estimate</h2>
                     <p class="text-sm md:text-md lg:text-xl text-muted-foreground max-w-3xl mx-auto">Ready to protect your property? Contact Rooster Roofing today for a free, no-obligation estimate on any of our roofing services.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-2">
                         <div class="shadow-card bg-card rounded-lg p-6 sm:p-8">
                             <div class="mb-4">
-                                <h3 class="text-center text-xl sm:text-2xl md:text-3xl text-foreground font-bold">Request a Quote</h3>
+                                <h3 class="text-center text-xl sm:text-2xl md:text-3xl text-foreground font-bold [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Request a Quote</h3>
                                 <p class="text-center text-xs sm:text-md md:text-lg text-muted-foreground">Fill out the form below and we'll get back to you within 2 hours during business hours.</p>
                             </div>
                             <form id="contact-form" action="https://formsubmit.co/sales@roosterroofingnow.com" method="POST" class="space-y-6">
@@ -476,7 +476,7 @@
                                     <label for="details" class="text-sm font-medium text-foreground mb-2 block">Project Details</label>
                                     <textarea id="details" name="details" class="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" placeholder="Please describe your roofing needs, any issues you're experiencing, or questions you have..."></textarea>
                                 </div>
-                                <button type="submit" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md sm:text-lg md:text-xl font-semibold ring-offset-background transition-all duration-300 h-10 px-6 sm:h-14 sm:px-10 w-full bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">Get My Free Estimate</button>
+                                <button type="submit" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-md sm:text-lg md:text-xl font-semibold ring-offset-background transition-all duration-300 h-10 px-6 sm:h-14 sm:px-10 w-full bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Get My Free Estimate</button>
                             </form>
                         </div>
                     </div>
@@ -489,7 +489,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-foreground mb-1">Phone</h3>
+                                    <h3 class="font-semibold text-foreground mb-1 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Phone</h3>
                                     <p class="text-sm sm:text-md md:text-lg font-medium text-foreground mb-1 hover:underline hover:text-red-700 flex-shrink-0"><a href="tel:9417243470">(941) 724-3470</a></p>
                                     <p class="text-sm text-muted-foreground">Emergency Service</p>
                                 </div>
@@ -504,7 +504,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-foreground mb-1">Email</h3>
+                                    <h3 class="font-semibold text-foreground mb-1 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Email</h3>
                                     <p class="text-sm sm:text-md md:text-lg font-medium text-foreground mb-1 hover:underline hover:text-red-700 flex-shrink-0"><a href="mailto:sales@roosterroofingnow.com">Sales@RoosterRoofingNow.com</a></p>
                                     <p class="text-sm text-muted-foreground">Responds within 2 hours</p>
                                 </div>
@@ -519,7 +519,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-foreground mb-1">Service Area</h3>
+                                    <h3 class="font-semibold text-foreground mb-1 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Service Area</h3>
                                     <p class="text-sm sm:text-md md:text-lg font-medium text-foreground mb-1 flex-shrink-0">West-Coast Florida</p>
                                     <p class="text-sm text-muted-foreground">And surrounding areas
                                     <p class="text-sm text-red-600 hover:underline hover:text-red-700"><a href="areas.html">Click to learn more...</a></p>
@@ -530,60 +530,78 @@
                 </div>
             </div>
         </section>
-
+        <div class="border-t border-foreground/20"></div>
         <section id="area-details" class="py-20">
             <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">Serving the West Coast of Florida</h2>
-                    <p class="text-md md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">We proudly serve homeowners and property managers in Manatee, Sarasota County and surrounding areas: Tampa, St. Petersburg, Bradenton, Sarasota, Venice, and Port Charlotte. Wherever you are on Florida’s West Coast, we’ve got you covered — fast.</p>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Serving West Coast Florida and Surrounding Areas</h2>
+                    <p class="text-md md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">We proudly serve homeowners and property managers in Manatee County, Sarasota County and surrounding areas: Tampa, St. Petersburg, Bradenton, Sarasota, Venice, and Port Charlotte. Wherever you are on Florida’s West Coast, we’ve got you covered — fast.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 text-xs md:text-sm lg:text-md" id="service-areas">
+                        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 text-lg md:text-lg lg:text-md" id="service-areas">
                             <li class="flex items-center justify-between">
                                 <a href="#" class="flex items-center hover:text-primary transition-colors map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225447.4339943534!2d-82.6149020473215!3d27.99440260423983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20FL!5e0!3m2!1sen!2sus!4v1663439009289!5m2!1sen!2sus">
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
                                     <span class="text-foreground font-medium">Tampa, FL</span>
                                 </a>
                                 <a href="tampa.html" class="text-sm text-red-700 hover:underline">Learn More</a>
                             </li>
                             <li class="flex items-center justify-between">
                                 <a href="#" class="flex items-center hover:text-primary transition-colors map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22606.28493181823!2d-82.65682888463744!3d27.77311118185854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e19b4e330415%3A0x4423ab1516752320!2sSt.%20Petersburg%2C%20FL!5e0!3m2!1sen!2sus!4v1663439103816!5m2!1sen!2sus">
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
                                     <span class="text-foreground font-medium">St. Petersburg, FL</span>
                                 </a>
                                 <a href="st-petersburg.html" class="text-sm text-red-700 hover:underline">Learn More</a>
                             </li>
                             <li class="flex items-center justify-between">
                                 <a href="#" class="flex items-center hover:text-primary transition-colors map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113407.4816954284!2d-82.62121763133679!3d27.478954702008413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c314d380963695%3A0x53994323282fb61b!2sBradenton%2C%20FL!5e0!3m2!1sen!2sus!4v1663439148564!5m2!1sen!2sus">
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
                                     <span class="text-foreground font-medium">Bradenton, FL</span>
                                 </a>
                                 <a href="bradenton.html" class="text-sm text-red-700 hover:underline">Learn More</a>
                             </li>
                             <li class="flex items-center justify-between">
                                 <a href="#" class="flex items-center hover:text-primary transition-colors map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113576.8143924707!2d-82.5939108342466!3d27.33643475837269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c3411c4ac4d769%3A0x86c679ff8100f915!2sSarasota%2C%20FL!5e0!3m2!1sen!2sus!4v1663439178714!5m2!1sen!2sus">
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
                                     <span class="text-foreground font-medium">Sarasota, FL</span>
                                 </a>
                                 <a href="sarasota.html" class="text-sm text-red-700 hover:underline">Learn More</a>
                             </li>
                             <li class="flex items-center justify-between">
                                 <a href="#" class="flex items-center hover:text-primary transition-colors map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57180.44498319693!2d-82.4795321855268!3d27.10309990596165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c35016e3760241%3A0x6a2c3ba024343d3a!2sVenice%2C%20FL!5e0!3m2!1sen!2sus!4v1663439209581!5m2!1sen!2sus">
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
                                     <span class="text-foreground font-medium">Venice, FL</span>
                                 </a>
                                 <a href="venice.html" class="text-sm text-red-700 hover:underline">Learn More</a>
                             </li>
                             <li class="flex items-center justify-between">
                                 <a href="#" class="flex items-center hover:text-primary transition-colors map-link" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57313.38317823862!2d-82.16782253303106!3d26.99727142439167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db44a3328e1289%3A0xb119c62c14828131!2sPort%20Charlotte%2C%20FL!5e0!3m2!1sen!2sus!4v1663439240422!5m2!1sen!2sus">
-                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mr-3 shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
                                     <span class="text-foreground font-medium">Port Charlotte, FL</span>
                                 </a>
                                 <a href="port-charlotte.html" class="text-sm text-red-700 hover:underline">Learn More</a>
                             </li>
                         </ul>
-                        <a href="contact.html" class="mt-8 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1">Get Your Free Estimate</a>
+                        <a href="contact.html" class="mt-8 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-semibold ring-offset-background transition-all duration-300 h-14 px-10 bg-red-700 text-secondary-foreground hover:bg-red-600 hover:scale-105 shadow-hero transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Get Your Free Estimate</a>
                     </div>
                     <div>
                         <iframe id="service-area-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113576.8143924707!2d-82.5939108342466!3d27.33643475837269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c3411c4ac4d769%3A0x86c679ff8100f915!2sSarasota%2C%20FL!5e0!3m2!1sen!2sus!4v1663439178714!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-card w-full">
@@ -597,44 +615,52 @@
     <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
 
     <footer class="bg-primary text-primary-foreground">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="md:col-span-2">
-                    <a href="index.html" class="flex items-center justify-start gap-1 whitespace-nowrap">
-                        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto">
-                        <span class="text-3xl md:text-2xl lg:text-3xl font-bold text-primary-foreground leading-tight [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)] whitespace-nowrap">ROOSTER ROOFING</span>
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+
+                <div class="flex flex-col md:col-span-2 items-center lg:items-start space-y-2">
+                    <a href="index.html" class="flex-shrink-0">
+                        <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="max-w-md h-40 w-auto lg:h-48 lg:w-auto mx-auto">
                     </a>
-                    <p class="text-primary-foreground/80 mb-4 max-w-lg">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
+                    <p class="text-center lg:text-start text-primary-foreground max-w-md [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">
+                        Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.
+                    </p>
                 </div>
+
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-primary-foreground/80">
-                        <li><a href="index.html" class="hover:underline hover:text-red-600 transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:underline hover:text-red-600 transition-colors">About Us</a></li>
-                        <li><a href="contact.html" class="hover:underline hover:text-red-600 transition-colors">Contact</a></li>
-                        <li><a href="services.html" class="hover:underline hover:text-red-600 transition-colors">Our Services</a></li>
-                        <li><a href="areas.html" class="hover:underline hover:text-red-600 transition-colors">Areas We Serve</a></li>
+                    <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Quick Links</h4>
+                    <ul class="text-center lg:text-start space-y-2 text-primary-foreground/80">
+                        <li><a href="index.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Home</a></li>
+                        <li><a href="about.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">About Us</a></li>
+                        <li><a href="contact.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Contact Us</a></li>
+                        <li><a href="services.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Our Services</a></li>
+                        <li><a href="areas.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Areas We Serve</a></li>
                     </ul>
                 </div>
+
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <div class="space-y-3 text-primary-foreground/80">
-                        <div class="flex-shrink-0 items-center">Office:<a href="tel:9417249355" class="hover:underline hover:text-red-600 ml-1 transition-colors">(941) 724-9355</a></div>
-                        <div class="flex-shrink-0 items-center">Sales:<a href="tel:9417243470" class="hover:underline hover:text-red-600 ml-1 transition-colors">(941) 724-3470</a></div>
-                        <div class="flex-shrink-0 items-center">General Inquiry:<a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-600 ml-1 transition-colors">info@roosterroofingnow.com</a></div>
+                    <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Contact Info</h4>
+                    <div class="text-center lg:text-start space-y-3 text-primary-foreground/80 whitespace-nowrap">
+                        <div><a href="tel:9417249355" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-9355</a></div>
+                        <div><a href="tel:9417243470" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-3470</a></div>
+                        <div><a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">info@roosterroofingnow.com</a></div>
                     </div>
                 </div>
+
             </div>
-            <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
+
+            <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground">
                 <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br />
-                    <a href="privacypolicy.html" class="hover:underline hover:text-red-600 transition-colors">Privacy Policy</a> |
-                    <a href="termsofservice.html" class="hover:underline hover:text-red-600 transition-colors">Terms of Service</a>
+                    <a href="privacypolicy.html" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Privacy Policy</a> |
+                    <a href="termsofservice.html" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Terms of Service</a>
                 </p>
             </div>
         </div>
     </footer>
 
+
     <script src="script.js" defer></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 
 </html>
