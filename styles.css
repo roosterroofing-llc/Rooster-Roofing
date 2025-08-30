@@ -1,112 +1,295 @@
-/* Embedding the custom design system and styles */
-:root {
-    /* Blue-Green Theme */
-    --primary: 200 70% 25%;            /* Dark Blue-Green for header */
-    --primary-foreground: 0 0% 98%;    /* White text on dark background */
-    --background: 200 30% 94%;         /* Light Blue-Green for body */
-    --foreground: 300 65% 15%;         /* Black text on light background */
+document.addEventListener("DOMContentLoaded", function() {
+  // --- Mobile Menu Toggle ---
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-    /* Button Colors */
-    --destructive: 350 90% 30%;        /* Dark Red for buttons */
-    --destructive-foreground: 0 0% 98%;/* White text on red buttons */
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
 
-    /* Additional variables may be retained from original for accents, cards, etc. */
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
-    --secondary: 50 75% 60%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 190 40% 90%;
-    --muted-foreground: 215 20% 45%;
-    --accent: 190 60% 60%;
-    --accent-foreground: 215 25% 15%;
-    --border: 190 20% 80%;
-    --input: 190 20% 80%;
-    --ring: 190 70% 25%;
-    --radius: 0.5rem;
+  // --- Priority+ Responsive Navigation ---
+  const visibleLinksContainer = document.getElementById('visible-nav-links');
+  const overflowContainer = document.getElementById('overflow-nav-container');
+  const overflowMenu = document.getElementById('overflow-nav-menu');
+  const overflowButton = document.getElementById('overflow-nav-button');
+  const masterLinks = document.querySelectorAll('#master-nav-links a');
+  const nav = document.querySelector('nav.hidden.lg\\:flex');
 
-    /* Gradients and Shadows (optional, update if used) */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(190, 50%, 30%));
-    --gradient-service: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
-    --gradient-cta: linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%));
-    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.1);
-    --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
-    --shadow-button: 0 4px 8px -2px hsl(var(--destructive) / 0.4);
-}
-body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+  function updateResponsiveNav() {
+    if (!nav || !visibleLinksContainer || !overflowContainer) return;
 
-/* Typographic Animation Styles */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    const availableWidth = nav.offsetWidth;
+    visibleLinksContainer.innerHTML = '';
+    overflowMenu.innerHTML = '';
+    overflowContainer.style.display = 'none';
+
+    masterLinks.forEach(link => {
+      visibleLinksContainer.appendChild(link.cloneNode(true));
+    });
+
+    let totalWidth = 0;
+    const visibleLinks = Array.from(visibleLinksContainer.children);
+    visibleLinks.forEach(link => {
+      totalWidth += link.offsetWidth;
+    });
+
+    if (visibleLinks.length > 1) {
+      totalWidth += (visibleLinks.length - 1) * 24;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    if (totalWidth > availableWidth) {
+      while (totalWidth > availableWidth && visibleLinksContainer.children.length > 0) {
+        const lastLink = visibleLinksContainer.lastElementChild;
+        const linkWidth = lastLink.offsetWidth + 24;
+
+        const overflowLink = lastLink.cloneNode(true);
+        overflowLink.className = 'block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors';
+
+        overflowMenu.insertBefore(overflowLink, overflowMenu.firstChild);
+        visibleLinksContainer.removeChild(lastLink);
+        totalWidth -= linkWidth;
+      }
+      overflowContainer.style.display = 'block';
     }
+  }
+
+  if (overflowButton) {
+    overflowButton.addEventListener('click', () => overflowMenu.classList.toggle('hidden'));
+    overflowMenu.addEventListener('mouseleave', () => overflowMenu.classList.add('hidden'));
+  }
+
+  updateResponsiveNav();
+  window.addEventListener('resize', updateResponsiveNav);
+
+  // --- Location Detection and Selection ---
+  const locationWidget = document.getElementById('location-widget');
+  const locationDisplay = document.getElementById('location-display');
+  const locationMenu = document.getElementById('location-menu');
+  const locationList = document.getElementById('location-list');
+  const locationArrow = document.getElementById('location-arrow');
+  const inAreaMessage = document.getElementById('in-area-message');
+  const outOfAreaMessage = document.getElementById('out-of-area-message');
+
+  const serviceAreaPages = {
+    "Tampa": "tampa.html",
+    "St. Petersburg": "st-petersburg.html",
+    "Bradenton": "bradenton.html",
+    "Sarasota": "sarasota.html",
+    "Venice": "venice.html",
+    "Port Charlotte": "port-charlotte.html"
+  };
+
+  // Define the primary counties you serve
+  const serviceCounties = ["Sarasota", "Manatee"];
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  function populateLocationMenu() {
+    if (!locationList) return;
+    locationList.innerHTML = ''; // Clear existing items
+    for (const area in serviceAreaPages) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = serviceAreaPages[area];
+      a.textContent = area;
+      a.className = "block px-4 py-2 text-sm text-foreground hover:bg-muted";
+      li.appendChild(a);
+      locationList.appendChild(li);
+    }
+  }
+
+  function showInAreaMessage() {
+    if (inAreaMessage) {
+      inAreaMessage.textContent = "(We serve your area!)";
+    }
+  }
+
+  function showOutOfAreaMessage() {
+    if (outOfAreaMessage) {
+      outOfAreaMessage.textContent = "(Out of Service Area)";
+    }
+  }
+
+  async function getLocation() {
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      const data = await response.json();
+      const city = data.city;
+      const state = data.region_code;
+      const county = data.county;
+
+      locationDisplay.textContent = `${city || "Your Location"}, ${state || ""}`;
+
+      // Check if the location is in one of the service counties or cities
+      const inServiceCounty = serviceCounties.some(c => county && county.includes(c));
+      const inServiceCity = Object.keys(serviceAreaPages).some(area => city && city.includes(area));
+
+      if (inServiceCounty || inServiceCity) {
+        showInAreaMessage();
+      } else {
+        showOutOfAreaMessage();
+      }
+
+    } catch (error) {
+      console.error("Error fetching location:", error);
+      locationDisplay.textContent = "Select Location";
+    } finally {
+      if (locationWidget) {
+        locationWidget.classList.remove('hidden');
+      }
+    }
+  }
+
+  async function handleLocationLogic() {
+    const isLocationPage = Object.values(serviceAreaPages).includes(currentPage);
+
+    if (currentPage === 'index.html' || currentPage === '') {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        const detectedCity = data.city;
+        const detectedState = data.region_code;
+        const detectedCounty = data.county;
+
+        let matchedPage = null;
+        // Still check for a specific city match first to redirect for a better UX
+        for (const area in serviceAreaPages) {
+          if (detectedCity && detectedCity.includes(area)) {
+            matchedPage = serviceAreaPages[area];
+            break;
+          }
+        }
+
+        if (matchedPage) {
+          window.location.href = matchedPage;
+        } else {
+          locationDisplay.textContent = `${detectedCity || "Select Location"}, ${detectedState || ""}`;
+
+          const inServiceCounty = serviceCounties.some(c => detectedCounty && detectedCounty.includes(c));
+          if (inServiceCounty) {
+            showInAreaMessage();
+          } else {
+            showOutOfAreaMessage();
+          }
+          locationWidget.classList.remove('hidden');
+        }
+      } catch (error) {
+        console.error("Error fetching location:", error);
+        locationDisplay.textContent = "Select Location";
+        locationWidget.classList.remove('hidden');
+      }
+    } else if (isLocationPage) {
+      // If on a specific location page, always show the "in area" message
+      const pageTitle = document.title.split(' ')[0].replace('-', ' ');
+      locationDisplay.textContent = `${pageTitle}, FL`;
+      showInAreaMessage();
+      locationWidget.classList.remove('hidden');
+    } else {
+      // For all other pages, use the general location check
+      getLocation();
+    }
+  }
+
+  if (locationWidget) {
+    populateLocationMenu();
+    handleLocationLogic();
+
+    if (locationArrow) {
+      locationArrow.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (locationMenu) {
+          locationMenu.classList.toggle('hidden');
+        }
+      });
+    }
+
+    document.addEventListener('click', function(event) {
+      if (locationWidget && !locationWidget.contains(event.target)) {
+        if (locationMenu) {
+          locationMenu.classList.add('hidden');
+        }
+      }
+    });
+  }
+
+  // --- Interactive Map Logic ---
+  const mapLinks = document.querySelectorAll('.map-link');
+  const serviceAreaMap = document.getElementById('service-area-map');
+
+  if (mapLinks && serviceAreaMap) {
+    mapLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const newSrc = this.getAttribute('data-src');
+        serviceAreaMap.src = newSrc;
+      });
+    });
+  }
+
+  // --- Gorilla Roof Leads Widget ---
+  function triggerWidget() {
+    const button = document.querySelector(".es-roof-calc-widget button");
+    if (button) {
+      button.click();
+    } else {
+      console.warn("Roof quote button not found, retrying...");
+      setTimeout(triggerWidget, 500);
+    }
+  }
+  if (document.querySelector(".es-roof-calc-widget")) {
+    setTimeout(triggerWidget, 1000);
+  }
+
+  // --- Gallery Auto-Slide ---
+  const sliders = document.querySelectorAll('.c');
+  const slideInterval = 5000; // 5 seconds
+
+  sliders.forEach(slider => {
+    let intervalId;
+    const sliderName = slider.querySelector('input[type="radio"]').name;
+    const radioButtons = slider.querySelectorAll('input[name="' + sliderName + '"]');
+    const totalSlides = radioButtons.length;
+    let currentSlide = 0;
+
+    const startAutoSlide = () => {
+      intervalId = setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        radioButtons[currentSlide].checked = true;
+      }, slideInterval);
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(intervalId);
+    };
+
+    startAutoSlide();
+
+    // Pause and resume on hover/touch
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
+
+    // Stop auto-slide when a user manually clicks a radio button
+    radioButtons.forEach(radio => {
+      radio.addEventListener('click', () => {
+        stopAutoSlide();
+        currentSlide = Array.from(radioButtons).indexOf(radio);
+        startAutoSlide();
+      });
+    });
+  });
+
+});
+
+// --- Function to load external scripts ---
+function loadScript(src, isAsync = true) {
+  let script = document.createElement('script');
+  script.src = src;
+  script.async = isAsync;
+  document.body.appendChild(script);
 }
 
-.animate-fade-in-up {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.hero-headline-word > span {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.sc-iGgWBj {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-/* Location Modal Styles */
-.location-modal {
-    transition: opacity 0.3s ease;
-}
-
-.location-modal-content {
-    transition: transform 0.3s ease;
-}
-
-/* Location Widget Styles */
-#location-widget .arrow {
-    transition: transform 0.2s;
-}
-#location-widget:hover .arrow {
-    transform: rotate(180deg);
-}
-
-/* Add this to the end of your styles.css file */
-#in-area-message {
-    color: #16a34a; /* This is a green color */
-}
-
-/* Custom styles for the location dropdown */
-#location-select {
-    background-image: var(--gradient-service);
-    color: hsl(var(--foreground));
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem; /* Equivalent to rounded-md */
-    border: 1px solid hsl(var(--border));
-    transition: background-color 0.2s, color 0.2s;
-}
-
-#location-select:hover {
-    background-image: none; /* Remove gradient on hover */
-    background-color: hsl(0, 72%, 51%); /* This is a standard red-700 color */
-    color: hsl(var(--primary-foreground));
-}
-
-/* Custom styles for the new location dropdown menu */
-#location-menu {
-    min-width: 150px; /* Ensures the dropdown has a nice width */
-}
+// Load external widget scripts
+loadScript("https://widget.gorillaroofleads.com/index.js");
+loadScript("https://static.elfsight.com/platform/platform.js");
