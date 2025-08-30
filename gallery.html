@@ -1,283 +1,339 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery - Rooster Roofing, LLC</title>
   <meta name="description" content="View our gallery of completed roofing projects. See before and after photos of shingle, metal, and tile roofs for both residential and commercial properties." />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- SwiperJS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles.css" />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
-                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
-                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
-                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
-                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
-                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
-                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
-                        'emergency': 'hsl(var(--emergency))',
-                    },
-                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
-                    boxShadow: { 'card': 'var(--shadow-card)', 'hero': 'var(--shadow-hero)', 'button': 'var(--shadow-button)' },
-                    backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-service': 'var(--gradient-service)', 'gradient-cta': 'var(--gradient-cta)' },
-                    animation: { pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
-                }
-            }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            primary: {
+              DEFAULT: 'hsl(var(--primary))',
+              foreground: 'hsl(var(--primary-foreground))'
+            },
+            secondary: {
+              DEFAULT: 'hsl(var(--secondary))',
+              foreground: 'hsl(var(--secondary-foreground))'
+            },
+            muted: {
+              DEFAULT: 'hsl(var(--muted))',
+              foreground: 'hsl(var(--muted-foreground))'
+            },
+            card: {
+              DEFAULT: 'hsl(var(--card))',
+              foreground: 'hsl(var(--card-foreground))'
+            },
+            'roofing-slate': 'hsl(var(--roofing-slate))',
+            'roofing-terra': 'hsl(var(--roofing-terra))',
+            'emergency': 'hsl(var(--emergency))',
+          },
+          borderRadius: {
+            lg: 'var(--radius)',
+            md: 'calc(var(--radius) - 2px)',
+            sm: 'calc(var(--radius) - 4px)'
+          },
+          boxShadow: {
+            'card': 'var(--shadow-card)',
+            'hero': 'var(--shadow-hero)',
+            'button': 'var(--shadow-button)'
+          },
+          backgroundImage: {
+            'gradient-hero': 'var(--gradient-hero)',
+            'gradient-service': 'linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)))',
+            'gradient-cta': 'linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%))'
+          },
+          animation: {
+            pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+
+          }
+
         }
-    </script>
+
+      }
+
+    }
+  </script>
 </head>
 
 <body class="bg-background">
 
-    <!-- Header -->
-    <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center py-4">
+  <!-- Header -->
+  <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-2">
 
-      <!-- Logo and Title -->
-      <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto">
-        <span class="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight ml-2 whitespace-nowrap">Rooster Roofing</span>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-foreground">
-        <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
-        <a href="residential.html" class="hover:text-secondary transition-colors">Residential</a>
-        <a href="commercial.html" class="hover:text-secondary transition-colors">Commercial</a>
-        <a href="repairs.html" class="hover:text-secondary transition-colors">Roof Repairs</a>
-        <a href="gallery.html" class="text-secondary font-bold">Gallery</a>
-        <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
-      </nav>
-
-      <!-- CTA (Call Button) - Hidden on smaller screens -->
-      <div class="hidden md:flex items-center space-x-4">
-          <a href="tel:+19417243470" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold ring-offset-background transition-all duration-200 h-11 px-6 bg-gradient-cta text-primary-foreground hover:bg-red-700 shadow-button animate-pulse">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            Call us now!
+        <div class="flex items-center flex-shrink-0">
+          <a href="index.html" class="justify-start flex-shrink-0">
+            <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto [filter:drop-shadow(4px_3px_2px_rgba(0,0,0,1.5))]">
           </a>
+          <div class="ml-1 items-center justify-start">
+            <a href="index.html">
+              <span class="block text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 leading-tight [text-shadow:2px_2px_2px_hsl(var(--foreground)/2.5)] whitespace-nowrap">ROOSTER ROOFING</span>
+            </a>
+            <div id="location-widget" class="relative hidden flex items-center space-x-1 mt-1 whitespace-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary h-4 w-4 sm:h-5 sm:w-5">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="flex items-center space-x-1">
+                <div class="flex items-center justify-start space-x-1 cursor-pointer">
+                  <span id="location-display" class="text-xs sm:text-md md:text-lg font-medium text-foreground whitespace-nowrap">Detecting...</span>
+                  <svg id="location-arrow" class="arrow w-4 h-4 flex items-center justify-start" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+                <span id="in-area-message" class="text-xs sm:text-md font-semibold whitespace-nowrap"></span>
+                <span id="out-of-area-message" class="text-xs sm:text-md text-red-600 font-semibold whitespace-nowrap"></span>
+              </div>
+              <div id="location-menu" class="absolute top-full left-0 mt-2 bg-gradient-service border border-border rounded-md shadow-lg hidden z-10">
+                <ul id="location-list"></ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="lg:hidden">
-        <button id="mobile-menu-button" class="text-foreground">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
+        <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
+          <div id="visible-nav-links" class="flex-row items-center justify-between space-x-8"></div>
+          <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
+            <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
+              More
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]"></div>
+          </div>
+        </nav>
+
+        <div id="master-nav-links" class="hidden">
+          <a href="index.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Home</a>
+          <a href="residential.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Residential</a>
+          <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Commercial</a>
+          <a href="repairs.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Repairs</a>
+          <a href="gallery.html" class="text-xl text-red-600 font-bold [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Gallery</a>
+          <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Blog</a>
+        </div>
+
+        <div class="lg:hidden">
+          <button id="mobile-menu-button" class="text-foreground">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+
       </div>
-
     </div>
-  </div>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
-    <a href="index.html" class="block py-2 px-4 text-sm hover:bg-muted">Home</a>
-    <a href="residential.html" class="block py-2 px-4 text-sm hover:bg-muted">Residential</a>
-    <a href="commercial.html" class="block py-2 px-4 text-sm hover:bg-muted">Commercial</a>
-    <a href="repairs.html" class="block py-2 px-4 text-sm hover:bg-muted">Roof Repairs</a>
-    <a href="gallery.html" class="block py-2 px-4 text-sm hover:bg-muted">Gallery</a>
-    <a href="blog.html" class="block py-2 px-4 text-sm hover:bg-muted">Blog</a>
-    <a href="estimator.html" class="block py-2 px-4 text-sm hover:bg-muted">Get an Instant Roof Quote</a>
-    <a href="privacypolicy.html" class="block py-2 px-4 text-sm hover:bg-muted">Privacy Policy</a>
-    <a href="termsofservice.html" class="block py-2 px-4 text-sm hover:bg-muted">Terms of Service</a>
-  </div>
-</header>
+    <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
+      <a href="index.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
+      <a href="residential.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Residential</a>
+      <a href="commercial.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
+      <a href="repairs.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Roof Repairs</a>
+      <a href="gallery.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Gallery</a>
+      <a href="blog.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
+    </div>
+  </header>
 
   <!-- Main Content -->
   <main>
     <section class="py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h1 class="text-4xl sm:text-5xl font-bold text-foreground mb-4">Our Workmanship & Quality</h1>
+          <h1 class="text-4xl sm:text-5xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Our Workmanship & Quality</h1>
           <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Browse our gallery to see the quality and care we put into every project.</p>
         </div>
 
-        <!-- Swiper Galleries -->
-        <div class="space-y-16">
-          <!-- Shingle Roofs Gallery -->
-                    <div>
-                        <h2 class="text-3xl font-bold text-foreground mb-8 text-center">Residential - Shingle Roofs</h2>
-                        <div class="swiper-container shingle-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">Before</h3>
-                                            <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Shingle+Before+1" alt="Before shingle roof replacement" class="rounded-lg shadow-card">
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">After</h3>
-                                            <img src="https://placehold.co/600x400/658595/ffffff?text=Shingle+After+1" alt="After shingle roof replacement" class="rounded-lg shadow-card">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">Before</h3>
-                                            <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Shingle+Before+2" alt="Before shingle roof replacement" class="rounded-lg shadow-card">
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">After</h3>
-                                            <img src="https://placehold.co/600x400/658595/ffffff?text=Shingle+After+2" alt="After shingle roof replacement" class="rounded-lg shadow-card">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-
-                    <!-- Commercial Gallery -->
-                     <div>
-                        <h2 class="text-3xl font-bold text-foreground mb-8 text-center">Commercial Roofing</h2>
-                        <div class="swiper-container commercial-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">Before</h3>
-                                            <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Commercial+Before+1" alt="Before commercial roof project" class="rounded-lg shadow-card">
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">After</h3>
-                                            <img src="https://placehold.co/600x400/215025/ffffff?text=Commercial+After+1" alt="After commercial roof project" class="rounded-lg shadow-card">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">Before</h3>
-                                            <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Commercial+Before+2" alt="Before commercial roof project" class="rounded-lg shadow-card">
-                                        </div>
-                                        <div>
-                                            <h3 class="text-xl font-semibold mb-2 text-center">After</h3>
-                                            <img src="https://placehold.co/600x400/215025/ffffff?text=Commercial+After+2" alt="After commercial roof project" class="rounded-lg shadow-card">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-
-          <!-- Video Showcase -->
-          <div>
-            <h2 class="text-3xl font-bold text-foreground mb-8 text-center">Video Showcase</h2>
-            
-            <div class="swiper video-swiper w-full max-w-6xl mx-auto">
-              <div class="swiper-wrapper">
-                
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                  <div class="aspect-video rounded-lg overflow-hidden shadow-card">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/yLPsmYFRNp4?si=jk-xiMighgeKveUS"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                    </div>
-                  </div>
-                  
-                  <!-- Slide 2 -->
-                  <div class="swiper-slide">
-                    <div class="aspect-video rounded-lg overflow-hidden shadow-card">
-                      <iframe class="w-full h-full" src="https://www.youtube.com/embed/another-video-id"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    
-                    <!-- Add more slides here -->
-                    </div>
-                    
-                    <!-- Navigation + Pagination -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    </div>
-                  </div>
-                </section>
-
-    <!-- Elfsight Google Reviews Widget -->
-    <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
-  </main>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-primary-foreground">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto">
-        <span class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground leading-tight ml-2 whitespace-rap">Rooster Roofing</span>
-      </a>
-            <p class="text-primary-foreground/80 mb-4 max-w-md">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Shingle Roof Slider -->
+          <div class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Shingles</h1>
+            <div class="c">
+              <input type="radio" name="shingle" id="shingle-1" checked>
+              <label for="shingle-1" style="--hue: 32"></label>
+              <div class="ci" style="--z: 4">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://img.companycam.com/4jWDquu7bRq3gR3QAvebOV0amTpYaSa7OYPDk01ruiQ/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS82YTlh/M2VkMy02ZDI4LTQ0/YTEtYmEwMy1hYmNl/NGVkYmZjOTcuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
+              </div>
+              <input type="radio" name="shingle" id="shingle-2">
+              <label for="shingle-2" style="--hue: 82"></label>
+              <div class="ci" style="--z: 3">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://img.companycam.com/7r8TDgHhtESPDkZatl-hXcKfRZv2nx7LcpI8yH6kjak/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS9kNDY1/NmYwMi0zZmYzLTQ5/NGUtYWQzNy00Njc2/ZDg3MWUyNjUuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
+              </div>
+              <input type="radio" name="shingle" id="shingle-3">
+              <label for="shingle-3" style="--hue: 40"></label>
+              <div class="ci" style="--z: 2">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://img.companycam.com/SLp8UNYwuWt8pSy1PLr35bTN84CR9i51x33hFHS71s8/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS85NjU2/YWJlNS1kNzBmLTQ1/YjgtODk3Yy05NWU0/ZmExYmQ4OTguanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
+              </div>
+              <input type="radio" name="shingle" id="shingle-4">
+              <label for="shingle-4" style="--hue: 210"></label>
+              <div class="ci" style="--z: 1">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://img.companycam.com/P37qV0BVRTIXIjXsoNOpw54zyixewUJ2sDb7gjhFfxY/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS80OTBk/YWVlNy0yOGU1LTQw/NWEtYmRkMy01NjNh/NjAxZWM0OWQuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-primary-foreground/80">
-              <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
-              <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
-              <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
-              <li><a href="areas.html" class="hover:text-secondary transition-colors">Areas We Serve</a></li>
-              <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
-            </ul>
+
+          <!-- Metal Roof Slider -->
+          <div class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Tiles</h1>
+            <div class="c">
+              <input type="radio" name="metal" id="metal-1" checked>
+              <label for="metal-1" style="--hue: 32"></label>
+              <div class="ci" style="--z: 4">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://img.companycam.com/Bn9w7kl6d4AaTkPv3E_3IEtowfMQnA52gYCFQof446k/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS82NWFj/MjkwZC1hMzg2LTRi/ODYtOTBmMy1hY2Zl/NmFhZjViY2IuanBn.jpg" alt="Metal - Full Roof Replacement">
+              </div>
+              <input type="radio" name="metal" id="metal-2">
+              <label for="metal-2" style="--hue: 82"></label>
+              <div class="ci" style="--z: 3">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/808080/ffffff?text=METAL+ROOF+AFTER" alt="Metal - Full Roof Replacement">
+              </div>
+              <input type="radio" name="metal" id="metal-3">
+              <label for="metal-3" style="--hue: 40"></label>
+              <div class="ci" style="--z: 2">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/808080/ffffff?text=METAL+ROOF+CLOSE-UP" alt="Metal - Full Roof Replacement">
+              </div>
+              <input type="radio" name="metal" id="metal-4">
+              <label for="metal-4" style="--hue: 210"></label>
+              <div class="ci" style="--z: 1">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/808080/ffffff?text=METAL+ROOF+DRONE" alt="Metal - Full Roof Replacement">
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-            <div class="space-y-3 text-primary-foreground/80">
-              <div class="flex items-center"><a href="tel:9417243470" class="hover:text-secondary transition-colors">(941) 724-3470</a></div>
-              <div class="flex items-center"><a href="mailto:sales@roosterroofingnow.com" class="hover:text-secondary transition-colors">sales@roosterroofingnow.com</a></div>
+
+          <!-- Tile Roof Slider -->
+          <div class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Tiles</h1>
+            <div class="c">
+              <input type="radio" name="tile" id="tile-1" checked>
+              <label for="tile-1" style="--hue: 32"></label>
+              <div class="ci" style="--z: 4">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Roof Repair</h2>
+                <img src="https://img.companycam.com/QDrfKNu49RuFdETXqHuUeuA7zW1RDyNA9jpOZYqabKQ/rs:fit:4032:4032/q:65/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS8wMTUz/MjAzOS01ZTY1LTRl/MjAtYWIwOC04NGJh/NzNlYzZmMzYuanBl/Zw.jpg" alt="Tile - Roof Repair">
+              </div>
+              <input type="radio" name="tile" id="tile-2">
+              <label for="tile-2" style="--hue: 82"></label>
+              <div class="ci" style="--z: 3">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/A52A2A/ffffff?text=TILE+ROOF+AFTER" alt="Tile - Full Roof Replacement">
+              </div>
+              <input type="radio" name="tile" id="tile-3">
+              <label for="tile-3" style="--hue: 40"></label>
+              <div class="ci" style="--z: 2">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/A52A2A/ffffff?text=TILE+ROOF+CLOSE-UP" alt="Tile - Full Roof Replacement">
+              </div>
+              <input type="radio" name="tile" id="tile-4">
+              <label for="tile-4" style="--hue: 210"></label>
+              <div class="ci" style="--z: 1">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/A52A2A/ffffff?text=TILE+ROOF+DRONE" alt="Tile - Full Roof Replacement">
+              </div>
+            </div>
+          </div>
+
+          <!-- Rolled Roofing Slider -->
+          <div class="text-center mb-16">
+            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Flat Roofs</h1>
+            <div class="c">
+              <input type="radio" name="rolled" id="rolled-1" checked>
+              <label for="rolled-1" style="--hue: 32"></label>
+              <div class="ci" style="--z: 4">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://img.companycam.com/xhSzwftxo0G-1WJ8yzPi1m2aC5uiWoR_kpYmFzgsMXM/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS8wMjI4/OGFlNS0xZGJkLTQ5/ZmUtODA2My0yMDc3/ZDg4NTQxMjQuanBl/Zw.jpg" alt="Rolled Roofing - Full Roof Replacement">
+              </div>
+              <input type="radio" name="rolled" id="rolled-2">
+              <label for="rolled-2" style="--hue: 82"></label>
+              <div class="ci" style="--z: 3">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/696969/ffffff?text=ROLLED+ROOFING+AFTER" alt="Rolled Roofing - Full Roof Replacement">
+              </div>
+              <input type="radio" name="rolled" id="rolled-3">
+              <label for="rolled-3" style="--hue: 40"></label>
+              <div class="ci" style="--z: 2">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/696969/ffffff?text=ROLLED+ROOFING+CLOSE-UP" alt="Rolled Roofing - Full Roof Replacement">
+              </div>
+              <input type="radio" name="rolled" id="rolled-4">
+              <label for="rolled-4" style="--hue: 210"></label>
+              <div class="ci" style="--z: 1">
+                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
+                <img src="https://placehold.co/700x500/696969/ffffff?text=ROLLED+ROOFING+DRONE" alt="Rolled Roofing - Full Roof Replacement">
+              </div>
             </div>
           </div>
         </div>
-        <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br/>Privacy Policy | Terms of Service</p>
-        </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.shingle-swiper', {
-        loop: true,
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        pagination: { el: '.swiper-pagination', clickable: true },
-      });
-      new Swiper('.commercial-swiper', {
-        loop: true,
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        pagination: { el: '.swiper-pagination', clickable: true },
-      });
-      new Swiper('.video-swiper', {
-        loop: true,
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        pagination: { el: '.swiper-pagination', clickable: true },
-      });
-    });
-  </script>
+  <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
 
+  <!-- Footer -->
+  <footer class="bg-primary text-primary-foreground">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+
+        <div class="flex flex-col md:col-span-2 items-center lg:items-start space-y-2">
+          <a href="index.html" class="flex-shrink-0">
+            <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="max-w-md h-40 w-auto lg:h-48 lg:w-auto mx-auto">
+          </a>
+          <p class="text-center lg:text-start text-primary-foreground max-w-md [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">
+            Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Quick Links</h4>
+          <ul class="text-center lg:text-start space-y-2 text-primary-foreground/80">
+            <li><a href="index.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Home</a></li>
+            <li><a href="about.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">About Us</a></li>
+            <li><a href="contact.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Contact Us</a></li>
+            <li><a href="services.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Our Services</a></li>
+            <li><a href="areas.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Areas We Serve</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Contact Info</h4>
+          <div class="text-center lg:text-start space-y-3 text-primary-foreground/80 whitespace-nowrap">
+            <div><a href="tel:9417249355" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-9355</a></div>
+            <div><a href="tel:9417243470" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-3470</a></div>
+            <div><a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">info@roosterroofingnow.com</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground">
+        <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br />
+          <a href="privacypolicy.html" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Privacy Policy</a> |
+          <a href="termsofservice.html" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js" defer></script>
 </body>
+
 </html>
