@@ -113,98 +113,6 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
-/* Swiper Slider Specific Styles */
-.c {
-  max-width: 700px;
-  width: 100%;
-  height: 500px;
-  border-radius: 12px;
-  padding: 20px;
-  padding-bottom: 40px;
-  box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: hsl(0 0% 90%);
-  box-sizing: border-box;
-  margin: 0 auto;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.c .ci {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: left 50%;
-  background: inherit;
-  z-index: var(--z);
-  transition: .3s ease-out;
-}
-
-.c .ci img {
-  -moz-user-select: none;
-  user-select: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.c .ch {
-  position: absolute;
-  top: 70%;
-  left: 4%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: hsla(var(--h) var(--s) var(--l) / .8);
-  text-shadow: 2px 2px 10px hsla(var(--h) var(--s) 10% / .3);
-}
-
-.c input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  z-index: -10;
-}
-
-.c label {
-  width: 10%;
-  height: 10px;
-  margin-right: 4px;
-  border-radius: 20px;
-  background: hsla(0 0% 90% / .3);
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-}
-
-.c label:last-child {
-  margin-right: 0;
-}
-
-.c input:checked+label {
-  background: linear-gradient(to right,
-      hsla(var(--hue) 80% 70% / .7),
-      hsla(calc(var(--hue) + 30) 80% 50% / .7));
-}
-
-.c input:not(:checked)+label+.ci {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-.c .ci:last-child input:checked~.ci {
-  transform: translateX(100%);
-}
-
-.c input:not(:checked)+label+.ci {
-  transition: 0s;
-}
-
 /* Button Animation */
 .animated-button {
   justify-content: flex-start !important;
@@ -215,10 +123,10 @@ body {
   border: none;
   position: relative;
   /* to do, calc arrow-stripes so they repeat nicely on animation loop  */
-  --padding-block: 2rem;
-  --padding-inline: 3rem;
-  --arrow: 6rem;
-  --arrow-stripes: .9rem;
+  --padding-block: 1rem;
+  --padding-inline: 2rem;
+  --arrow: 3rem;
+  --arrow-stripes: .6rem;
 
   padding: var(--padding-block) var(--padding-inline);
   padding-right: calc(var(--padding-inline) + var(--arrow));
