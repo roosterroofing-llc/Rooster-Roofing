@@ -14,61 +14,77 @@
 ## ✨ Features
 
 * **📱 Responsive Design**: A seamless experience on desktops, tablets, and mobile devices.
-* **📋 Comprehensive Services**: Detailed pages for Residential, Commercial, and Repair services.
-* **💲 Instant Roof Estimator**: Get a quick, no-obligation roof estimate directly from our website using an embedded tool.
-* **🖼️ Project Gallery**: A "before and after" gallery showcasing our quality workmanship with image and video carousels.
-* **📧 Easy Contact**: A simple and straightforward contact form for quote requests.
-* **⭐ Customer Reviews**: Integrated Google Reviews widget to build trust and highlight our commitment to customer satisfaction.
-* **✍️ Informative Blog**: A blog with expert tips on roof maintenance, repair, and replacement.
+* **📋 Comprehensive Services**: Dedicated service pages for Residential, Commercial, Repairs, and more.
+* **💲 Instant Roof Estimator**: Two versions of our estimator tool, including a fullscreen option.
+* **🖼️ Project Gallery**: Before-and-after gallery showcasing our workmanship with carousels.
+* **📧 Easy Contact**: Contact page for inquiries and quote requests.
+* **⭐ Customer Reviews**: Integrated Google Reviews widget for credibility.
+* **✍️ Informative Blog**: A blog with expert roofing tips and maintenance insights.
 
 ---
 
 ## 🛠️ Technologies & Services
 
-This website is built with a modern and efficient stack to ensure a great user experience.
-
-| Technology / Service                                       | Description                                           |
-| ---------------------------------------------------------- | ----------------------------------------------------- |
-| **HTML5 & CSS3** | The foundation of our web pages and custom styling.          |
-| **JavaScript** | For interactive features like the mobile menu and loading external widgets.         |
-| **[Tailwind CSS](https://tailwindcss.com/)** | A utility-first CSS framework for rapid UI development. |
-| **[SwiperJS](https://swiperjs.com/)** | A modern touch slider for our project gallery carousels.        |
+| Technology / Service                                        | Description                                           |
+| ----------------------------------------------------------- | ----------------------------------------------------- |
+| **HTML5 & CSS3**                                            | The foundation of our web pages and styling.          |
+| **JavaScript**                                              | Adds interactivity like mobile menus and widgets.     |
+| **[Tailwind CSS](https://tailwindcss.com/)**                | Utility-first CSS framework for rapid UI development. |
+| **[SwiperJS](https://swiperjs.com/)**                       | Used for project gallery carousels.                   |
 | **[Gorilla Roof Leads](https://www.gorillaroofleads.com/)** | Powers our instant roof estimator tool.               |
-| **[Elfsight](https://elfsight.com/)** | For embedding our Google Reviews widget.              |
-| **[FormSubmit](https://formsubmit.co/)** | A simple, no-backend solution for our contact form.   |
+| **[Elfsight](https://elfsight.com/)**                       | Embeds Google Reviews widget.                         |
+| **[FormSubmit](https://formsubmit.co/)**                    | Handles contact form submissions.                     |
 
 ---
 
 ## 🚀 Getting Started
 
-No special build steps or dependencies are required. To view the website locally, simply follow these steps:
+This website is hosted directly from a **Google Cloud Storage bucket**. To deploy updates:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/rooster-roofing.git](https://github.com/your-username/rooster-roofing.git)
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd rooster-roofing
-    ```
-3.  **Open `index.html` in your favorite web browser.**
+1. **Upload or sync your files** to the bucket:
+
+   ```bash
+   gsutil -m rsync -r ./local-folder gs://roosterroofingnow.com
+   ```
+2. **Confirm public access** is enabled with:
+
+   ```bash
+   gcloud storage buckets get-iam-policy gs://roosterroofingnow.com
+   ```
+3. **Test your site** by visiting:
+
+   ```
+   https://storage.googleapis.com/roosterroofingnow.com/index.html
+   ```
+4. (Optional) Configure your custom domain `roosterroofingnow.com` in DNS to point to the bucket and enable HTTPS via Google Cloud Load Balancer.
 
 ---
 
 ## 📁 File Structure
 
-The project has a clear and straightforward structure, with each page having its own dedicated file.
+```
 .
-├── about.html              # Company information page
-├── blog.html               # Blog posts page
-├── commercial.html         # Details on commercial roofing services
-├── contact.html            # Contact form and information
-├── estimator.html          # Embedded instant roof estimator
-├── gallery.html            # Before & After project gallery
-├── index.html              # Main landing page
-├── privacy-policy.html     # The Privacy Policy for the website
-├── repairs.html            # Details on roof repair services
-├── residential.html        # Details on residential roofing services
-├── terms-of-service.html   # The Terms of Service for the website
-├── script.js               # JavaScript for mobile menu and external widgets
-└── styles.css              # Custom styling and design system
+├── about.html                 # Company information page
+├── areas.html                 # Service areas page
+├── blog.html                  # Blog posts page
+├── bradenton.html             # Location-specific service page (Bradenton)
+├── commercial.html            # Commercial roofing services
+├── contact.html               # Contact page with form and info
+├── estimator.html             # Embedded instant roof estimator
+├── estimator-fullscreen.html  # Fullscreen version of the roof estimator
+├── gallery.html               # Project gallery with before/after examples
+├── index.html                 # Main landing page
+├── mobile.html                # Mobile-specific page
+├── port-charlotte.html        # Location-specific service page (Port Charlotte)
+├── privacypolicy.html         # Privacy Policy page
+├── repairs.html               # Roof repair services
+├── residential.html           # Residential roofing services
+├── sarasota.html              # Location-specific service page (Sarasota)
+├── script.js                  # JavaScript for menus, widgets, and interactivity
+├── services.html              # Overview of all roofing services
+├── st-petersburg.html         # Location-specific service page (St. Petersburg)
+├── styles.css                 # Custom styling for the website
+├── tampa.html                 # Location-specific service page (Tampa)
+├── termsofservice.html        # Terms of Service page
+└── venice.html                # Location-specific service page (Venice)
+```
