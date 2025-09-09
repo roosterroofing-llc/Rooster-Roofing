@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Updated service area pages
   const serviceAreaPages = {
-    "Manatee County": "manatee.html",
+    "Manatee County": "manatee-county.html",
     "Sarasota County": "sarasota.html",
     "Bradenton Beach": "bradenton-beach.html",
     "Siesta Key": "siesta-key.html"",
     "Holmes Beach": "holmes-beach.html",
     "Lakewood Ranch": "lakewood-ranch.html",
-    "Anna Maria Island": "anna-maria.html",
+    "Anna Maria Island": "anna-maria-island.html",
     "Tampa": "tampa.html",
     "St. Petersburg": "st-petersburg.html",
     "Port Charlotte": "port-charlotte.html"
