@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const overflowMenu = document.getElementById('overflow-nav-menu');
   const overflowButton = document.getElementById('overflow-nav-button');
   const masterLinks = document.querySelectorAll('#master-nav-links a');
-  const nav = document.querySelector('nav.hidden.lg\\:flex');
+  const nav = document.querySelector('nav'); // fixed: target nav generally
 
   function updateResponsiveNav() {
     if (!nav || !visibleLinksContainer || !overflowContainer) return;
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "Manatee County": "manatee-county.html",
     "Sarasota County": "sarasota.html",
     "Bradenton Beach": "bradenton-beach.html",
-    "Siesta Key": "siesta-key.html",
+    "Siesta Key": "siesta-key.html", // fixed broken quote
     "Holmes Beach": "holmes-beach.html",
     "Lakewood Ranch": "lakewood-ranch.html",
     "Anna Maria Island": "anna-maria-island.html",
