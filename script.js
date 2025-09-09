@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "Manatee County": "manatee-county.html",
     "Sarasota County": "sarasota.html",
     "Bradenton Beach": "bradenton-beach.html",
-    "Siesta Key": "siesta-key.html"",
+    "Siesta Key": "siesta-key.html",
     "Holmes Beach": "holmes-beach.html",
     "Lakewood Ranch": "lakewood-ranch.html",
     "Anna Maria Island": "anna-maria-island.html",
