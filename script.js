@@ -72,23 +72,25 @@ document.addEventListener("DOMContentLoaded", function() {
   const inAreaMessage = document.getElementById('in-area-message');
   const outOfAreaMessage = document.getElementById('out-of-area-message');
 
+  // Updated service area pages
   const serviceAreaPages = {
-    "Tampa": "tampa.html",
-    "St. Petersburg": "st-petersburg.html",
-    "Bradenton": "bradenton.html",
-    "Sarasota": "sarasota.html",
-    "Venice": "venice.html",
-    "Port Charlotte": "port-charlotte.html"
+    "Manatee County": "manatee-county.html",
+    "Sarasota County": "sarasota-county.html",
+    "Bradenton Beach": "bradenton-beach.html",
+    "Siesta Key": "siesta-key.html",
+    "Holmes Beach": "holmes-beach.html",
+    "Lakewood Ranch": "lakewood-ranch.html",
+    "Anna Maria Island": "anna-maria-island.html"
   };
 
   // Define the primary counties you serve
-  const serviceCounties = ["Sarasota", "Manatee"];
+  const serviceCounties = ["Manatee", "Sarasota"];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   function populateLocationMenu() {
     if (!locationList) return;
-    locationList.innerHTML = ''; // Clear existing items
+    locationList.innerHTML = ''; 
     for (const area in serviceAreaPages) {
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -154,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const detectedCounty = data.county;
 
         let matchedPage = null;
-        // Still check for a specific city match first to redirect for a better UX
         for (const area in serviceAreaPages) {
           if (detectedCity && detectedCity.includes(area)) {
             matchedPage = serviceAreaPages[area];
@@ -166,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function() {
           window.location.href = matchedPage;
         } else {
           locationDisplay.textContent = `${detectedCity || "Select Location"}, ${detectedState || ""}`;
-
           const inServiceCounty = serviceCounties.some(c => detectedCounty && detectedCounty.includes(c));
           if (inServiceCounty) {
             showInAreaMessage();
@@ -181,13 +181,11 @@ document.addEventListener("DOMContentLoaded", function() {
         locationWidget.classList.remove('hidden');
       }
     } else if (isLocationPage) {
-      // If on a specific location page, always show the "in area" message
       const pageTitle = document.title.split(' ')[0].replace('-', ' ');
       locationDisplay.textContent = `${pageTitle}, FL`;
       showInAreaMessage();
       locationWidget.classList.remove('hidden');
     } else {
-      // For all other pages, use the general location check
       getLocation();
     }
   }
@@ -244,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // --- Gallery Auto-Slide ---
   const sliders = document.querySelectorAll('.c');
-  const slideInterval = 5000; // 5 seconds
+  const slideInterval = 5000;
 
   sliders.forEach(slider => {
     let intervalId;
@@ -266,11 +264,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     startAutoSlide();
 
-    // Pause and resume on hover/touch
     slider.addEventListener('mouseenter', stopAutoSlide);
     slider.addEventListener('mouseleave', startAutoSlide);
 
-    // Stop auto-slide when a user manually clicks a radio button
     radioButtons.forEach(radio => {
       radio.addEventListener('click', () => {
         stopAutoSlide();
@@ -290,6 +286,5 @@ function loadScript(src, isAsync = true) {
   document.body.appendChild(script);
 }
 
-// Load external widget scripts
 loadScript("https://widget.gorillaroofleads.com/index.js");
 loadScript("https://static.elfsight.com/platform/platform.js");
