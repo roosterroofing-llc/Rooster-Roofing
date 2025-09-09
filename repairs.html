@@ -4,122 +4,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
-    <title>Roof Repair Services - Rooster Roofing, LLC</title>
+    <title>Roof Repair Services - Rooster Roofing</title>
     <meta name="description" content="Fast and reliable roof repair services in Sarasota & Manatee County, FL. We fix leaks, storm damage, and missing shingles. 24/7 emergency tarping available." />
-    <meta name="author" content="Rooster Roofing, LLC" />
+    <meta name="author" content="Rooster Roofing" />
     <meta name="keywords" content="roof repair Sarasota, emergency roof tarping, leak repair Manatee County, storm damage roof repair Florida, missing shingles fix, Rooster Roofing" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Local SEO / GEO -->
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Sarasota" />
     <meta name="geo.position" content="27.3364;-82.5307" />
     <meta name="ICBM" content="27.3364, -82.5307" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://roosterroofing.com/roof-repair" />
     <meta property="og:title" content="Roof Repair Services - Sarasota & Manatee County" />
     <meta property="og:description" content="Fast and reliable roof repair services for leaks, storm damage, and missing shingles. 24/7 emergency tarping in Sarasota & Manatee County." />
     <meta property="og:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
-    <meta property="og:site_name" content="Rooster Roofing, LLC" />
+    <meta property="og:site_name" content="Rooster Roofing" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://roosterroofing.com/roof-repair" />
     <meta name="twitter:title" content="Roof Repair Services - Sarasota & Manatee County" />
     <meta name="twitter:description" content="Fast and reliable roof repair services for leaks, storm damage, and missing shingles. 24/7 emergency tarping in Sarasota & Manatee County." />
     <meta name="twitter:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
 
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Styles -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        border: 'hsl(var(--border))', input: 'hsl(var(--input))', ring: 'hsl(var(--ring))',
-                        background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
-                        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
-                        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
-                        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
-                        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
-                        'roofing-slate': 'hsl(var(--roofing-slate))', 'roofing-terra': 'hsl(var(--roofing-terra))',
-                        'emergency': 'hsl(var(--emergency))',
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    border: 'hsl(var(--border))',
+                    input: 'hsl(var(--input))',
+                    ring: 'hsl(var(--ring))',
+                    background: 'hsl(var(--background))',
+                    foreground: 'hsl(var(--foreground))',
+                    primary: {
+                        DEFAULT: 'hsl(var(--primary))',
+                        foreground: 'hsl(var(--primary-foreground))'
                     },
-                    borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
-                    boxShadow: { 'card': 'var(--shadow-card)', 'hero': 'var(--shadow-hero)', 'button': 'var(--shadow-button)' },
-                    backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-service': 'var(--gradient-service)', 'gradient-cta': 'var(--gradient-cta)' },
-                    animation: { pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                    secondary: {
+                        DEFAULT: 'hsl(var(--secondary))',
+                        foreground: 'hsl(var(--secondary-foreground))'
+                    },
+                    muted: {
+                        DEFAULT: 'hsl(var(--muted))',
+                        foreground: 'hsl(var(--muted-foreground))'
+                    },
+                    card: {
+                        DEFAULT: 'hsl(var(--card))',
+                        foreground: 'hsl(var(--card-foreground))'
+                    },
+                    'roofing-slate': 'hsl(var(--roofing-slate))',
+                    'roofing-terra': 'hsl(var(--roofing-terra))',
+                    'emergency': 'hsl(var(--emergency))',
+                },
+                borderRadius: {
+                    lg: 'var(--radius)',
+                    md: 'calc(var(--radius) - 2px)',
+                    sm: 'calc(var(--radius) - 4px)'
+                },
+                boxShadow: {
+                    'card': 'var(--shadow-card)',
+                    'hero': 'var(--shadow-hero)',
+                    'button': 'var(--shadow-button)'
+                },
+                backgroundImage: {
+                    'gradient-hero': 'var(--gradient-hero)',
+                    'gradient-service': 'var(--gradient-service)',
+                    'gradient-cta': 'var(--gradient-cta)'
+                },
+                animation: {
+                    pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
                 }
             }
         }
-    </script>
+    }
+  </script> 
 </head>
 <body class="bg-background">
-
-    <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center space-y-4">
-
-      <a href="index.html" class="flex items-center flex-shrink-0">
-        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto [filter:drop-shadow(3px_3px_2px_rgba(0,0,0,0.3))]">
-        <span class="text-1xl sm:text-2xl md:text-4xl font-bold text-red-700 leading-tight mr-6 [text-shadow:2px_2px_4px_hsl(var(--foreground)/0.5)]">Rooster Roofing</span>
-      </a>
-
-      <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
-        <div id="visible-nav-links" class="flex-row items-center space-x-7"></div>
-
-        <div class="relative ml-6" id="overflow-nav-container" style="display: none;">
-          <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors">
-            More
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden">
+  <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-2">
+        <div class="flex items-center flex-shrink-0"> <a href="index.html" class="justify-start flex-shrink-0"> <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto [filter:drop-shadow(4px_3px_2px_rgba(0,0,0,1.5))]"> </a>
+          <div class="ml-1 items-center justify-start"> <a href="index.html"> <span class="block text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 leading-tight [text-shadow:2px_2px_2px_hsl(var(--foreground)/2.5)] whitespace-nowrap">ROOSTER ROOFING</span> </a>
+            <div id="location-widget" class="relative hidden flex items-center space-x-1 mt-1 whitespace-nowrap"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary h-4 w-4 sm:h-5 sm:w-5">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="flex items-center space-x-1">
+                <div class="flex items-center justify-start space-x-1 cursor-pointer"> <span id="location-display" class="text-xs sm:text-md md:text-lg font-medium text-foreground whitespace-nowrap">Detecting...</span> <svg id="location-arrow" class="arrow w-4 h-4 flex items-center justify-start" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg> </div> <span id="in-area-message" class="text-xs sm:text-md font-semibold whitespace-nowrap"></span> <span id="out-of-area-message" class="text-xs sm:text-md text-red-600 font-semibold whitespace-nowrap"></span>
+              </div>
+              <div id="location-menu" class="absolute top-full left-0 mt-2 bg-gradient-service border border-border rounded-md shadow-lg hidden z-10">
+                <ul id="location-list"></ul>
+              </div>
             </div>
+          </div>
         </div>
-      </nav>
-
-      <div id="master-nav-links" class="hidden">
-          <a href="index.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Home</a>
-          <a href="repairs.html" class="text-xl text-red-600 font-bold">Roof Repairs</a>
-          <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Commercial</a>
-          <a href="residential.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Residential</a>
-          <a href="gallery.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Gallery</a>
-          <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors">Blog</a>
+        <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
+          <div id="visible-nav-links" class="flex-row items-center justify-between space-x-8"></div>
+          <div class="relative ml-6" id="overflow-nav-container" style="display: none;"> <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors"> More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg> </button>
+            <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]"></div>
+          </div>
+        </nav>
+        <div id="master-nav-links" class="hidden">
+          <a href="index.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Home</a>
+          <a href="residential.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Residential</a>
+          <a href="commercial.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Commercial</a>
+          <a href="repairs.html" class="text-xl text-red-600 font-bold [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Repairs</a>
+          <a href="gallery.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Gallery</a>
+          <a href="blog.html" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Blog</a>
+        </div>
+        <div class="lg:hidden"> <button id="mobile-menu-button" class="text-foreground"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg> </button> </div>
       </div>
-
-      <div class="lg:hidden">
-        <button id="mobile-menu-button" class="text-foreground">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-
     </div>
-  </div>
-
-  <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
-    <a href="index.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
-    <a href="residential.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Residential</a>
-    <a href="commercial.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
-    <a href="repairs.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg">Roof Repairs</a>
-    <a href="gallery.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Gallery</a>
-    <a href="blog.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
-  </div>
-</header>
+    <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
+      <a href="index.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
+      <a href="residential.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Residential</a>
+      <a href="commercial.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
+      <a href="repairs.html" class="block py-2 px-4 text-primary-foreground font-bold bg-red-700 text-lg [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Roof Repairs</a>
+      <a href="gallery.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Gallery</a>
+      <a href="blog.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
+    </div>
+  </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="relative py-24 sm:py-32 bg-primary text-primary-foreground text-center overflow-hidden">
           <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://ik.imagekit.io/roosterroofing/-post-ai-image-24882.png?updatedAt=1753703859662');"></div>
             
@@ -133,7 +152,6 @@
             </div>
         </section>
 
-        <!-- Repair Services Section -->
         <section class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -141,26 +159,28 @@
                     <p class="mt-4 text-lg leading-8 text-gray-600">Don't let a small problem become a major expense. We handle all types of roof repairs.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Leak Detection -->
-                    <div class="bg-card p-8 rounded-lg shadow-card">
+                    <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                      <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-foreground mb-2">Leak Detection & Repair</h3>
                         <p class="text-muted-foreground">Using advanced techniques, we quickly locate the source of leaks and provide lasting repairs to prevent water damage.</p>
+                      </div>
                     </div>
-                    <!-- Shingle Replacement -->
-                    <div class="bg-card p-8 rounded-lg shadow-card">
+                    <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                      <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-foreground mb-2">Missing & Damaged Shingles</h3>
                         <p class="text-muted-foreground">Wind and age can cause shingles to crack or blow away. We replace them with matching materials to restore your roof's integrity.</p>
+                      </div>
                     </div>
-                    <!-- Storm Damage -->
-                    <div class="bg-card p-8 rounded-lg shadow-card">
+                    <div class="bg-gradient-service shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg flex flex-col">
+                      <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-foreground mb-2">Storm Damage Repair</h3>
                         <p class="text-muted-foreground">From hail impacts to wind damage, we provide comprehensive repairs to secure your home after a storm and can assist with insurance claims.</p>
+                      </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Emergency CTA -->
         <section class="bg-gradient-cta">
             <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
@@ -169,56 +189,44 @@
                 <p class="mt-4 text-lg leading-6 text-primary-foreground">
                     We offer emergency tarping services to protect your property from further damage. Don't wait!
                 </p>
-                <a href="contact.html" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-emergency bg-white hover:bg-gray-100 sm:w-auto">
-                    Contact Us Now!
+                <a href="tel:9417243470" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-emergency bg-white hover:bg-gray-100 sm:w-auto">
+                    Call Us Now!
                 </a>
             </div>
         </section>
-
-
-        <!-- Elfsight Google Reviews Widget -->
-        <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-primary text-primary-foreground">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <a href="index.html" class="flex items-center gap-2 flex-shrink-0">
-        <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-14 sm:h-20 w-auto">
-        <span class="text-2xl sm:text-4xl md:text-3xl font-bold text-primary-foreground leading-tight ml-2 whitespace-wrap flex-grow">Rooster Roofing</span>
-      </a>
-            <p class="text-md sm:text-lg md:text-sm text-primary-foreground/80 mb-4 max-w-md">Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service.</p>
-          </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-primary-foreground/80">
-              <li><a href="index.html" class="hover:text-red-700 transition-colors">Home</a></li>
-              <li><a href="about.html" class="hover:text-red-700 transition-colors">About Us</a></li>
-              <li><a href="services.html" class="hover:text-red-700 transition-colors">Services</a></li>
-              <li><a href="areas.html" class="hover:text-red-700 transition-colors">Areas We Serve</a></li>
-              <li><a href="contact.html" class="hover:text-red-700 transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-            <div class="space-y-3 text-primary-foreground/80">
-              <div class="flex items-center"><a href="tel:9417243470" class="hover:text-red-700 transition-colors">(941) 724-3470</a></div>
-              <div class="flex items-center"><a href="mailto:sales@roosterroofingnow.com" class="hover:text-red-700 transition-colors">sales@roosterroofingnow.com</a></div>
-            </div>
-          </div>
+  <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
+  <footer class="bg-primary text-primary-foreground">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div class="flex flex-col md:col-span-2 items-center lg:items-start space-y-2"> <a href="index.html" class="flex-shrink-0"> <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="max-w-md h-40 w-auto lg:h-48 lg:w-auto mx-auto"> </a>
+          <p class="text-center lg:text-start text-primary-foreground max-w-md [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]"> Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service. </p>
         </div>
-        <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br/>
-          <a href="privacypolicy.html" class="hover:text-red-700 transition-colors">Privacy Policy</a> | 
-          <a href="termsofservice.html" class="hover:text-red-700 transition-colors">Terms of Service</a>
-          </p>
+        <div>
+          <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Quick Links</h4>
+          <ul class="text-center lg:text-start space-y-2 text-primary-foreground/80">
+            <li><a href="index.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Home</a></li>
+            <li><a href="about.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">About Us</a></li>
+            <li><a href="contact.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Contact Us</a></li>
+            <li><a href="services.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Our Services</a></li>
+            <li><a href="areas.html" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Areas We Serve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Contact Info</h4>
+          <div class="text-center lg:text-start space-y-3 text-primary-foreground/80 whitespace-nowrap">
+            <div><a href="tel:9417249355" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-9355</a></div>
+            <div><a href="tel:9417243470" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-3470</a></div>
+            <div><a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">info@roosterroofingnow.com</a></div>
+          </div>
         </div>
       </div>
-    </footer>
-
-    <script src="script.js"></script>
-
+      <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground">
+        <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br /> <a href="privacypolicy.html" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Privacy Policy</a> | <a href="termsofservice.html" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Terms of Service</a> </p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
