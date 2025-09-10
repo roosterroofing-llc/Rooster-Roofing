@@ -73,113 +73,6 @@
         }
     }
   </script> 
-  <!-- ✅ Inline Services Styles -->
-  <style>
-    .services-container { display: flex; justify-content: center; padding: 2rem 0; }
-    .popup { width: 100%; max-width: 1400px; display: flex; border-radius: 24px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-    .tabs { width: clamp(150px, 20vw, 350px); background: #f8fafc; display: flex; flex-direction: column; border-right: 1px solid #e5e7eb; }
-    .tabs label { font-size: clamp(15px, 1.5vw, 18px); font-weight: 600; padding: clamp(0.75rem, 2vw, 1rem); cursor: pointer; transition: all .3s ease; color: hsl(var(--foreground)); border-left: 4px solid transparent; }
-    .tabs label:hover, input[type="radio"]:checked+label { background: #b91c1c; color: hsl(var(--primary-foreground)); border-left: 4px solid #dc2626; font-weight: bold; text-shadow: 2px 2px 2px hsl(var(--foreground) / 1.5); }
-    input[type="radio"] { display: none; }
-    .content-area { flex: 1; padding: 2rem; }
-    .service-content { display: none; animation: fadeIn .4s ease-in-out; }
-    .service-content.active { display: block; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
-      
-      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-    
-    /* Swiper Slider Specific Styles */
-    .c {
-      width: 100%;                  /* take full width of parent container */
-      max-width: 100%;              /* no shrinking below container size */
-      height: auto;                 /* let height adapt */
-      aspect-ratio: 16 / 9;         /* keeps proportion across screens */
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;  /* align content to the left */
-      position: relative;
-      overflow: hidden;
-      background: hsl(0 0% 90%);
-      box-sizing: border-box;
-      margin: 0;                    /* no centering */
-      font-family: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    }
-    
-    .c .ci {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform-origin: left 50%;
-      background: inherit;
-      z-index: var(--z);
-      transition: .3s ease-out;
-    }
-    
-    .c .ci img {
-      -moz-user-select: none;
-      user-select: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .c .ch {
-      position: absolute;
-      top: 65%;
-      left: 2%;
-      transform: translateY(-50%);
-      font-size: clamp(1rem, 2vw, 2rem); /* scales text between 1rem and 2rem */
-      color: hsla(var(--h) var(--s) var(--l) / .8);
-      text-shadow: 2px 2px 10px hsla(var(--h) var(--s) 10% / .3);
-    }
-    
-    .c input {
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      z-index: -10;
-    }
-    
-    .c label {
-      width: clamp(8%, 40px, 10%);  /* flexible width depending on screen */
-      height: 10px;
-      margin-right: 4px;
-      border-radius: 20px;
-      background: hsla(0 0% 90% / .3);
-      cursor: pointer;
-      position: relative;
-      z-index: 10;
-    }
-    
-    .c label:last-child {
-      margin-right: 0;
-    }
-    
-    .c input:checked+label {
-      background: linear-gradient(to right,
-      hsla(var(--hue) 80% 70% / .7),
-      hsla(calc(var(--hue) + 30) 80% 50% / .7));
-    }
-    
-    .c input:not(:checked)+label+.ci {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    
-    .c .ci:last-child input:checked~.ci {
-      transform: translateX(100%);
-    }
-    
-    .c input:not(:checked)+label+.ci {
-      transition: 0s;
-    }
-  </style>
 </head>
 
 <body class="bg-background">
@@ -235,143 +128,80 @@
   </header>
 
   <!-- Main Content -->
-  <main>
-    <section class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h1 class="text-4xl sm:text-5xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Our Workmanship & Quality</h1>
-          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Browse our gallery to see the quality and care we put into every project.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Shingle Roof Slider -->
-          <div class="text-center mb-16">
-            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Shingles</h1>
-            <div class="c">
-              <input type="radio" name="shingle" id="shingle-1" checked>
-              <label for="shingle-1" style="--hue: 32"></label>
-              <div class="ci" style="--z: 4">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://img.companycam.com/4jWDquu7bRq3gR3QAvebOV0amTpYaSa7OYPDk01ruiQ/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS82YTlh/M2VkMy02ZDI4LTQ0/YTEtYmEwMy1hYmNl/NGVkYmZjOTcuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-              </div>
-              <input type="radio" name="shingle" id="shingle-2">
-              <label for="shingle-2" style="--hue: 82"></label>
-              <div class="ci" style="--z: 3">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://img.companycam.com/7r8TDgHhtESPDkZatl-hXcKfRZv2nx7LcpI8yH6kjak/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS9kNDY1/NmYwMi0zZmYzLTQ5/NGUtYWQzNy00Njc2/ZDg3MWUyNjUuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-              </div>
-              <input type="radio" name="shingle" id="shingle-3">
-              <label for="shingle-3" style="--hue: 40"></label>
-              <div class="ci" style="--z: 2">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://img.companycam.com/SLp8UNYwuWt8pSy1PLr35bTN84CR9i51x33hFHS71s8/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS85NjU2/YWJlNS1kNzBmLTQ1/YjgtODk3Yy05NWU0/ZmExYmQ4OTguanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-              </div>
-              <input type="radio" name="shingle" id="shingle-4">
-              <label for="shingle-4" style="--hue: 210"></label>
-              <div class="ci" style="--z: 1">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://img.companycam.com/P37qV0BVRTIXIjXsoNOpw54zyixewUJ2sDb7gjhFfxY/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS80OTBk/YWVlNy0yOGU1LTQw/NWEtYmRkMy01NjNh/NjAxZWM0OWQuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-              </div>
-            </div>
-          </div>
-
-          <!-- Metal Roof Slider -->
-          <div class="text-center mb-16">
-            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Tiles</h1>
-            <div class="c">
-              <input type="radio" name="metal" id="metal-1" checked>
-              <label for="metal-1" style="--hue: 32"></label>
-              <div class="ci" style="--z: 4">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://img.companycam.com/Bn9w7kl6d4AaTkPv3E_3IEtowfMQnA52gYCFQof446k/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS82NWFj/MjkwZC1hMzg2LTRi/ODYtOTBmMy1hY2Zl/NmFhZjViY2IuanBn.jpg" alt="Metal - Full Roof Replacement">
-              </div>
-              <input type="radio" name="metal" id="metal-2">
-              <label for="metal-2" style="--hue: 82"></label>
-              <div class="ci" style="--z: 3">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/808080/ffffff?text=METAL+ROOF+AFTER" alt="Metal - Full Roof Replacement">
-              </div>
-              <input type="radio" name="metal" id="metal-3">
-              <label for="metal-3" style="--hue: 40"></label>
-              <div class="ci" style="--z: 2">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/808080/ffffff?text=METAL+ROOF+CLOSE-UP" alt="Metal - Full Roof Replacement">
-              </div>
-              <input type="radio" name="metal" id="metal-4">
-              <label for="metal-4" style="--hue: 210"></label>
-              <div class="ci" style="--z: 1">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/808080/ffffff?text=METAL+ROOF+DRONE" alt="Metal - Full Roof Replacement">
-              </div>
-            </div>
-          </div>
-
-          <!-- Tile Roof Slider -->
-          <div class="text-center mb-16">
-            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Tiles</h1>
-            <div class="c">
-              <input type="radio" name="tile" id="tile-1" checked>
-              <label for="tile-1" style="--hue: 32"></label>
-              <div class="ci" style="--z: 4">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Roof Repair</h2>
-                <img src="https://img.companycam.com/QDrfKNu49RuFdETXqHuUeuA7zW1RDyNA9jpOZYqabKQ/rs:fit:4032:4032/q:65/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS8wMTUz/MjAzOS01ZTY1LTRl/MjAtYWIwOC04NGJh/NzNlYzZmMzYuanBl/Zw.jpg" alt="Tile - Roof Repair">
-              </div>
-              <input type="radio" name="tile" id="tile-2">
-              <label for="tile-2" style="--hue: 82"></label>
-              <div class="ci" style="--z: 3">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/A52A2A/ffffff?text=TILE+ROOF+AFTER" alt="Tile - Full Roof Replacement">
-              </div>
-              <input type="radio" name="tile" id="tile-3">
-              <label for="tile-3" style="--hue: 40"></label>
-              <div class="ci" style="--z: 2">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/A52A2A/ffffff?text=TILE+ROOF+CLOSE-UP" alt="Tile - Full Roof Replacement">
-              </div>
-              <input type="radio" name="tile" id="tile-4">
-              <label for="tile-4" style="--hue: 210"></label>
-              <div class="ci" style="--z: 1">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/A52A2A/ffffff?text=TILE+ROOF+DRONE" alt="Tile - Full Roof Replacement">
-              </div>
-            </div>
-          </div>
-
-          <!-- Rolled Roofing Slider -->
-          <div class="text-center mb-16">
-            <h1 class="text-3xl sm:text-4xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Flat Roofs</h1>
-            <div class="c">
-              <input type="radio" name="rolled" id="rolled-1" checked>
-              <label for="rolled-1" style="--hue: 32"></label>
-              <div class="ci" style="--z: 4">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://img.companycam.com/xhSzwftxo0G-1WJ8yzPi1m2aC5uiWoR_kpYmFzgsMXM/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS8wMjI4/OGFlNS0xZGJkLTQ5/ZmUtODA2My0yMDc3/ZDg4NTQxMjQuanBl/Zw.jpg" alt="Rolled Roofing - Full Roof Replacement">
-              </div>
-              <input type="radio" name="rolled" id="rolled-2">
-              <label for="rolled-2" style="--hue: 82"></label>
-              <div class="ci" style="--z: 3">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/696969/ffffff?text=ROLLED+ROOFING+AFTER" alt="Rolled Roofing - Full Roof Replacement">
-              </div>
-              <input type="radio" name="rolled" id="rolled-3">
-              <label for="rolled-3" style="--hue: 40"></label>
-              <div class="ci" style="--z: 2">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/696969/ffffff?text=ROLLED+ROOFING+CLOSE-UP" alt="Rolled Roofing - Full Roof Replacement">
-              </div>
-              <input type="radio" name="rolled" id="rolled-4">
-              <label for="rolled-4" style="--hue: 210"></label>
-              <div class="ci" style="--z: 1">
-                <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Full Roof Replacement</h2>
-                <img src="https://placehold.co/700x500/696969/ffffff?text=ROLLED+ROOFING+DRONE" alt="Rolled Roofing - Full Roof Replacement">
-              </div>
-            </div>
-          </div>
-        </div>
+<main>
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Our Workmanship & Quality</h1>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Browse our gallery to see the quality and care we put into every project.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+  <div class="border-t border-foreground/20"></div>
+  <section id="gallery" class="py-20 bg-card">
+    <!-- First (Left aligned) -->
+    <div class="py-6">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+        <div class="flex-1">
+          <h2 class="text-3xl font-bold text-foreground mb-4">Shingle Roofing Projects</h2>
+          <!-- Elfsight Slider | Shingle Roofing projects -->
+          <div class="elfsight-app-492d4ec0-0eb6-457a-814d-cac868ab8ee5" data-elfsight-app-lazy></div>
+        </div>
+        <div class="flex-1"></div>
+      </div>
+    </div>
 
+    <!-- Second (Right aligned) -->
+    <div class="py-6">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row-reverse items-center">
+        <div class="flex-1">
+          <h2 class="text-3xl font-bold text-foreground mb-4">Metal Roofing Projects</h2>
+          <!-- Elfsight Slider | Metal Roofing projects -->
+          <div class="elfsight-app-1bd50f3f-b642-4b86-8836-5c3ddddb8654" data-elfsight-app-lazy></div>
+        </div>
+        <div class="flex-1"></div>
+      </div>
+    </div>
+
+    <!-- Third (Left aligned) -->
+    <div class="py-6">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+        <div class="flex-1">
+          <h2 class="text-3xl font-bold text-foreground mb-4">Tile Roofing Projects</h2>
+          <!-- Elfsight Slider | Tile Roofing projects -->
+          <div class="elfsight-app-72c820db-9940-44d4-99aa-5f8809ebf874" data-elfsight-app-lazy></div>
+        </div>
+        <div class="flex-1"></div>
+      </div>
+    </div>
+
+    <!-- Fourth (Right aligned) -->
+    <div class="py-6">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row-reverse items-center">
+        <div class="flex-1">
+          <h2 class="text-3xl font-bold text-foreground mb-4">Flat, Low-Slope & Rolled Roofing Projects</h2>
+          <!-- Elfsight Slider | Flat, Low-Slope & Rolled Roofing projects -->
+          <div class="elfsight-app-7f66a824-42b5-48e6-992b-6d328d451f43" data-elfsight-app-lazy></div>
+        </div>
+        <div class="flex-1"></div>
+      </div>
+    </div>
+    
+    <!-- Fifth (Left aligned) -->
+    <div class="py-6">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+        <div class="flex-1">
+          <h2 class="text-3xl font-bold text-foreground mb-4">TPO Roofing System & Flat/Low-Slope Commercial Roofing Projects</h2>
+          <!-- Elfsight Slider | TPO & Flat/Low-Slope Commercial Roofing projects -->
+          <div class="elfsight-app-742fea29-adc4-4576-be73-94138c4ba3f8" data-elfsight-app-lazy></div>
+        </div>
+        <div class="flex-1"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div class="elfsight-app-2723aad0-e76c-4e69-8407-0dcf75ae2421" data-elfsight-app-lazy></div>
   <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
   <footer class="bg-primary text-primary-foreground">
     <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-12">
@@ -404,19 +234,7 @@
     </div>
   </footer>
   <script src="script.js" defer></script>
-  <!-- ✅ Inline Services Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tabs = document.querySelectorAll("input[name='tab']");
-      const contents = document.querySelectorAll(".service-content");
-      tabs.forEach((tab, i) => {
-        tab.addEventListener("change", () => {
-          contents.forEach(c => c.classList.remove("active"));
-          document.getElementById("content" + (i+1)).classList.add("active");
-        });
-      });
-    });
-  </script>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
 </body>
 
 </html>
