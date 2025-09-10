@@ -89,10 +89,9 @@
       width: 100%;                  /* take full width of parent container */
       max-width: 100%;              /* no shrinking below container size */
       height: auto;                 /* let height adapt */
-      aspect-ratio: 16 / 9;         /* keeps proportion across screens */
+      aspect-ratio: 16 / 15;         /* keeps proportion across screens */
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;  /* align content to the left */
@@ -229,6 +228,7 @@
       <a href="blog.html" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
     </div>
   </header>
+  
   <main>
     <section class="relative bg-card-foreground flex items-center text-white overflow-hidden min-h-[60vh] sm:min-h-[80vh]">
       <div class="absolute inset-0 w-full h-full z-0 overflow-hidden"> <iframe src="https://player.vimeo.com/video/1111944528?background=1&autoplay=1&loop=1&muted=1&quality=auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%);" title="Rooster Roofing Drone Footage BG"> </iframe> </div>
@@ -284,41 +284,12 @@
             <div id="content1" class="service-content active">
               <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Rooster Roofing Services</h2>
               <div class="flex flex-col items-center justify-between">
-                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-1 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1 items-center">
                   <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Rooster Roofing provides dependable roofing solutions designed to safeguard homes and businesses across West Coast Florida. Whether you need a full roof replacement, timely repairs, or preventive maintenance, our team combines skilled craftsmanship with premium materials to deliver lasting protection. We understand the unique challenges of Florida’s climate—from heavy rains to hurricane-force winds—and build roofs that stand up to the elements. With a commitment to quality, reliability, and customer care, Rooster Roofing ensures every project is completed with precision and peace of mind.</p>
                   <div class="grid grid-cols-1 gap-1">
-                    <div class="c">
-                      <input type="radio" name="services" id="services-1" checked>
-                      <label for="services-1" style="--hue: 32"></label>
-                      <div class="ci" style="--z: 6">
-                        <img src="https://img.companycam.com/qbwaJuJ6C9ErtVsUToE7OXq-pMyDGuRkK7uriDpq1iY/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS9iNTAy/ZTNhNy1kMDZiLTQ1/YTAtOTE4Mi0wZTMw/ODVlNjljNWEuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-                      </div>
-                      <input type="radio" name="services" id="services-2" checked>
-                      <label for="services-2" style="--hue: 82"></label>
-                      <div class="ci" style="--z: 5">
-                        <img src="https://img.companycam.com/Bn9w7kl6d4AaTkPv3E_3IEtowfMQnA52gYCFQof446k/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS82NWFj/MjkwZC1hMzg2LTRi/ODYtOTBmMy1hY2Zl/NmFhZjViY2IuanBn.jpg" alt="Metal - Full Roof Replacement">
-                      </div>
-                      <input type="radio" name="services" id="services-3" checked>
-                      <label for="services-3" style="--hue: 40"></label>
-                      <div class="ci" style="--z: 4">
-                        <img src="https://img.companycam.com/7r8TDgHhtESPDkZatl-hXcKfRZv2nx7LcpI8yH6kjak/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS9kNDY1/NmYwMi0zZmYzLTQ5/NGUtYWQzNy00Njc2/ZDg3MWUyNjUuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-                      </div>
-                      <input type="radio" name="services" id="services-4" checked>
-                      <label for="services-4" style="--hue: 210"></label>
-                      <div class="ci" style="--z: 3">
-                        <img src="https://img.companycam.com/25T_t-YODD7ltBcpR9YFMPzEht6jb8VH2QPEkYWrmhc/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS9jYzRk/YjNjYy0wNzhmLTRk/NDQtYTlkMC1kYTA4/MWI3ZDc3NjUuanBl/Zw.jpg" alt="Rolled Roofing - Full Roof Replacement">
-                      </div>
-                      <input type="radio" name="services" id="services-5" checked>
-                      <label for="services-5" style="--hue: 232"></label>
-                      <div class="ci" style="--z: 2">
-                        <img src="https://img.companycam.com/SLp8UNYwuWt8pSy1PLr35bTN84CR9i51x33hFHS71s8/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS85NjU2/YWJlNS1kNzBmLTQ1/YjgtODk3Yy05NWU0/ZmExYmQ4OTguanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-                      </div>
-                      <input type="radio" name="services" id="services-6" checked>
-                      <label for="services-6" style="--hue: 282"></label>
-                      <div class="ci" style="--z: 1">
-                        <img src="https://img.companycam.com/RVmp5iMFcnK6gVz8zNZmxXOdYqyG_016nizgKTtD02g/rs:fit:4032:4032/q:80/aHR0cHM6Ly9jb21w/YW55Y2FtLXBlbmRp/bmcuczMuYW1hem9u/YXdzLmNvbS8xNGUw/OWJmYi04YjM2LTRl/M2YtYTg3Yy1jYzI2/N2FlODc1NzIuanBl/Zw.jpg" alt="Shingle - Full Roof Replacement">
-                      </div>
-                    </div>
+                    <!-- Elfsight Google Reviews | Rooster Roofing Reviews - Slider -->
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-dba89442-a5fe-4fb6-bc58-c4217e351af3" data-elfsight-app-lazy></div>
                   </div>
                 </div>
               </div>
@@ -326,10 +297,10 @@
             <div id="content2" class="service-content">
               <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Full Roof Replacement</h2>
               <div class="flex flex-col items-center justify-between">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-1 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1 items-center">
                   <div>
-                    <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Complete roof installation with premium materials. We work with all roofing types including tile, shingle, metal, and flat roofs.</p>
-                    <a href="residential.html" class="mb-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Learn More</a>
+                    <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">If your roof has reached the end of its lifespan, trust Rooster Roofing for a seamless roof replacement. Serving homeowners and businesses accross <strong>Manatee County, Sarasota County and surrounding areas</strong>, we install high-performance shingles, tile, and flat roofing systems backed by strong warranties and expert craftsmanship.</p>
+                    <a href="residential.html" class="mt-6 mb-10 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Learn More</a>
                   </div>
                   <div class="grid grid-cols-1 gap-1">
                     <div class="c">
@@ -371,10 +342,10 @@
             <div id="content3" class="service-content">
               <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Repair</h2>
               <div class="flex flex-col items-center justify-between">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-1 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1 items-center">
                   <div>
-                    <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Professional repair services for leaks, damaged shingles, and storm damage. Quick response and lasting solutions.</p>
-                    <a href="repairs.html" class="mb-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Learn More</a>
+                    <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Whether it’s a minor leak or storm damage, we respond quickly to protect your home. We handle shingle repairs, flashing fixes, and emergency patchwork to restore your roof’s integrity fast.</p>
+                    <a href="repairs.html" class="mt-6 mb-10 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Learn More</a>
                   </div>
                   <div class="grid grid-cols-1 gap-1">
                     <div class="c">
@@ -413,12 +384,12 @@
             </div>
             <div id="content4" class="service-content">
               <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Emergency Roof Tarping</h2>
-              <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Provides emergency tarping to protect your property from water damage until permanent repairs can be made.</p>
-              <a href="tel:9417243470" class="mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Contact us</a>
+              <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Hurricanes and severe storms can cause unexpected roof damage. We provide emergency roof tarping to protect your property from water damage until permanent repairs can be made. We also assist with insurance claims to ease the process.</p>
+              <a href="tel:9417243470" class="mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Call us now!</a>
             </div>
             <div id="content5" class="service-content">
               <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Inspection</h2>
-              <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Comprehensive roof assessments with detailed reports. Perfect for home purchases or insurance claims.</p>
+              <p class="text-xs md:text-sm lg:text-md text-gray-700 mb-4">Protect your investment with a detailed roof inspection from <strong>Rooster Roofing</strong>. We identify hidden damage, aging concerns, and maintenance needs before they become costly issues.</p>
               <a href="#area-details" class="mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs md:text-sm lg:text-md font-bold ring-offset-background transition-all duration-200 h-10 px-2 py-2 lg:px-6 lg:py-2 w-full md:w-48 lg:w-48 text-primary-foreground hover:scale-105 transform hover:-translate-y-1 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] animated-button">Areas we serve</a>
             </div>
             <div id="content6" class="service-content">
