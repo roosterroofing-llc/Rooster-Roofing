@@ -220,11 +220,35 @@ document.addEventListener("DOMContentLoaded", function() {
   const serviceAreaMap = document.getElementById('service-area-map');
 
   if (mapLinks && serviceAreaMap) {
+
+    // Helper function to validate URL (same origin and relative paths only, or HTTPS images/maps)
+    function isSafeMapSrc(src) {
+      // Only allow relative URLs or absolute URLs with HTTPS protocol and same origin
+      try {
+        const url = new URL(src, window.location.origin);
+        // Allow only same origin or relative resource
+        if (
+          url.origin === window.location.origin ||
+          (url.protocol === 'https:' && url.hostname === window.location.hostname)
+        ) {
+          return true;
+        }
+      } catch (e) {
+        // If constructing URL fails, treat as unsafe
+        return false;
+      }
+      return false;
+    }
+
     mapLinks.forEach(link => {
       link.addEventListener('click', function(event) {
         event.preventDefault();
         const newSrc = this.getAttribute('data-src');
-        serviceAreaMap.src = newSrc;
+        if (newSrc && isSafeMapSrc(newSrc)) {
+          serviceAreaMap.src = newSrc;
+        } else {
+          console.warn("Blocked unsafe src value for serviceAreaMap:", newSrc);
+        }
       });
     });
   }
