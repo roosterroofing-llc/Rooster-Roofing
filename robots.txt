@@ -1,0 +1,12 @@
+# robots.txt for https://www.roosterroofingnow.com/
+
+User-agent: *
+Allow: /
+
+# Block internal or sensitive directories (adjust if they exist)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Sitemap location
+Sitemap: https://www.roosterroofingnow.com/sitemap.xml
