@@ -74,20 +74,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Updated service area pages
   const serviceAreaPages = {
-    "Manatee County": "manatee-county.html",
-    "Sarasota County": "sarasota-county.html",
-    "Bradenton Beach": "bradenton-beach.html",
-    "Siesta Key": "siesta-key.html", // fixed broken quote
-    "Holmes Beach": "holmes-beach.html",
-    "Lakewood Ranch": "lakewood-ranch.html",
-    "Anna Maria Island": "anna-maria-island.html",
-    "Tampa": "tampa.html",
-    "St. Petersburg": "st-petersburg.html",
-    "Port Charlotte": "port-charlotte.html"
+    "Manatee County, FL": "manatee-county.html",
+    "Sarasota County, FL": "sarasota-county.html",
+    "Bradenton Beach, FL": "bradenton-beach.html",
+    "Siesta Key, FL": "siesta-key.html", // fixed broken quote
+    "Holmes Beach, FL": "holmes-beach.html",
+    "Lakewood Ranch, FL": "lakewood-ranch.html",
+    "Anna Maria Island, FL": "anna-maria-island.html",
+    "Tampa, FL": "tampa.html",
+    "St. Petersburg, FL": "st-petersburg.html",
+    "Port Charlotte, FL": "port-charlotte.html"
   };
 
   // Define the primary counties you serve
-  const serviceCounties = ["Manatee", "Sarasota"];
+  const serviceCounties = ["Manatee County", "Sarasota County"];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
