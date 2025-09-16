@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Updated service area pages
   const serviceAreaPages = {
     "Manatee County": "manatee-county.html",
-    "Sarasota County": "sarasota.html",
+    "Sarasota County": "sarasota-county.html",
     "Bradenton Beach": "bradenton-beach.html",
     "Siesta Key": "siesta-key.html", // fixed broken quote
     "Holmes Beach": "holmes-beach.html",
