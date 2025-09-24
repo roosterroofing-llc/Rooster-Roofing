@@ -175,14 +175,23 @@ document.addEventListener("DOMContentLoaded", function() {
         locationWidget.classList.remove('hidden');
       }
     } else if (isLocationPage) {
-      const pageTitle = document.title.split(' ')[0].replace('-', ' ');
-      locationDisplay.textContent = `${pageTitle}, FL`;
+      // Find the matching area name from the URL
+      const matchedArea = Object.entries(serviceAreaPages).find(([area, url]) => {
+        return window.location.pathname.includes(url);
+        });
+      
+      if (matchedArea) {
+        locationDisplay.textContent = matchedArea[0]; // Use the full service area name
+        } else {
+        locationDisplay.textContent = document.title; // Fallback if not matched
+      }
+      
       showInAreaMessage();
       locationWidget.classList.remove('hidden');
-    } else {
+      } else {
       getLocation();
+      }
     }
-  }
 
   if (locationWidget) {
     populateLocationMenu();
