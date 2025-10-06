@@ -27,13 +27,13 @@
 
 | Technology / Service                                        | Description                                           |
 | ----------------------------------------------------------- | ----------------------------------------------------- |
-| **HTML5 & CSS3**                                            | The foundation of our web pages and styling.          |
-| **JavaScript**                                              | Adds interactivity like mobile menus and widgets.     |
-| **[Tailwind CSS](https://tailwindcss.com/)**                | Utility-first CSS framework for rapid UI development. |
-| **[SwiperJS](https://swiperjs.com/)**                       | Used for project gallery carousels.                   |
+| **HTML5 & CSS3** | The foundation of our web pages and styling.          |
+| **JavaScript** | Adds interactivity like mobile menus and widgets.     |
+| **[Tailwind CSS](https://tailwindcss.com/)** | Utility-first CSS framework for rapid UI development. |
+| **[SwiperJS](https://swiperjs.com/)** | Used for project gallery carousels.                   |
 | **[Gorilla Roof Leads](https://www.gorillaroofleads.com/)** | Powers our instant roof estimator tool.               |
-| **[Elfsight](https://elfsight.com/)**                       | Embeds Google Reviews widget.                         |
-| **[FormSubmit](https://formsubmit.co/)**                    | Handles contact form submissions.                     |
+| **[Elfsight](https://elfsight.com/)** | Embeds Google Reviews widget.                         |
+| **[FormSubmit](https://formsubmit.co/)** | Handles contact form submissions.                     |
 
 ---
 
@@ -45,46 +45,46 @@ This website is hosted directly from a **Google Cloud Storage bucket**. To deplo
 
    ```bash
    gsutil -m rsync -r ./local-folder gs://roosterroofingnow.com
-   ```
+   
 2. **Confirm public access** is enabled with:
-
-   ```bash
+   
    gcloud storage buckets get-iam-policy gs://roosterroofingnow.com
-   ```
+   
 3. **Test your site** by visiting:
 
-   ```
-   https://storage.googleapis.com/roosterroofingnow.com/index.html
-   ```
-4. (Optional) Configure your custom domain `roosterroofingnow.com` in DNS to point to the bucket and enable HTTPS via Google Cloud Load Balancer.
+   [https://storage.googleapis.com/roosterroofingnow.com/index.html](https://storage.googleapis.com/roosterroofingnow.com/index.html)
 
----
+4. (Optional) Configure your custom domain roosterroofingnow.com in DNS to point to the bucket and enable HTTPS via Google Cloud Load Balancer.
 
 ## 📁 File Structure
 
-```
 .
-├── about.html                 # Company information page
-├── areas.html                 # Service areas page
-├── blog.html                  # Blog posts page
-├── bradenton.html             # Location-specific service page (Bradenton)
-├── commercial.html            # Commercial roofing services
-├── contact.html               # Contact page with form and info
-├── estimator.html             # Embedded instant roof estimator
-├── estimator-fullscreen.html  # Fullscreen version of the roof estimator
-├── gallery.html               # Project gallery with before/after examples
-├── index.html                 # Main landing page
-├── mobile.html                # Mobile-specific page
-├── port-charlotte.html        # Location-specific service page (Port Charlotte)
-├── privacypolicy.html         # Privacy Policy page
-├── repairs.html               # Roof repair services
-├── residential.html           # Residential roofing services
-├── sarasota.html              # Location-specific service page (Sarasota)
-├── script.js                  # JavaScript for menus, widgets, and interactivity
-├── services.html              # Overview of all roofing services
-├── st-petersburg.html         # Location-specific service page (St. Petersburg)
-├── styles.css                 # Custom styling for the website
-├── tampa.html                 # Location-specific service page (Tampa)
-├── termsofservice.html        # Terms of Service page
-└── venice.html                # Location-specific service page (Venice)
-```
+├── about/index.html
+├── anna-maria-island/index.html
+├── areas/index.html
+├── blog/index.html
+├── bradenton-beach/index.html
+├── commercial/index.html
+├── contact/index.html
+├── estimator/index.html
+├── gallery/index.html
+├── holmes-beach/index.html
+├── lakewood-ranch/index.html
+├── manatee-county/index.html
+├── port-charlotte/index.html
+├── privacypolicy/index.html
+├── roof-repairs/index.html
+├── residential/index.html
+├── sarasota-county/index.html
+├── services/index.html
+├── services-appointment/index.html
+├── siesta-key/index.html
+├── st-petersburg/index.html
+├── tampa/index.html
+├── termsofservice/index.html
+├── index.html
+├── script.js
+├── styles.css
+├── sitemap.xml
+├── robots.txt
+└── README.md
