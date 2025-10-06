@@ -98,112 +98,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
     }
   </script> 
-  <!-- ✅ Inline Services Styles -->
-  <style>
-    .services-container { display: flex; justify-content: center; padding: 2rem 0; }
-    .popup { width: 100%; max-width: 1400px; display: flex; border-radius: 24px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-    .tabs { width: clamp(150px, 20vw, 350px); background: #f8fafc; display: flex; flex-direction: column; border-right: 1px solid #e5e7eb; }
-    .tabs label { font-size: clamp(15px, 1.5vw, 18px); font-weight: 600; padding: clamp(0.75rem, 2vw, 1rem); cursor: pointer; transition: all .3s ease; color: hsl(var(--foreground)); border-left: 4px solid transparent; }
-    .tabs label:hover, input[type="radio"]:checked+label { background: #b91c1c; color: hsl(var(--primary-foreground)); border-left: 4px solid #dc2626; font-weight: bold; text-shadow: 2px 2px 2px hsl(var(--foreground) / 1.5); }
-    input[type="radio"] { display: none; }
-    .content-area { flex: 1; padding: 2rem; }
-    .service-content { display: none; animation: fadeIn .4s ease-in-out; }
-    .service-content.active { display: block; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
-      
-      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-    
-    /* Swiper Slider Specific Styles */
-    .c {
-      width: 100%;                  /* take full width of parent container */
-      max-width: 100%;              /* no shrinking below container size */
-      height: auto;                 /* let height adapt */
-      aspect-ratio: 16 / 15;         /* keeps proportion across screens */
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;  /* align content to the left */
-      position: relative;
-      overflow: hidden;
-      background: hsl(0 0% 90%);
-      box-sizing: border-box;
-      margin: 0;                    /* no centering */
-      font-family: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    }
-    
-    .c .ci {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform-origin: left 50%;
-      background: inherit;
-      z-index: var(--z);
-      transition: .3s ease-out;
-    }
-    
-    .c .ci img {
-      -moz-user-select: none;
-      user-select: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .c .ch {
-      position: absolute;
-      top: 65%;
-      left: 2%;
-      transform: translateY(-50%);
-      font-size: clamp(1rem, 2vw, 2rem); /* scales text between 1rem and 2rem */
-      color: hsla(var(--h) var(--s) var(--l) / .8);
-      text-shadow: 2px 2px 10px hsla(var(--h) var(--s) 10% / .3);
-    }
-    
-    .c input {
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      z-index: -10;
-    }
-    
-    .c label {
-      width: clamp(8%, 40px, 10%);  /* flexible width depending on screen */
-      height: 10px;
-      margin-right: 4px;
-      border-radius: 20px;
-      background: hsla(0 0% 90% / .3);
-      cursor: pointer;
-      position: relative;
-      z-index: 10;
-    }
-    
-    .c label:last-child {
-      margin-right: 0;
-    }
-    
-    .c input:checked+label {
-      background: linear-gradient(to right,
-      hsla(var(--hue) 80% 70% / .7),
-      hsla(calc(var(--hue) + 30) 80% 50% / .7));
-    }
-    
-    .c input:not(:checked)+label+.ci {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    
-    .c .ci:last-child input:checked~.ci {
-      transform: translateX(100%);
-    }
-    
-    .c input:not(:checked)+label+.ci {
-      transition: 0s;
-    }
-  </style>
 </head>
 <body class="bg-background">
   <!-- Google Tag Manager (noscript) -->
@@ -435,20 +329,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <script src="/script.js" defer></script>
   <script src="https://player.vimeo.com/api/player.js"></script> 
-  
-  <!-- ✅ Inline Services Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tabs = document.querySelectorAll("input[name='tab']");
-      const contents = document.querySelectorAll(".service-content");
-      tabs.forEach((tab, i) => {
-        tab.addEventListener("change", () => {
-          contents.forEach(c => c.classList.remove("active"));
-          document.getElementById("content" + (i+1)).classList.add("active");
-        });
-      });
-    });
-  </script>
   
 </body>
 </html>
