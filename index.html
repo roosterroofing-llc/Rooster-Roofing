@@ -522,18 +522,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="/script.js" defer></script>
   <script src="https://player.vimeo.com/api/player.js"></script> 
   
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tabs = document.querySelectorAll("input[name='tab']");
-      const contents = document.querySelectorAll(".service-content");
-      tabs.forEach((tab, i) => {
-        tab.addEventListener("change", () => {
-          contents.forEach(c => c.classList.remove("active"));
-          document.getElementById("content" + (i+1)).classList.add("active");
-        });
-      });
-    });
-  </script>
-  
 </body>
 </html>
