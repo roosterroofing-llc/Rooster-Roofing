@@ -3,10 +3,12 @@
 User-agent: *
 Allow: /
 
-# Block internal or sensitive directories (adjust if they exist)
+# Block internal or sensitive directories
 Disallow: /admin/
 Disallow: /cgi-bin/
 Disallow: /tmp/
+Disallow: /privacypolicy/
+Disallow: /termsofservice/
 
 # Sitemap location
 Sitemap: https://www.roosterroofingnow.com/sitemap.xml
