@@ -88,7 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   const serviceCounties = ["Manatee County", "Sarasota County"];
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const pathParts = window.location.pathname.split('/').filter(part => part !== '');
+  const currentPage = pathParts.length > 0 ? pathParts[pathParts.length - 1] : 'index.html';
+
 
   function populateLocationMenu() {
     if (!locationList) return;
@@ -139,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   async function handleLocationLogic() {
-    const isLocationPage = Object.values(serviceAreaPages).includes(currentPage);
+    const isLocationPage = Object.values(serviceAreaPages).includes(window.location.pathname);
 
     if (currentPage === 'index.html' || currentPage === '') {
       try {
