@@ -1,5 +1,10 @@
 # robots.txt for https://www.roosterroofingnow.com/
 
+`robots.txt`
+**Changes:**
+* Maintained standard structure.
+* Confirmed `Sitemap` directive points to the correct live URL.
+
 ```txt
 User-agent: *
 Allow: /
