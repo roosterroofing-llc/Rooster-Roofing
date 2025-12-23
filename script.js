@@ -264,20 +264,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- Instant Estimator - Roofr ---
-  function triggerWidget() {
-    const button = document.querySelector(".instant-estimate-app button");
-    if (button) {
-      button.click();
-    } else {
-      console.warn("Roof quote button not found, retrying...");
-      setTimeout(triggerWidget, 500);
-    }
-  }
-  if (document.querySelector(".instant-estimate-app")) {
-    setTimeout(triggerWidget, 1000);
-  }
-
   // --- Gallery Auto-Slide ---
   const sliders = document.querySelectorAll('.c');
   const slideInterval = 5000;
@@ -321,5 +307,4 @@ function loadScript(src, isAsync = true) {
   script.async = isAsync;
   document.body.appendChild(script);
 }
-loadScript("https://app.roofr.com/js/entry-InstantEstimateApp-BFFcG0nG.js");
 loadScript("https://static.elfsight.com/platform/platform.js");
