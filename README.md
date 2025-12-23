@@ -16,7 +16,7 @@
 * **📱 Responsive Design**: A seamless experience on desktops, tablets, and mobile devices.
 * **📋 Comprehensive Services**: Dedicated service pages for Residential, Commercial, Repairs, and more.
 * **💲 Instant Roof Estimator**: Two versions of our estimator tool, including a fullscreen option.
-* **🖼️ Project Gallery**: Before-and-after gallery showcasing our workmanship with carousels.
+* **🖼️ Project Gallery**: Before-and-after gallery showcasing our workmanship.
 * **📧 Easy Contact**: Contact page for inquiries and quote requests.
 * **⭐ Customer Reviews**: Integrated Google Reviews widget for credibility.
 * **✍️ Informative Blog**: A blog with expert roofing tips and maintenance insights.
@@ -30,10 +30,8 @@
 | **HTML5 & CSS3** | The foundation of our web pages and styling.          |
 | **JavaScript** | Adds interactivity like mobile menus and widgets.     |
 | **[Tailwind CSS](https://tailwindcss.com/)** | Utility-first CSS framework for rapid UI development. |
-| **[SwiperJS](https://swiperjs.com/)** | Used for project gallery carousels.                   |
 | **[Roofr](https://roofr.com/)** | Powers our instant roof estimator tool.               |
-| **[Elfsight](https://elfsight.com/)** | Embeds Google Reviews widget.                         |
-| **[FormSubmit](https://formsubmit.co/)** | Handles contact form submissions.                     |
+| **[Elfsight](https://elfsight.com/)** | Embeds Google Reviews widget and project galleries.   |
 
 ---
 
