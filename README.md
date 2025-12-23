@@ -31,7 +31,7 @@
 | **JavaScript** | Adds interactivity like mobile menus and widgets.     |
 | **[Tailwind CSS](https://tailwindcss.com/)** | Utility-first CSS framework for rapid UI development. |
 | **[SwiperJS](https://swiperjs.com/)** | Used for project gallery carousels.                   |
-| **[Gorilla Roof Leads](https://www.gorillaroofleads.com/)** | Powers our instant roof estimator tool.               |
+| **[Roofr](https://roofr.com/)** | Powers our instant roof estimator tool.               |
 | **[Elfsight](https://elfsight.com/)** | Embeds Google Reviews widget.                         |
 | **[FormSubmit](https://formsubmit.co/)** | Handles contact form submissions.                     |
 
@@ -45,46 +45,18 @@ This website is hosted directly from a **Google Cloud Storage bucket**. To deplo
 
    ```bash
    gsutil -m rsync -r ./local-folder gs://roosterroofingnow.com
-   
+
 2. **Confirm public access** is enabled with:
-   
-   gcloud storage buckets get-iam-policy gs://roosterroofingnow.com
-   
+
+Bash
+
+gcloud storage buckets get-iam-policy gs://roosterroofingnow.com
+
 3. **Test your site** by visiting:
 
-   [https://storage.googleapis.com/roosterroofingnow.com/index.html](https://storage.googleapis.com/roosterroofingnow.com/index.html)
+https://storage.googleapis.com/roosterroofingnow.com/index.html
 
 4. (Optional) Configure your custom domain roosterroofingnow.com in DNS to point to the bucket and enable HTTPS via Google Cloud Load Balancer.
 
-## 📁 File Structure
-
-.
-├── about/index.html
-├── anna-maria-island/index.html
-├── areas/index.html
-├── blog/index.html
-├── bradenton-beach/index.html
-├── commercial/index.html
-├── contact/index.html
-├── estimator/index.html
-├── gallery/index.html
-├── holmes-beach/index.html
-├── lakewood-ranch/index.html
-├── manatee-county/index.html
-├── port-charlotte/index.html
-├── privacypolicy/index.html
-├── roof-repairs/index.html
-├── residential/index.html
-├── sarasota-county/index.html
-├── services/index.html
-├── services-appointment/index.html
-├── siesta-key/index.html
-├── st-petersburg/index.html
-├── tampa/index.html
-├── termsofservice/index.html
-├── index.html
-├── script.js
-├── styles.css
-├── sitemap.xml
-├── robots.txt
-└── README.md
+📁 File Structure
+. ├── about/index.html ├── anna-maria-island/index.html ├── areas/index.html ├── blog/index.html ├── bradenton-beach/index.html ├── commercial/index.html ├── contact/index.html ├── estimator/index.html ├── gallery/index.html ├── holmes-beach/index.html ├── lakewood-ranch/index.html ├── manatee-county/index.html ├── port-charlotte/index.html ├── privacypolicy/index.html ├── roof-repairs/index.html ├── residential/index.html ├── sarasota-county/index.html ├── services/index.html ├── services-appointment/index.html ├── siesta-key/index.html ├── st-petersburg/index.html ├── tampa/index.html ├── termsofservice/index.html ├── index.html ├── script.js ├── styles.css ├── sitemap.xml ├── robots.txt └── README.md
