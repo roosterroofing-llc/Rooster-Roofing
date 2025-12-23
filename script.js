@@ -264,9 +264,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- Gorilla Roof Leads Widget ---
+  // --- Instant Estimator - Roofr ---
   function triggerWidget() {
-    const button = document.querySelector(".es-roof-calc-widget button");
+    const button = document.querySelector(".instant-estimate-app button");
     if (button) {
       button.click();
     } else {
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(triggerWidget, 500);
     }
   }
-  if (document.querySelector(".es-roof-calc-widget")) {
+  if (document.querySelector(".instant-estimate-app")) {
     setTimeout(triggerWidget, 1000);
   }
 
@@ -321,5 +321,5 @@ function loadScript(src, isAsync = true) {
   script.async = isAsync;
   document.body.appendChild(script);
 }
-loadScript("https://widget.gorillaroofleads.com/index.js");
+loadScript("https://app.roofr.com/js/entry-InstantEstimateApp-BFFcG0nG.js");
 loadScript("https://static.elfsight.com/platform/platform.js");
