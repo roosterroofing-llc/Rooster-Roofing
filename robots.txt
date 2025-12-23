@@ -1,5 +1,6 @@
 # robots.txt for https://www.roosterroofingnow.com/
 
+```txt
 User-agent: *
 Allow: /
 
